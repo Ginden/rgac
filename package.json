@@ -1,0 +1,57 @@
+{
+  "name": "rgac",
+  "version": "1.0.0",
+  "description": "Riot Games API Client, written in TypeScript",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "rimraf build && tsc",
+    "test": "jest",
+    "t:c": "npm run --silent test:coverage",
+    "test:coverage": "jest --coverage",
+    "docs": "rimraf docs && typedoc",
+    "prepare": "npm run build && npm test",
+    "generate-schemas": "ts-node src/tools/generateJoiFromInterfaces.ts",
+    "generate-files": "ts-node src/tools/generateEnumsFromFiles.ts",
+    "prettier": "prettier --loglevel silent --write 'src/**/*.ts' '__tests__/**/*.ts'",
+    "from-scratch": "npm run generate-schemas && npm run generate-files && npm run prettier && npm run build && npm run docs && npm run --silent test:coverage"
+  },
+  "files": [
+    "build"
+  ],
+  "keywords": [],
+  "author": "Michał Wadas <michalwadas@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/hapi__joi": "^16.0.3",
+    "@types/jest": "^24.0.22",
+    "@types/lodash": "^4.14.144",
+    "@types/node": "^10.17.3",
+    "@types/slug": "^0.9.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "typedoc": "^0.15.0",
+    "typescript": "^3.7.2"
+  },
+  "types": "./build/index.d.ts",
+  "dependencies": {
+    "@hapi/joi": "^16.1.7",
+    "axios": "^0.19.0",
+    "axios-rate-limit": "^1.2.1",
+    "lodash": "^4.17.15",
+    "slug": "^1.1.0",
+    "tslib": "^1.10.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run docs && git add docs",
+      "pre-push": "npm run build && npm test"
+    }
+  }
+}

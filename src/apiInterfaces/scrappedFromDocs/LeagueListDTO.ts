@@ -1,0 +1,10 @@
+import { RankedQueue, RankedTier } from '../index';
+import { LeagueItemDTO } from './LeagueItemDTO';
+
+export interface LeagueListDTO {
+    leagueId: string;
+    tier: RankedTier;
+    entries: LeagueItemDTO[];
+    queue: RankedQueue;
+    name: string;
+}
