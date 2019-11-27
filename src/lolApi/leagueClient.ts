@@ -13,8 +13,7 @@ import { AccountId, WithNextPage } from '../types';
 
 export class LeagueClient extends ChildClient {
     /**
-     *
-     * @description Get the challenger league for given queue.
+     * Get the challenger league for given queue.
      * @link https://developer.riotgames.com/apis#league-v4/GET_getChallengerLeague
      * @param {RankedQueue} queue
      * @return {Promise<LeagueListDTO>}
@@ -26,7 +25,7 @@ export class LeagueClient extends ChildClient {
     }
 
     /**
-     * @description Get league entries in all queues for a given summoner ID.
+     * Get league entries in all queues for a given summoner ID.
      * @link https://developer.riotgames.com/apis#league-v4/GET_getLeagueEntriesForSummoner
      * @param {AccountId} summoner
      * @return {Promise<LeagueEntryDTO[]>}
@@ -41,7 +40,7 @@ export class LeagueClient extends ChildClient {
     }
 
     /**
-     * @description Get all the league entries.
+     * Get all the league entries.
      * @link https://developer.riotgames.com/apis#league-v4/GET_getLeagueEntries
      * @param {RankedQueue} queue
      * @param {RankedTier} tier
@@ -64,8 +63,8 @@ export class LeagueClient extends ChildClient {
     }
 
     /**
+     * Get the grandmaster league of a specific queue.
      * @link https://developer.riotgames.com/apis#league-v4/GET_getGrandmasterLeague
-     * @description Get the grandmaster league of a specific queue.
      * @param {RankedQueue} queue
      * @return {Promise<LeagueListDTO>}
      */
@@ -78,7 +77,7 @@ export class LeagueClient extends ChildClient {
     }
 
     /**
-     * @description Get the master league for given queue
+     * Get the master league for given queue
      * @link https://developer.riotgames.com/apis#league-v4/GET_getMasterLeague
      * @param {RankedQueue} queue
      * @return {Promise<LeagueListDTO>}
@@ -90,7 +89,7 @@ export class LeagueClient extends ChildClient {
     }
 
     /**
-     * @description Get league with given ID, including inactive entries.
+     * Get league with given ID, including inactive entries.
      * @link https://developer.riotgames.com/apis#league-v4/GET_getLeagueById
      * @param {string} id
      * @return {Promise<LeagueListDTO>}

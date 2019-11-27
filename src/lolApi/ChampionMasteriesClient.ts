@@ -5,7 +5,7 @@ import { AnySummonerFormat, SummonerId } from '../types';
 
 export class ChampionMasteriesClient extends ChildClient {
     /**
-     * @description Get all champion mastery entries sorted by number of champion points descending.
+     * Get all champion mastery entries sorted by number of champion points descending.
      * @link https://developer.riotgames.com/apis#champion-mastery-v4/GET_getAllChampionMasteries
      * @param {AnySummonerFormat} summoner
      * @return {Promise<ChampionMasteryDTO[]>}
@@ -20,7 +20,7 @@ export class ChampionMasteriesClient extends ChildClient {
     }
 
     /**
-     * @description Get a champion mastery by player ID and champion ID.
+     * Get a champion mastery by player ID and champion ID.
      * @link https://developer.riotgames.com/apis#champion-mastery-v4/GET_getChampionMastery
      * @param {AnySummonerFormat} summoner
      * @param {ChampionId} champion
@@ -38,7 +38,7 @@ export class ChampionMasteriesClient extends ChildClient {
     }
 
     /**
-     * @description Get a player's total champion mastery score, which is the sum of individual champion mastery levels.
+     * Get a player's total champion mastery score, which is the sum of individual champion mastery levels.
      * @link https://developer.riotgames.com/apis#champion-mastery-v4/GET_getChampionMasteryScore
      * @param {AnySummonerFormat} summoner
      * @return {Promise<number>}

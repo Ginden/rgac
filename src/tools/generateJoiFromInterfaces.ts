@@ -209,6 +209,12 @@ export function generateSchemas(
                     .concat(`\n}).id('${interf.name}');`)
                     .concat(`\n`);
             })
+            .map(
+                text => `/**
+ * @ignore
+ */ 
+ ${text}`
+            )
             .join(`\n\n`),
         imports: [...usedEnums]
     };

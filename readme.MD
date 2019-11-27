@@ -17,16 +17,16 @@ const {data: [anotherMatch]} = await getNextPage();
 
 # Features
 
-* Support for following APIs
-** `champion-mastery-v4`
-** `champion-v3`
-** `league-exp-v4`
-** `league-v4`
-** `lol-status-v3`
-** `match-v4`
-** `spectator-v4`
-** `summoner-v4`
-** `third-party-code-v4`
+* Support for following APIs:
+  * `champion-mastery-v4`
+  * `champion-v3`
+  * `league-exp-v4`
+  * `league-v4`
+  * `lol-status-v3`
+  * `match-v4`
+  * `spectator-v4`
+  * `summoner-v4`
+  * `third-party-code-v4`
 * Rich objects:
 ** `Summoner` and `Match` classes
 * [Joi](https://github.com/hapijs/joi) schemas for all API interfaces

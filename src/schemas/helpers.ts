@@ -1,7 +1,13 @@
 import Joi = require('@hapi/joi');
 
+/**
+ * @ignore
+ */
 export const J = Joi.defaults(x => x);
 
+/**
+ * @ignore
+ */
 export function referenceSchema(thunk: () => Joi.ObjectSchema): Joi.AnySchema {
     return J.any().custom((value: any) => {
         J.assert(value, thunk(), { abortEarly: false, debug: true });
@@ -10,8 +16,7 @@ export function referenceSchema(thunk: () => Joi.ObjectSchema): Joi.AnySchema {
 }
 
 /**
- *
- * @param obj
+ * @ignore
  */
 export function getEnumValues(obj: any): any[] {
     return Object.keys(obj)
@@ -19,6 +24,9 @@ export function getEnumValues(obj: any): any[] {
         .map(k => obj[k]);
 }
 
+/**
+ * @ignore
+ */
 export function enumSchema(en: object): Joi.AnySchema {
     return J.any().valid(...new Set(getEnumValues(en)));
 }

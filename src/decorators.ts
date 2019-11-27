@@ -1,3 +1,6 @@
+/**
+ * @ignore
+ */
 export function CachedGetter<T extends object>(
     target: T,
     key: PropertyKey,
@@ -17,6 +20,9 @@ export function CachedGetter<T extends object>(
     };
 }
 
+/**
+ * @ignore
+ */
 export function NonEnumerable(target: any, key: string) {
     const symbol = Symbol(`${target.constructor.name}.${key}`);
     Object.defineProperty(target, key, {

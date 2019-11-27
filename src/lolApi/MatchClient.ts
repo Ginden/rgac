@@ -12,7 +12,7 @@ import { Summoner } from '../apiClasses';
 
 export class MatchClient extends ChildClient {
     /**
-     * @description Get match by match ID.
+     * Get match by match ID.
      * @link https://developer.riotgames.com/apis#match-v4/GET_getMatch
      * @param {AnyMatchFormat} match
      * @return {Promise<Match>}
@@ -26,7 +26,7 @@ export class MatchClient extends ChildClient {
     }
 
     /**
-     * @description Get matchlist for games played on given account ID and platform ID
+     * Get matchlist for games played on given account ID and platform ID
      *  and filtered using given filter parameters, if any.
      * @link https://developer.riotgames.com/apis#match-v4/GET_getMatchlist
      * @param {AnySummonerFormat} summoner
@@ -63,7 +63,7 @@ export class MatchClient extends ChildClient {
     }
 
     /**
-     * @description Get match timeline by match ID.
+     * Get match timeline by match ID.
      * @link https://developer.riotgames.com/apis#match-v4/GET_getMatchTimeline
      * @param {AnyMatchFormat} match
      * @return {Promise<MatchTimelineDto>}
@@ -76,7 +76,7 @@ export class MatchClient extends ChildClient {
     }
 
     /**
-     * @description Get match IDs by tournament code.
+     * Get match IDs by tournament code.
      * @link https://developer.riotgames.com/apis#match-v4/GET_getMatchIdsByTournamentCode
      * @param {string} tournamentCode
      * @return {Promise<number[]>}
@@ -90,8 +90,8 @@ export class MatchClient extends ChildClient {
     }
 
     /**
+     * Get match by match ID and tournament code.
      * @link https://developer.riotgames.com/apis#match-v4/GET_getMatchByTournamentCode
-     * @description Get match by match ID and tournament code.
      * @param {AnyMatchFormat} match
      * @param {string} tournamentCode
      * @return {Promise<Match>}

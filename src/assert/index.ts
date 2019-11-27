@@ -1,3 +1,6 @@
+/**
+ * @ignore
+ */
 export function assertInstanceOf(val: any, Ctor: typeof val): true {
     if (val instanceof Ctor) {
         return true;
@@ -8,6 +11,9 @@ export function assertInstanceOf(val: any, Ctor: typeof val): true {
     );
 }
 
+/**
+ * @ignore
+ */
 export function assertIsNotEmpty(val: any): true {
     if (val) {
         return true;

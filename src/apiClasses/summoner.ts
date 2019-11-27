@@ -39,35 +39,61 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
         this.summonerLevel = data.summonerLevel;
     }
 
+    /**
+     * See [[MatchClient#listBySummoner]]
+     */
     public getMatches(
         filter: MatchFilterObject = {}
     ): Promise<WithNextPage<MatchlistDto>> {
         return this.client.lol.matches.listBySummoner(this, filter);
     }
 
-    getActiveMatches(): Promise<CurrentGameInfo> {
+    /**
+     * See [[SpectatorClient#activeGamesBySummoner]]
+     */
+    public getActiveMatches(): Promise<CurrentGameInfo> {
         return this.client.lol.spectator.activeGamesBySummoner(this);
     }
 
-    getChampionMastery(champion: ChampionId): Promise<ChampionMasteryDTO> {
+    /**
+     * See [[ChampionMasteriesClient#bySummonerAndChampion]]
+     */
+    public getChampionMastery(
+        champion: ChampionId
+    ): Promise<ChampionMasteryDTO> {
         return this.client.lol.championMasteries.bySummonerAndChampion(
             this,
             champion
         );
     }
 
+    /**
+     * See [[ChampionMasteriesClient#bySummoner]]
+     */
     public getChampionMasteries(): Promise<ChampionMasteryDTO[]> {
         return this.client.leagueOfLegends.championMasteries.bySummoner(this);
     }
 
+    /**
+     * See [[LeagueClient#entriesBySummoner]]
+     */
     public getLeagueEntries(): Promise<LeagueEntryDTO[]> {
         return this.client.leagueOfLegends.league.entriesBySummoner(this);
     }
 
+    /**
+     * See [[ThirdPartyCodeClient#bySummoner]]
+     */
     public thirdPartyCode(): Promise<string> {
         return this.client.leagueOfLegends.thirdParty.bySummoner(this);
     }
 
+    /**
+     * Returns encrypted accountId from param
+     * Strings are assumed to be ids.
+     * @param {AccountId} summoner
+     * @return {string}
+     */
     public static accountId(summoner: AccountId) {
         assertIsNotEmpty(summoner);
         if (isString(summoner)) {
@@ -81,6 +107,12 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
         return summoner.accountId;
     }
 
+    /**
+     * Return puuid from argument
+     * Strings are assumed to be ids.
+     * @param {Puuid} summoner
+     * @return {string}
+     */
     public static puuid(summoner: Puuid) {
         assertIsNotEmpty(summoner);
         if (isString(summoner)) {
@@ -92,6 +124,12 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
         return summoner.puuid;
     }
 
+    /**
+     * Returns encryptedSummonerId from argument.
+     * Strings are assumed to be ids.
+     * @param {SummonerId} summoner
+     * @return {string | any}
+     */
     public static id(summoner: SummonerId) {
         assertIsNotEmpty(summoner);
         if (isString(summoner)) {
@@ -106,6 +144,12 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
         return summoner.id;
     }
 
+    /**
+     * Gets name from argument.
+     * String are assumed to be names.
+     * @param {AnySummonerFormat} summoner
+     * @return {string}
+     */
     public static getName(summoner: AnySummonerFormat) {
         assertIsNotEmpty(summoner);
         if (isString(summoner)) {

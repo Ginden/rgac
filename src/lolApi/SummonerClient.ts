@@ -4,7 +4,7 @@ import { AccountId, AnySummonerFormat, Puuid, SummonerId } from '../types';
 
 export class SummonerClient extends ChildClient {
     /**
-     * @description Get a summoner by account ID.
+     * Get a summoner by account ID.
      * @link https://developer.riotgames.com/apis#summoner-v4/GET_getByAccountId
      * @param {AccountId} summoner
      * @return {Promise<Summoner>}
@@ -18,8 +18,8 @@ export class SummonerClient extends ChildClient {
     }
 
     /**
+     * Get a summoner by summoner name.
      * @link https://developer.riotgames.com/apis#summoner-v4/GET_getBySummonerName
-     * @description Get a summoner by summoner name.
      * @param {AnySummonerFormat} summoner
      * @return {Promise<Summoner>}
      */
@@ -32,7 +32,7 @@ export class SummonerClient extends ChildClient {
     }
 
     /**
-     * @description Get a summoner by PUUID.
+     * Get a summoner by PUUID.
      * @link https://developer.riotgames.com/apis#summoner-v4/GET_getByPUUID
      * @param {Puuid} summoner
      * @return {Promise<Summoner>}
@@ -46,7 +46,7 @@ export class SummonerClient extends ChildClient {
     }
 
     /**
-     * @description Get a summoner by summoner ID.
+     * Get a summoner by summoner ID.
      * @link https://developer.riotgames.com/apis#summoner-v4/GET_getBySummonerId
      * @param {SummonerId} summoner
      * @return {Promise<Summoner>}
