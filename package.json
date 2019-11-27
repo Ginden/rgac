@@ -1,6 +1,6 @@
 {
   "name": "rgac",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Riot Games API Client, written in TypeScript",
   "main": "build/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "t:c": "npm run --silent test:coverage",
     "test:coverage": "jest --coverage",
     "docs": "rimraf docs && typedoc",
-    "prepare": "npm run build && npm test",
+    "prepare": "npm run build # && npm test",
     "generate-schemas": "ts-node src/tools/generateJoiFromInterfaces.ts",
     "generate-files": "ts-node src/tools/generateEnumsFromFiles.ts",
     "prettier": "prettier --loglevel error --write 'src/**/*.ts' '__tests__/**/*.ts'",
