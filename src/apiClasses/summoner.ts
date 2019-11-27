@@ -19,6 +19,10 @@ import {
 import { assertIsNotEmpty } from '../assert';
 import { isString } from 'lodash';
 
+/**
+ * This class encapsulates match info
+ * @group API
+ */
 export class Summoner extends ChildClient implements ApiSummonerInfo {
     public readonly id: string;
     public readonly accountId: string;
@@ -40,7 +44,7 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
     }
 
     /**
-     * See [[MatchClient#listBySummoner]]
+     * See [[MatchClient.listBySummoner]]
      */
     public getMatches(
         filter: MatchFilterObject = {}
@@ -49,14 +53,14 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
     }
 
     /**
-     * See [[SpectatorClient#activeGamesBySummoner]]
+     * See [[SpectatorClient.activeGamesBySummoner]]
      */
     public getActiveMatches(): Promise<CurrentGameInfo> {
         return this.client.lol.spectator.activeGamesBySummoner(this);
     }
 
     /**
-     * See [[ChampionMasteriesClient#bySummonerAndChampion]]
+     * See [[ChampionMasteriesClient.bySummonerAndChampion]]
      */
     public getChampionMastery(
         champion: ChampionId
@@ -68,21 +72,21 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
     }
 
     /**
-     * See [[ChampionMasteriesClient#bySummoner]]
+     * See [[ChampionMasteriesClient.bySummoner]]
      */
     public getChampionMasteries(): Promise<ChampionMasteryDTO[]> {
         return this.client.leagueOfLegends.championMasteries.bySummoner(this);
     }
 
     /**
-     * See [[LeagueClient#entriesBySummoner]]
+     * See [[LeagueClient.entriesBySummoner]]
      */
     public getLeagueEntries(): Promise<LeagueEntryDTO[]> {
         return this.client.leagueOfLegends.league.entriesBySummoner(this);
     }
 
     /**
-     * See [[ThirdPartyCodeClient#bySummoner]]
+     * See [[ThirdPartyCodeClient.bySummoner]]
      */
     public thirdPartyCode(): Promise<string> {
         return this.client.leagueOfLegends.thirdParty.bySummoner(this);

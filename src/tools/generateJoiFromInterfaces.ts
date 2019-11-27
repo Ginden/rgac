@@ -88,7 +88,7 @@ function getJoiTypeInfo(
     }
 }
 
-export function generateSchemas(
+function generateSchemas(
     sourceFile: ts.SourceFile
 ): { imports: string[]; schemaText: string } {
     const interfaces: { name: string; members: MemberInfo[] }[] = [];

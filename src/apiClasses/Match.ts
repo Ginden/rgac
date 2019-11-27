@@ -15,6 +15,10 @@ import {
 import { RiotApiClient } from '../RiotApiClient';
 import { AnyMatchFormat } from '../types';
 
+/**
+ * This class encapsulates match info
+ * @group API
+ */
 export class Match extends ChildClient implements MatchDto {
     public seasonId: Season;
     public queueId: GameQueue;
