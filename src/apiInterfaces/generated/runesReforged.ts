@@ -1,4 +1,4 @@
-/* Generated from URL http://ddragon.leagueoflegends.com/cdn/9.22.1/data/en_US/runesReforged.json */
+/* Generated from URL http://ddragon.leagueoflegends.com/cdn/9.23.1/data/en_US/runesReforged.json */
 
 export enum RunesReforgedTrees {
     Domination = 8100,
@@ -39,10 +39,10 @@ export enum RunesReforgedAll {
     UltimateHunter = 8106,
     GLACIAL_AUGMENT = 8351,
     GlacialAugment = 8351,
-    KLEPTOMANCY = 8359,
-    Kleptomancy = 8359,
     UNSEALED_SPELLBOOK = 8360,
     UnsealedSpellbook = 8360,
+    MASTER_KEY = 8358,
+    MasterKey = 8358,
     HEXTECH_FLASHTRAPTION = 8306,
     HextechFlashtraption = 8306,
     MAGICAL_FOOTWEAR = 8304,

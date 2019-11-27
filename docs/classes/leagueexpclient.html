@@ -91,6 +91,7 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="leagueexpclient.html#entries" class="tsd-kind-icon">entries</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="leagueexpclient.html#entriesiterable" class="tsd-kind-icon">entries<wbr>Iterable</a></li>
 							</ul>
 						</section>
 					</div>
@@ -109,7 +110,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="childclient.html">ChildClient</a>.<a href="childclient.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/ChildClient.ts#L6">ChildClient.ts:6</a></li>
+									<li>Defined in ChildClient.ts:7</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -135,7 +136,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/leagueExpClient.ts#L9">lolApi/leagueExpClient.ts:9</a></li>
+									<li>Defined in lolApi/leagueExpClient.ts:9</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -154,6 +155,38 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#withnextpage" class="tsd-signature-type">WithNextPage</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/leagueentrydto.html" class="tsd-signature-type">LeagueEntryDTO</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="entriesiterable" class="tsd-anchor"></a>
+					<h3>entries<wbr>Iterable</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">entries<wbr>Iterable<span class="tsd-signature-symbol">(</span>queue<span class="tsd-signature-symbol">: </span><a href="../enums/rankedqueue.html" class="tsd-signature-type">RankedQueue</a>, tier<span class="tsd-signature-symbol">: </span><a href="../enums/rankedtier.html" class="tsd-signature-type">RankedTier</a>, division<span class="tsd-signature-symbol">: </span><a href="../enums/rankeddivision.html" class="tsd-signature-type">RankedDivision</a>, page<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AsyncIterable</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/leagueentrydto.html" class="tsd-signature-type">LeagueEntryDTO</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lolApi/leagueExpClient.ts:21</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>queue: <a href="../enums/rankedqueue.html" class="tsd-signature-type">RankedQueue</a></h5>
+								</li>
+								<li>
+									<h5>tier: <a href="../enums/rankedtier.html" class="tsd-signature-type">RankedTier</a></h5>
+								</li>
+								<li>
+									<h5>division: <a href="../enums/rankeddivision.html" class="tsd-signature-type">RankedDivision</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> page: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;1</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">AsyncIterable</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/leagueentrydto.html" class="tsd-signature-type">LeagueEntryDTO</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -179,6 +212,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="leagueexpclient.html#entries" class="tsd-kind-icon">entries</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="leagueexpclient.html#entriesiterable" class="tsd-kind-icon">entries<wbr>Iterable</a>
 							</li>
 						</ul>
 					</li>

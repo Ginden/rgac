@@ -1,4 +1,4 @@
-import { ChampionId } from '../generated/champions';
+import { ChampionId } from '..';
 
 export interface CurrentGameInfo {
     gameId: number;
@@ -9,8 +9,9 @@ export interface CurrentGameInfo {
     gameType: string;
     bannedChampions: CurrentGameInfoBannedChampion[];
     observers: CurrentGameInfoObserver;
-    participants: CurrentGameParticipant;
+    participants: CurrentGameParticipant[];
     gameLength: number;
+    gameTypeConfigId?: number;
     gameQueueConfigId: number;
 }
 
@@ -28,13 +29,14 @@ export interface CurrentGameParticipant {
     profileIconId: number;
     championId: ChampionId;
     summonerName: string;
-    gameCustomizationObjects: CurrentGameInfoGameCustomizationObject[];
+    gameCustomizationObjects?: CurrentGameInfoGameCustomizationObject[];
     bot: boolean;
-    perks: CurrentGameInfoPerks;
+    perks?: CurrentGameInfoPerks;
     spell1Id: number;
     spell2Id: number;
     teamId: number;
-    summonerId: string;
+    skinIndex?: number;
+    summonerId?: string;
 }
 
 export interface CurrentGameInfoGameCustomizationObject {

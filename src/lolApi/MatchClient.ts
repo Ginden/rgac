@@ -1,27 +1,40 @@
 import { Match } from '../apiClasses/Match';
 import { ChildClient } from '../ChildClient';
 import {
-    AnySummonerFormat,
+    AccountId,
     AnyMatchFormat,
+    AnySummonerFormat,
     MatchFilterObject,
     WithNextPage
 } from '../types';
-import { MatchDto } from '../apiInterfaces';
+import { MatchDto, MatchlistDto, MatchTimelineDto } from '../apiInterfaces';
 import { Summoner } from '../apiClasses';
-import { MatchlistDto } from '../apiInterfaces/scrappedFromDocs/MatchlistDto';
-import { MatchTimelineDto } from '../apiInterfaces/scrappedFromDocs/MatchTimelineDto';
 
 export class MatchClient extends ChildClient {
-    async get(match: AnyMatchFormat): Promise<Match> {
+    /**
+     * @description Get match by match ID.
+     * @link https://developer.riotgames.com/apis#match-v4/GET_getMatch
+     * @param {AnyMatchFormat} match
+     * @return {Promise<Match>}
+     */
+    public async get(match: AnyMatchFormat): Promise<Match> {
         const matchId: number = Match.id(match);
-        const matchDto: MatchDto = await this.client.doRequest({
+        const matchDto: MatchDto = await this.doRequest({
             url: `/lol/match/v4/matches/${matchId}`
         });
         return new Match(this.client, matchDto);
     }
 
-    async listBySummoner(
-        summoner: AnySummonerFormat,
+    /**
+     * @description Get matchlist for games played on given account ID and platform ID
+     *  and filtered using given filter parameters, if any.
+     * @link https://developer.riotgames.com/apis#match-v4/GET_getMatchlist
+     * @param {AnySummonerFormat} summoner
+     * @param {MatchFilterObject} [filter]
+     * @return {Promise<WithNextPage<MatchlistDto>>}
+     */
+    public async listBySummoner(
+        summoner: AccountId,
         filter?: MatchFilterObject
     ): Promise<WithNextPage<MatchlistDto>> {
         const encryptedAccountId: string = Summoner.accountId(summoner);
@@ -32,7 +45,7 @@ export class MatchClient extends ChildClient {
         if (!newFilter.endIndex) {
             newFilter.endIndex = Number(newFilter.beginIndex) + 100;
         }
-        const matchlistDto: MatchlistDto = await this.client.doRequest({
+        const matchlistDto: MatchlistDto = await this.doRequest({
             url: `/lol/match/v4/matchlists/by-account/${encryptedAccountId}`
         });
         return {
@@ -49,21 +62,48 @@ export class MatchClient extends ChildClient {
         };
     }
 
-    async timeline(match: AnyMatchFormat): Promise<MatchTimelineDto> {
+    /**
+     * @description Get match timeline by match ID.
+     * @link https://developer.riotgames.com/apis#match-v4/GET_getMatchTimeline
+     * @param {AnyMatchFormat} match
+     * @return {Promise<MatchTimelineDto>}
+     */
+    public async timeline(match: AnyMatchFormat): Promise<MatchTimelineDto> {
         const matchId: number = Match.id(match);
-        return this.client.doRequest({
+        return this.doRequest({
             url: `/lol/match/v4/timelines/by-match/${matchId}`
         });
     }
 
-    async getForTournamentCode(code: string): Promise<never> {
-        throw new Error('TBA');
+    /**
+     * @description Get match IDs by tournament code.
+     * @link https://developer.riotgames.com/apis#match-v4/GET_getMatchIdsByTournamentCode
+     * @param {string} tournamentCode
+     * @return {Promise<number[]>}
+     */
+    public async getForTournamentCode(
+        tournamentCode: string
+    ): Promise<number[]> {
+        return this.doRequest({
+            url: `/lol/match/v4/matches/by-tournament-code/${tournamentCode}/ids`
+        });
     }
 
-    async getForMatchAndTournament(
+    /**
+     * @link https://developer.riotgames.com/apis#match-v4/GET_getMatchByTournamentCode
+     * @description Get match by match ID and tournament code.
+     * @param {AnyMatchFormat} match
+     * @param {string} tournamentCode
+     * @return {Promise<Match>}
+     */
+    public async getForMatchAndTournament(
         match: AnyMatchFormat,
-        code: string
-    ): Promise<never> {
-        throw new Error('TBA');
+        tournamentCode: string
+    ): Promise<Match> {
+        const matchId: number = Match.id(match);
+        const matchDto: MatchDto = await this.doRequest({
+            url: `/lol/match/v4/matches/${matchId}/by-tournament-code/${tournamentCode} `
+        });
+        return new Match(this.client, matchDto);
     }
 }

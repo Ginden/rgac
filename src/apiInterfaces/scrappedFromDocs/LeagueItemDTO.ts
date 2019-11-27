@@ -1,5 +1,5 @@
 import { MiniSeriesDTO } from './MiniSeriesDTO';
-import { RankedDivision } from '../manual/RankedDivision';
+import { RankedDivision } from '..';
 
 export interface LeagueItemDTO {
     summonerName: string;

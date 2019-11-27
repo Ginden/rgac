@@ -1,6 +1,5 @@
 import { ApiSummonerInfoSchema, J, RiotApiClient } from '../../../src';
-import { Summoner } from '../../../src/apiClasses';
-import { Servers } from '../../../src/apiInterfaces';
+import { apiKey, saveData, server } from './helpers';
 
 const startUser = 'GindenEU';
 
@@ -8,8 +7,8 @@ describe('RiotApiClient.leagueOfLegends.summoner', () => {
     let client: RiotApiClient;
     beforeAll(async () => {
         client = new RiotApiClient({
-            apiKey: String(process.env.RIOT_API_KEY),
-            server: Servers.EUW1
+            apiKey,
+            server
         });
     });
 
@@ -33,5 +32,7 @@ describe('RiotApiClient.leagueOfLegends.summoner', () => {
         expect(byName).toEqual(byPuuidData);
         expect(byName).toEqual(bySummonerId);
         expect(byName).toEqual(byAccountId);
+
+        saveData(`leagueOfLegends.summoner.by-name`, byName);
     });
 });

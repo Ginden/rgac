@@ -1,16 +1,31 @@
-import { FeaturedGames } from '../apiInterfaces';
+import { CurrentGameInfo, FeaturedGames } from '../apiInterfaces';
 import { ChildClient } from '../ChildClient';
-import { AnySummonerFormat } from '../types';
-import { CurrentGameInfo } from '../apiInterfaces';
+import { AnySummonerFormat, SummonerId } from '../types';
+import { Summoner } from '../apiClasses';
 
 export class SpectatorClient extends ChildClient {
-    async activeGamesBySummoner(
-        summoner: AnySummonerFormat
+    /**
+     *
+     * @param {AnySummonerFormat} summoner
+     * @link https://developer.riotgames.com/apis#spectator-v4/GET_getCurrentGameInfoBySummoner
+     * @return {Promise<CurrentGameInfo>}
+     */
+    public async activeGamesBySummoner(
+        summoner: SummonerId
     ): Promise<CurrentGameInfo> {
-        throw new Error('TBA');
+        const encryptedSummonerId = Summoner.id(summoner);
+        return this.client.doRequest({
+            url: `lol/spectator/v4/active-games/by-summoner/${encryptedSummonerId}`
+        });
     }
 
-    async featuredGames(): Promise<FeaturedGames> {
-        throw new Error('TBA');
+    /**
+     * @link https://developer.riotgames.com/apis#spectator-v4/GET_getFeaturedGames
+     * @return {Promise<FeaturedGames>}
+     */
+    public async featuredGames(): Promise<FeaturedGames> {
+        return this.doRequest({
+            url: '/lol/spectator/v4/featured-games'
+        });
     }
 }

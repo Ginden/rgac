@@ -7,23 +7,23 @@ import { RiotApiClient } from '../RiotApiClient';
 
 const patch = RiotApiClient.dataDragonVersion;
 const urls = {
-    seasons: 'http://static.developer.riotgames.com/docs/lol/seasons.json',
-    gameQueues: 'http://static.developer.riotgames.com/docs/lol/queues.json',
-    maps: 'http://static.developer.riotgames.com/docs/lol/maps.json',
-    gameTypes: 'http://static.developer.riotgames.com/docs/lol/gameTypes.json',
-    gameModes: 'http://static.developer.riotgames.com/docs/lol/gameModes.json',
+    seasons: `http://static.developer.riotgames.com/docs/lol/seasons.json`,
+    gameQueues: `http://static.developer.riotgames.com/docs/lol/queues.json`,
+    maps: `http://static.developer.riotgames.com/docs/lol/maps.json`,
+    gameTypes: `http://static.developer.riotgames.com/docs/lol/gameTypes.json`,
+    gameModes: `http://static.developer.riotgames.com/docs/lol/gameModes.json`,
     champions: `http://ddragon.leagueoflegends.com/cdn/${patch}/data/en_US/champion.json`,
     items: `http://ddragon.leagueoflegends.com/cdn/${patch}/data/en_US/item.json`,
     runesReforged: `http://ddragon.leagueoflegends.com/cdn/${patch}/data/en_US/runesReforged.json`
 };
 
-function seasons(arr: ({ id: number; season: string })[]): string {
-    const ret = ['export enum Season {'];
+function seasons(arr: { id: number; season: string }[]): string {
+    const ret = [`export enum Season {`];
     for (const { season, id } of arr) {
-        ret.push(`  ${slug(season, '_')} = ${id},`);
+        ret.push(`  ${slug(season, `_`)} = ${id},`);
     }
-    ret.push('};');
-    return ret.join('\n');
+    ret.push(`};`);
+    return ret.join(`\n`);
 }
 
 type Queue = {
@@ -34,18 +34,18 @@ type Queue = {
 };
 
 function gameQueues(arr: Queue[]): string {
-    const ret = ['export enum GameQueue {'];
+    const ret = [`export enum GameQueue {`];
 
     function simpleSlug({ description, map }: Queue) {
-        let slugified = slug(description || map, '_').toUpperCase();
-        if (description && description.toLowerCase().includes('deprecated')) {
-            slugified += 'DEPRECATED';
+        let slugified = slug(description || map, `_`).toUpperCase();
+        if (description && description.toLowerCase().includes(`deprecated`)) {
+            slugified += `DEPRECATED`;
         }
         if (slugified.match(/^[0-9]/)) {
-            slugified = 'QUEUE_' + slugified;
+            slugified = `QUEUE_` + slugified;
         }
-        if (slugified.includes('_GAMES')) {
-            slugified = slugified.replace('_GAMES', '');
+        if (slugified.includes(`_GAMES`)) {
+            slugified = slugified.replace(`_GAMES`, ``);
         }
         return slugified;
     }
@@ -65,20 +65,20 @@ function gameQueues(arr: Queue[]): string {
 
     for (const { queueId, description, notes, slugified } of addSlugs(arr)) {
         const comment =
-            notes || description ? ' // ' + (notes || description) : '';
+            notes || description ? ` // ` + (notes || description) : ``;
         ret.push(`  ${slugified} = ${queueId},${comment}`);
     }
-    ret.push('};');
-    return ret.join('\n');
+    ret.push(`};`);
+    return ret.join(`\n`);
 }
 
 type MapEntry = { mapId: number; mapName: string; notes: string };
 
 function maps(arr: MapEntry[]): string {
-    const ret = ['export enum Map {'];
+    const ret = [`export enum Map {`];
 
     const pairs: [string, MapEntry[]][] = Object.entries(
-        _.groupBy(arr, v => slug(v.mapName, '_').toUpperCase())
+        _.groupBy(arr, v => slug(v.mapName, `_`).toUpperCase())
     );
     for (const [slugifiedMapName, entries] of pairs) {
         for (const { mapId, notes } of entries) {
@@ -89,26 +89,26 @@ function maps(arr: MapEntry[]): string {
             ret.push(`  ${slugified} = ${mapId}, // ${notes}`);
         }
     }
-    ret.push('};');
-    return ret.join('\n');
+    ret.push(`};`);
+    return ret.join(`\n`);
 }
 
 function gameTypes(arr: { gametype: string; description: string }[]): string {
-    const ret = ['export enum GameType {'];
+    const ret = [`export enum GameType {`];
     for (const { gametype, description } of arr) {
-        ret.push(`  ${slug(gametype, '_')} = '${gametype}', // ${description}`);
+        ret.push(`  ${slug(gametype, `_`)} = '${gametype}', // ${description}`);
     }
-    ret.push('};');
-    return ret.join('\n');
+    ret.push(`};`);
+    return ret.join(`\n`);
 }
 
 function gameModes(arr: { gameMode: string; description: string }[]): string {
-    const ret = ['export enum GameMode {'];
+    const ret = [`export enum GameMode {`];
     for (const { gameMode, description } of arr) {
-        ret.push(`  ${slug(gameMode, '_')} = '${gameMode}', // ${description}`);
+        ret.push(`  ${slug(gameMode, `_`)} = '${gameMode}', // ${description}`);
     }
-    ret.push('};');
-    return ret.join('\n');
+    ret.push(`};`);
+    return ret.join(`\n`);
 }
 
 type ChampionData = {
@@ -122,11 +122,14 @@ type ChampionData = {
 };
 
 function champions({ data }: ChampionData): string {
-    let ret = ['export enum ChampionId {'];
-    ret.push('  None = -1,');
+    let ret = [
+        `import { DataDragonChampionInfo } from '..';`,
+        `export enum ChampionId {`
+    ];
+    ret.push(`  None = -1,`);
     for (const { name, id, key } of Object.values(data)) {
-        const slugifiedName = slug(name, '_');
-        const slugifiedId = slug(id, '_');
+        const slugifiedName = slug(name, `_`);
+        const slugifiedId = slug(id, `_`);
         /*
             Order matters.
             Last string will be used by TypeScript reversed enum mapping.
@@ -138,31 +141,31 @@ function champions({ data }: ChampionData): string {
         ret.push(`  ${slugifiedName} = ${key},`);
         ret.push(`  ${slugifiedId} = ${key},`);
     }
-    ret.push('};');
+    ret.push(`};`);
     ret = [...new Set(ret)];
     const jsonFriendlyForTypescript = JSON.stringify(
-        _.keyBy(Object.values(data), 'key'),
+        _.keyBy(Object.values(data), `key`),
         null,
         2
     )
-        .split('\n')
+        .split(`\n`)
         .map(e => {
             if (e.match(/"([0-9]*)": {/)) {
-                return e.replace(/"/g, '');
+                return e.replace(/"/g, ``);
             }
             return e;
         });
-    ret.push('');
+    ret.push(``);
     ret.push(`/**
     * @ignore
     */`);
     ret.push(
-        'export const championData: {[K in ChampionId]: object | null} = {'
+        `export const championData: {[K in ChampionId]: DataDragonChampionInfo | null} = {`
     );
     ret.push(`'-1': null,`);
     ret.push(...jsonFriendlyForTypescript.slice(1, -1));
-    ret.push('};');
-    return ret.join('\n');
+    ret.push(`};`);
+    return ret.join(`\n`);
 }
 
 type ItemData = {
@@ -175,19 +178,19 @@ type ItemData = {
 };
 
 function items(id: ItemData) {
-    let ret = ['export enum GameItem {'];
+    let ret = [`export enum GameItem {`];
     const duplicatedKeys = _.countBy(Object.values(id.data), ({ name }) =>
-        slug(name, '_').toUpperCase()
+        slug(name, `_`).toUpperCase()
     );
-    for (const [key, { name }] of _.sortBy(Object.entries(id.data), '1.name')) {
-        let slugified = slug(name, '_').toUpperCase();
+    for (const [key, { name }] of _.sortBy(Object.entries(id.data), `1.name`)) {
+        let slugified = slug(name, `_`).toUpperCase();
         if (duplicatedKeys[slugified] > 1) {
             slugified += `_${key}`;
         }
         ret.push(`  ${slugified} = ${key}, // ${name}`);
     }
-    ret.push('};');
-    return ret.join('\n');
+    ret.push(`};`);
+    return ret.join(`\n`);
 }
 
 type RunesReforgedTree = {
@@ -203,25 +206,25 @@ type RunesReforgedTree = {
 };
 
 function runesReforged(rrta: RunesReforgedTree[]) {
-    const ret = ['export enum RunesReforgedTrees {'];
+    const ret = [`export enum RunesReforgedTrees {`];
     for (const { key, id } of rrta) {
         ret.push(`  ${key} = ${id},`);
     }
-    ret.push('};', '');
+    ret.push(`};`, ``);
 
     ret.push(`export enum RunesReforgedAll {`);
     for (const { slots } of rrta) {
         for (const { runes } of slots) {
             for (const { key, id } of runes) {
                 ret.push(
-                    `  ${slug(_.snakeCase(key), '_').toUpperCase()} = ${id},`
+                    `  ${slug(_.snakeCase(key), `_`).toUpperCase()} = ${id},`
                 );
                 ret.push(`  ${key} = ${id},`);
             }
         }
     }
-    ret.push('};', '');
-    return ret.join('\n');
+    ret.push(`};`, ``);
+    return ret.join(`\n`);
 }
 
 type MappingFunction = (val: any) => string;
@@ -248,16 +251,16 @@ const generators: { [K in keyof typeof urls]: MappingFunction } = {
         writeFileSync(
             join(
                 process.cwd(),
-                'src',
-                'apiInterfaces',
-                'generated',
+                `src`,
+                `apiInterfaces`,
+                `generated`,
                 `${name}.ts`
             ),
             generated
         );
     }
 })()
-    .then(() => console.log('Generated enums from files'))
+    .then(() => console.log(`Generated enums from files`))
     .then(() => process.exit(0))
     .catch(e => {
         setImmediate(() => {

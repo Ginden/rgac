@@ -1,8 +1,7 @@
 import { Summoner } from '../apiClasses';
-import { ChampionId } from '../apiInterfaces';
-import { ChampionMasteryDTO } from '../apiInterfaces/lol/ChampionMasteryDTO';
+import { ChampionId, ChampionMasteryDTO } from '../apiInterfaces';
 import { ChildClient } from '../ChildClient';
-import { AnySummonerFormat } from '../types';
+import { AnySummonerFormat, SummonerId } from '../types';
 
 export class ChampionMasteriesClient extends ChildClient {
     /**
@@ -12,10 +11,10 @@ export class ChampionMasteriesClient extends ChildClient {
      * @return {Promise<ChampionMasteryDTO[]>}
      */
     public async bySummoner(
-        summoner: AnySummonerFormat
+        summoner: SummonerId
     ): Promise<ChampionMasteryDTO[]> {
-        const accountId: string = Summoner.accountId(summoner);
-        return this.client.doRequest({
+        const accountId: string = Summoner.id(summoner);
+        return this.doRequest({
             url: `lol/champion-mastery/v4/champion-masteries/by-summoner/${accountId}`
         });
     }
@@ -29,12 +28,12 @@ export class ChampionMasteriesClient extends ChildClient {
      */
 
     public async bySummonerAndChampion(
-        summoner: AnySummonerFormat,
+        summoner: SummonerId,
         champion: ChampionId
     ): Promise<ChampionMasteryDTO> {
-        const accountId: string = Summoner.accountId(summoner);
+        const encryptedSummonerId: string = Summoner.id(summoner);
         return this.client.doRequest({
-            url: `lol/champion-mastery/v4/scores/champion-masteries/by-summoner/${accountId}/by-champion/${champion}`
+            url: `lol/champion-mastery/v4/champion-masteries/by-summoner/${encryptedSummonerId}/by-champion/${champion}`
         });
     }
 
@@ -47,8 +46,8 @@ export class ChampionMasteriesClient extends ChildClient {
     public async scoresBySummoner(
         summoner: AnySummonerFormat
     ): Promise<number> {
-        const accountId: string = Summoner.accountId(summoner);
-        return this.client.doRequest({
+        const accountId: string = Summoner.id(summoner);
+        return this.doRequest({
             url: `lol/champion-mastery/v4/scores/${accountId}/`
         });
     }

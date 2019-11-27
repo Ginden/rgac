@@ -5,4 +5,9 @@ export interface ChampionMasteryDTO {
     championLevel: number;
     championPoints: number;
     championId: ChampionId;
+    championPointsSinceLastLevel: number;
+    championPointsUntilNextLevel: number;
+    tokensEarned: number;
+    lastPlayTime?: number;
+    summonerId?: string;
 }

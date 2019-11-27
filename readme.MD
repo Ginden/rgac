@@ -17,12 +17,23 @@ const {data: [anotherMatch]} = await getNextPage();
 
 # Features
 
-* Full support for normal League of Legends API
+* Support for following APIs
+** `champion-mastery-v4`
+** `champion-v3`
+** `league-exp-v4`
+** `league-v4`
+** `lol-status-v3`
+** `match-v4`
+** `spectator-v4`
+** `summoner-v4`
+** `third-party-code-v4`
+* Rich objects:
+** `Summoner` and `Match` classes
+* [Joi](https://github.com/hapijs/joi) schemas for all API interfaces
+* TypeScript interfaces for API data
 
 # Known limitations
 
-* `summonerId`, `puuid`, `accountId` confusion.
-** `Summoner` instances automatically handle these subtleties, but very few endpoints return them.
 * Limited rate limiting - currently, you can specify only `maxRequests` and `perMilliseconds` and it's less flexible than system provided by Riot Games.
 * Need to manually check if has next page.
 
@@ -32,6 +43,10 @@ const {data: [anotherMatch]} = await getNextPage();
 * Legends of Runeterra support
 * Intelligent caching of responses
 * AsyncIterables for pagination
+
+# Contributing
+
+See [CONTRIBUTING.MD](./CONTRIBUTING.MD);
 
 # Disclaimer
 

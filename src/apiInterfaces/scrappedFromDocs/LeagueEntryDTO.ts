@@ -1,7 +1,7 @@
 import { MiniSeriesDTO } from './MiniSeriesDTO';
-import { RankedDivision } from '../manual/RankedDivision';
-import { RankedQueue } from '../manual/RankedQueue';
-import { RankedTier } from '../manual/RankedTier';
+import { RankedDivision } from '..';
+import { RankedQueue } from '..';
+import { RankedTier } from '..';
 
 export interface LeagueEntryDTO {
     queueType: RankedQueue;

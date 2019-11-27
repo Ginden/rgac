@@ -1,28 +1,30 @@
 import { Dictionary } from './MatchDto';
-import { Team } from '../manual/Teams';
+import { Team } from '..';
 
 export interface MatchTimelineDto {
     frames: MatchFrameDto[];
-    framesInterval: number;
+    frameInterval?: number;
 }
 
 export interface MatchFrameDto {
     timestamp: number;
     participantFrames: Dictionary<MatchParticipantFrameDto>;
     events: MatchEventDto[];
+    frameInterval?: number;
 }
 
 export interface MatchParticipantFrameDto {
     totalGold: number;
-    teamScore: number;
+    teamScore?: number;
     participantId: number;
     level: number;
     currentGold: number;
     minionsKilled: number;
-    dominionScore: number;
-    position: MatchPositionDto;
+    dominionScore?: number;
+    position?: MatchPositionDto;
     xp: number;
     jungleMinionsKilled: number;
+    framesInterval?: number;
 }
 
 export interface MatchPositionDto {
@@ -54,4 +56,5 @@ export interface MatchEventDto {
     type: string;
     victimId?: number;
     wardType?: string;
+    framesInterval?: number;
 }

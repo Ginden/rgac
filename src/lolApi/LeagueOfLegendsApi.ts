@@ -12,47 +12,47 @@ import { ThirdPartyCodeClient } from './ThirdPartyCodeClient';
 
 export class LeagueOfLegendsApi extends ChildClient {
     @CachedGetter
-    get championMasteries(): ChampionMasteriesClient {
+    public get championMasteries(): ChampionMasteriesClient {
         return new ChampionMasteriesClient(this.client);
     }
 
     @CachedGetter
-    get leagueExp(): LeagueExpClient {
+    public get leagueExp(): LeagueExpClient {
         return new LeagueExpClient(this.client);
     }
 
     @CachedGetter
-    get league(): LeagueClient {
+    public get league(): LeagueClient {
         return new LeagueClient(this.client);
     }
 
     @CachedGetter
-    get status(): StatusClient {
+    public get status(): StatusClient {
         return new StatusClient(this.client);
     }
 
     @CachedGetter
-    get champions(): ChampionClient {
+    public get champions(): ChampionClient {
         return new ChampionClient(this.client);
     }
 
     @CachedGetter
-    get matches(): MatchClient {
+    public get matches(): MatchClient {
         return new MatchClient(this.client);
     }
 
     @CachedGetter
-    get spectator(): SpectatorClient {
+    public get spectator(): SpectatorClient {
         return new SpectatorClient(this.client);
     }
 
     @CachedGetter
-    get summoner(): SummonerClient {
+    public get summoner(): SummonerClient {
         return new SummonerClient(this.client);
     }
 
     @CachedGetter
-    get thirdParty(): ThirdPartyCodeClient {
+    public get thirdParty(): ThirdPartyCodeClient {
         return new ThirdPartyCodeClient(this.client);
     }
 }

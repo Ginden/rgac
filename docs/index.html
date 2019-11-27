@@ -80,17 +80,55 @@
 					<h1>Features</h1>
 				</a>
 				<ul>
-					<li>Full support for normal League of Legends API</li>
+					<li>Support for following APIs</li>
+					<li><ul>
+							<li><code>champion-mastery-v4</code></li>
+						</ul>
+					</li>
+					<li><ul>
+							<li><code>champion-v3</code></li>
+						</ul>
+					</li>
+					<li><ul>
+							<li><code>league-exp-v4</code></li>
+						</ul>
+					</li>
+					<li><ul>
+							<li><code>league-v4</code></li>
+						</ul>
+					</li>
+					<li><ul>
+							<li><code>lol-status-v3</code></li>
+						</ul>
+					</li>
+					<li><ul>
+							<li><code>match-v4</code></li>
+						</ul>
+					</li>
+					<li><ul>
+							<li><code>spectator-v4</code></li>
+						</ul>
+					</li>
+					<li><ul>
+							<li><code>summoner-v4</code></li>
+						</ul>
+					</li>
+					<li><ul>
+							<li><code>third-party-code-v4</code></li>
+						</ul>
+					</li>
+					<li>Rich objects:</li>
+					<li><ul>
+							<li><code>Summoner</code> and <code>Match</code> classes</li>
+						</ul>
+					</li>
+					<li><a href="https://github.com/hapijs/joi">Joi</a> schemas for all API interfaces</li>
+					<li>TypeScript interfaces for API data</li>
 				</ul>
 				<a href="#known-limitations" id="known-limitations" style="color: inherit; text-decoration: none;">
 					<h1>Known limitations</h1>
 				</a>
 				<ul>
-					<li><code>summonerId</code>, <code>puuid</code>, <code>accountId</code> confusion.</li>
-					<li><ul>
-							<li><code>Summoner</code> instances automatically handle these subtleties, but very few endpoints return them.</li>
-						</ul>
-					</li>
 					<li>Limited rate limiting - currently, you can specify only <code>maxRequests</code> and <code>perMilliseconds</code> and it&#39;s less flexible than system provided by Riot Games.</li>
 					<li>Need to manually check if has next page.</li>
 				</ul>
@@ -104,6 +142,10 @@
 					<li>Intelligent caching of responses</li>
 					<li>AsyncIterables for pagination</li>
 				</ul>
+				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+					<h1>Contributing</h1>
+				</a>
+				<p>See <a href="./CONTRIBUTING.MD">CONTRIBUTING.MD</a>;</p>
 				<a href="#disclaimer" id="disclaimer" style="color: inherit; text-decoration: none;">
 					<h1>Disclaimer</h1>
 				</a>
@@ -240,6 +282,9 @@
 						<a href="interfaces/currentgameparticipant.html" class="tsd-kind-icon">Current<wbr>Game<wbr>Participant</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/datadragonchampioninfo.html" class="tsd-kind-icon">Data<wbr>Dragon<wbr>Champion<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/featuredgames.html" class="tsd-kind-icon">Featured<wbr>Games</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -321,6 +366,9 @@
 						<a href="interfaces/teamstatsdto.html" class="tsd-kind-icon">Team<wbr>Stats<wbr>Dto</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#accountid" class="tsd-kind-icon">Account<wbr>Id</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#anymatchformat" class="tsd-kind-icon">Any<wbr>Match<wbr>Format</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
@@ -331,6 +379,12 @@
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#matchfilterobject" class="tsd-kind-icon">Match<wbr>Filter<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#puuid" class="tsd-kind-icon">Puuid</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#summonerid" class="tsd-kind-icon">Summoner<wbr>Id</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 						<a href="globals.html#withnextpage" class="tsd-kind-icon">With<wbr>Next<wbr>Page</a>
@@ -459,7 +513,16 @@
 						<a href="globals.html#assertisnotempty" class="tsd-kind-icon">assert<wbr>IsNot<wbr>Empty</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="globals.html#enumschema" class="tsd-kind-icon">enum<wbr>Schema</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="globals.html#generateschemas" class="tsd-kind-icon">generate<wbr>Schemas</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getenumvalues" class="tsd-kind-icon">get<wbr>Enum<wbr>Values</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#referenceschema" class="tsd-kind-icon">reference<wbr>Schema</a>
 					</li>
 				</ul>
 			</nav>

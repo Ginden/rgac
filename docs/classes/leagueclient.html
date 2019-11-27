@@ -90,11 +90,11 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="leagueclient.html#byid" class="tsd-kind-icon">by<wbr>Id</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="leagueclient.html#challengerleagues" class="tsd-kind-icon">challenger<wbr>Leagues</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="leagueclient.html#entries" class="tsd-kind-icon">entries</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="leagueclient.html#entriesbysummoner" class="tsd-kind-icon">entries<wbr>BySummoner</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="leagueclient.html#grandmasterleagues" class="tsd-kind-icon">grandmaster<wbr>Leagues</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="leagueclient.html#league" class="tsd-kind-icon">league</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="leagueclient.html#masterleagues" class="tsd-kind-icon">master<wbr>Leagues</a></li>
 							</ul>
 						</section>
@@ -114,7 +114,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="childclient.html">ChildClient</a>.<a href="childclient.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/ChildClient.ts#L6">ChildClient.ts:6</a></li>
+									<li>Defined in ChildClient.ts:7</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -131,6 +131,39 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="byid" class="tsd-anchor"></a>
+					<h3>by<wbr>Id</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">by<wbr>Id<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/leaguelistdto.html" class="tsd-signature-type">LeagueListDTO</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lolApi/leagueClient.ts:98</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Get league with given ID, including inactive entries.</p>
+									</dd>
+									<dt>link</dt>
+									<dd><p><a href="https://developer.riotgames.com/apis#league-v4/GET_getLeagueById">https://developer.riotgames.com/apis#league-v4/GET_getLeagueById</a></p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/leaguelistdto.html" class="tsd-signature-type">LeagueListDTO</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="challengerleagues" class="tsd-anchor"></a>
 					<h3>challenger<wbr>Leagues</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -140,9 +173,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/leagueClient.ts#L11">lolApi/leagueClient.ts:11</a></li>
+									<li>Defined in lolApi/leagueClient.ts:22</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Get the challenger league for given queue.</p>
+									</dd>
+									<dt>link</dt>
+									<dd><p><a href="https://developer.riotgames.com/apis#league-v4/GET_getChallengerLeague">https://developer.riotgames.com/apis#league-v4/GET_getChallengerLeague</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -163,9 +206,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/leagueClient.ts#L26">lolApi/leagueClient.ts:26</a></li>
+									<li>Defined in lolApi/leagueClient.ts:52</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Get all the league entries.</p>
+									</dd>
+									<dt>link</dt>
+									<dd><p><a href="https://developer.riotgames.com/apis#league-v4/GET_getLeagueEntries">https://developer.riotgames.com/apis#league-v4/GET_getLeagueEntries</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -189,19 +242,29 @@
 					<a name="entriesbysummoner" class="tsd-anchor"></a>
 					<h3>entries<wbr>BySummoner</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">entries<wbr>BySummoner<span class="tsd-signature-symbol">(</span>summoner<span class="tsd-signature-symbol">: </span><a href="../globals.html#anysummonerformat" class="tsd-signature-type">AnySummonerFormat</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/leagueentrydto.html" class="tsd-signature-type">LeagueEntryDTO</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">entries<wbr>BySummoner<span class="tsd-signature-symbol">(</span>summoner<span class="tsd-signature-symbol">: </span><a href="../globals.html#accountid" class="tsd-signature-type">AccountId</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/leagueentrydto.html" class="tsd-signature-type">LeagueEntryDTO</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/leagueClient.ts#L17">lolApi/leagueClient.ts:17</a></li>
+									<li>Defined in lolApi/leagueClient.ts:34</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Get league entries in all queues for a given summoner ID.</p>
+									</dd>
+									<dt>link</dt>
+									<dd><p><a href="https://developer.riotgames.com/apis#league-v4/GET_getLeagueEntriesForSummoner">https://developer.riotgames.com/apis#league-v4/GET_getLeagueEntriesForSummoner</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>summoner: <a href="../globals.html#anysummonerformat" class="tsd-signature-type">AnySummonerFormat</a></h5>
+									<h5>summoner: <a href="../globals.html#accountid" class="tsd-signature-type">AccountId</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/leagueentrydto.html" class="tsd-signature-type">LeagueEntryDTO</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -218,36 +281,23 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/leagueClient.ts#L40">lolApi/leagueClient.ts:40</a></li>
+									<li>Defined in lolApi/leagueClient.ts:72</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>link</dt>
+									<dd><p><a href="https://developer.riotgames.com/apis#league-v4/GET_getGrandmasterLeague">https://developer.riotgames.com/apis#league-v4/GET_getGrandmasterLeague</a></p>
+									</dd>
+									<dt>description</dt>
+									<dd><p>Get the grandmaster league of a specific queue.</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>queue: <a href="../enums/rankedqueue.html" class="tsd-signature-type">RankedQueue</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/leaguelistdto.html" class="tsd-signature-type">LeagueListDTO</a><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="league" class="tsd-anchor"></a>
-					<h3>league</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">league<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/leaguelistdto.html" class="tsd-signature-type">LeagueListDTO</a><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/leagueClient.ts#L54">lolApi/leagueClient.ts:54</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>id: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/leaguelistdto.html" class="tsd-signature-type">LeagueListDTO</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -264,9 +314,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/leagueClient.ts#L48">lolApi/leagueClient.ts:48</a></li>
+									<li>Defined in lolApi/leagueClient.ts:86</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Get the master league for given queue</p>
+									</dd>
+									<dt>link</dt>
+									<dd><p><a href="https://developer.riotgames.com/apis#league-v4/GET_getMasterLeague">https://developer.riotgames.com/apis#league-v4/GET_getMasterLeague</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -298,6 +358,9 @@
 								<a href="leagueclient.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="leagueclient.html#byid" class="tsd-kind-icon">by<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="leagueclient.html#challengerleagues" class="tsd-kind-icon">challenger<wbr>Leagues</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -308,9 +371,6 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="leagueclient.html#grandmasterleagues" class="tsd-kind-icon">grandmaster<wbr>Leagues</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="leagueclient.html#league" class="tsd-kind-icon">league</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="leagueclient.html#masterleagues" class="tsd-kind-icon">master<wbr>Leagues</a>

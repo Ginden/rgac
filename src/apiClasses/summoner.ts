@@ -3,11 +3,19 @@ import {
     ChampionMasteryDTO,
     ChampionId,
     LeagueEntryDTO,
-    MatchlistDto
+    MatchlistDto,
+    CurrentGameInfo
 } from '../apiInterfaces';
 import { ChildClient } from '../ChildClient';
 import { RiotApiClient } from '../RiotApiClient';
-import { AnySummonerFormat, MatchFilterObject, WithNextPage } from '../types';
+import {
+    AnySummonerFormat,
+    MatchFilterObject,
+    WithNextPage,
+    SummonerId,
+    AccountId,
+    Puuid
+} from '../types';
 import { assertIsNotEmpty } from '../assert';
 import { isString } from 'lodash';
 
@@ -20,7 +28,7 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
     public readonly revisionDate: number;
     public readonly summonerLevel: number;
 
-    constructor(client: RiotApiClient, data: ApiSummonerInfo) {
+    public constructor(client: RiotApiClient, data: ApiSummonerInfo) {
         super(client);
         this.id = data.id;
         this.accountId = data.accountId;
@@ -31,32 +39,36 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
         this.summonerLevel = data.summonerLevel;
     }
 
-    getMatches(
+    public getMatches(
         filter: MatchFilterObject = {}
     ): Promise<WithNextPage<MatchlistDto>> {
-        return this.client.leagueOfLegends.matches.listBySummoner(this, filter);
+        return this.client.lol.matches.listBySummoner(this, filter);
+    }
+
+    getActiveMatches(): Promise<CurrentGameInfo> {
+        return this.client.lol.spectator.activeGamesBySummoner(this);
     }
 
     getChampionMastery(champion: ChampionId): Promise<ChampionMasteryDTO> {
-        return this.client.leagueOfLegends.championMasteries.bySummonerAndChampion(
+        return this.client.lol.championMasteries.bySummonerAndChampion(
             this,
             champion
         );
     }
 
-    getChampionMasteries(): Promise<ChampionMasteryDTO[]> {
+    public getChampionMasteries(): Promise<ChampionMasteryDTO[]> {
         return this.client.leagueOfLegends.championMasteries.bySummoner(this);
     }
 
-    getLeagueEntries(): Promise<LeagueEntryDTO[]> {
+    public getLeagueEntries(): Promise<LeagueEntryDTO[]> {
         return this.client.leagueOfLegends.league.entriesBySummoner(this);
     }
 
-    thirdPartyCode(): Promise<never> {
+    public thirdPartyCode(): Promise<string> {
         return this.client.leagueOfLegends.thirdParty.bySummoner(this);
     }
 
-    static accountId(summoner: AnySummonerFormat) {
+    public static accountId(summoner: AccountId) {
         assertIsNotEmpty(summoner);
         if (isString(summoner)) {
             if (summoner.length === 78) {
@@ -69,7 +81,7 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
         return summoner.accountId;
     }
 
-    static puuid(summoner: AnySummonerFormat) {
+    public static puuid(summoner: Puuid) {
         assertIsNotEmpty(summoner);
         if (isString(summoner)) {
             if (summoner.length !== 78) {
@@ -80,7 +92,7 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
         return summoner.puuid;
     }
 
-    static id(summoner: AnySummonerFormat) {
+    public static id(summoner: SummonerId) {
         assertIsNotEmpty(summoner);
         if (isString(summoner)) {
             if (summoner.length === 78) {
@@ -88,10 +100,13 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
             }
             return summoner;
         }
+        if (`summonerId` in summoner) {
+            return summoner.summonerId;
+        }
         return summoner.id;
     }
 
-    static getName(summoner: AnySummonerFormat) {
+    public static getName(summoner: AnySummonerFormat) {
         assertIsNotEmpty(summoner);
         if (isString(summoner)) {
             if (summoner.length === 78) {

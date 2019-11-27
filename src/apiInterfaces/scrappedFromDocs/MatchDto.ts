@@ -1,11 +1,11 @@
-import { ChampionId } from '../generated/champions';
-import { GameMode } from '../generated/gameModes';
-import { GameQueue } from '../generated/gameQueues';
-import { GameType } from '../generated/gameTypes';
-import { Season } from '../generated/seasons';
-import { Map } from '../generated/maps';
-import { Team } from '../manual/Teams';
-import { WinString } from '../manual/WinString';
+import { ChampionId } from '..';
+import { GameMode } from '..';
+import { GameQueue } from '..';
+import { GameType } from '..';
+import { Season } from '..';
+import { Map } from '..';
+import { Team } from '..';
+import { WinString } from '..';
 
 export type Dictionary<T> = {
     [K: string]: T;

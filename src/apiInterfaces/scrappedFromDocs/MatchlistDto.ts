@@ -1,6 +1,6 @@
-import { ChampionId } from '../generated/champions';
-import { GameQueue } from '../generated/gameQueues';
-import { Season } from '../generated/seasons';
+import { ChampionId } from '..';
+import { GameQueue } from '..';
+import { Season } from '..';
 
 export interface MatchlistDto {
     matches: MatchReferenceDto[];

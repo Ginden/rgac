@@ -76,5 +76,8 @@ export enum GameQueue {
     ODYSSEY_EXTRACTION_ONSLAUGHT = 1070, // Odyssey Extraction: Onslaught games
     TEAMFIGHT_TACTICS = 1090, // Teamfight Tactics games
     RANKED_TEAMFIGHT_TACTICS = 1100, // Ranked Teamfight Tactics games
-    NEXUS_BLITZ = 1200 // Deprecated in patch 9.2
+    NEXUS_BLITZ = 1200, // Deprecated in patch 9.2
+    TUTORIAL_1 = 2000, // Tutorial 1
+    TUTORIAL_2 = 2010, // Tutorial 2
+    TUTORIAL_3 = 2020 // Tutorial 3
 }

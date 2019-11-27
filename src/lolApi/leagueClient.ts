@@ -1,28 +1,54 @@
 import { Summoner } from '../apiClasses';
-import { LeagueEntryDTO } from '../apiInterfaces/scrappedFromDocs/LeagueEntryDTO';
-import { LeagueListDTO } from '../apiInterfaces/scrappedFromDocs/LeagueListDTO';
-import { RankedDivision } from '../apiInterfaces/manual/RankedDivision';
-import { RankedQueue } from '../apiInterfaces/manual/RankedQueue';
-import { RankedTier } from '../apiInterfaces/manual/RankedTier';
+
+import {
+    LeagueEntryDTO,
+    LeagueListDTO,
+    RankedDivision,
+    RankedQueue,
+    RankedTier
+} from '../apiInterfaces';
+
 import { ChildClient } from '../ChildClient';
-import { AnySummonerFormat, WithNextPage } from '../types';
+import { AccountId, WithNextPage } from '../types';
 
 export class LeagueClient extends ChildClient {
-    async challengerLeagues(queue: RankedQueue): Promise<LeagueListDTO> {
-        return this.client.doRequest({
+    /**
+     *
+     * @description Get the challenger league for given queue.
+     * @link https://developer.riotgames.com/apis#league-v4/GET_getChallengerLeague
+     * @param {RankedQueue} queue
+     * @return {Promise<LeagueListDTO>}
+     */
+    public async challengerLeagues(queue: RankedQueue): Promise<LeagueListDTO> {
+        return this.doRequest({
             url: `/lol/league/v4/challengerleagues/by-queue/${queue}`
         });
     }
 
-    async entriesBySummoner(
-        summoner: AnySummonerFormat
+    /**
+     * @description Get league entries in all queues for a given summoner ID.
+     * @link https://developer.riotgames.com/apis#league-v4/GET_getLeagueEntriesForSummoner
+     * @param {AccountId} summoner
+     * @return {Promise<LeagueEntryDTO[]>}
+     */
+    public async entriesBySummoner(
+        summoner: AccountId
     ): Promise<LeagueEntryDTO[]> {
         const summonerId: string = Summoner.accountId(summoner);
-        return this.client.doRequest({
+        return this.doRequest({
             url: `/lol/league/v4/entries/by-summoner/${summonerId}`
         });
     }
 
+    /**
+     * @description Get all the league entries.
+     * @link https://developer.riotgames.com/apis#league-v4/GET_getLeagueEntries
+     * @param {RankedQueue} queue
+     * @param {RankedTier} tier
+     * @param {RankedDivision} division
+     * @param {number} [page]
+     * @return {Promise<WithNextPage<LeagueEntryDTO[]>>}
+     */
     public async entries(
         queue: RankedQueue,
         tier: RankedTier,
@@ -37,22 +63,40 @@ export class LeagueClient extends ChildClient {
         );
     }
 
+    /**
+     * @link https://developer.riotgames.com/apis#league-v4/GET_getGrandmasterLeague
+     * @description Get the grandmaster league of a specific queue.
+     * @param {RankedQueue} queue
+     * @return {Promise<LeagueListDTO>}
+     */
     public async grandmasterLeagues(
         queue: RankedQueue
     ): Promise<LeagueListDTO> {
-        return this.client.doRequest({
+        return this.doRequest({
             url: `/lol/league/v4/grandmasterleagues/by-queue/${queue}`
         });
     }
 
+    /**
+     * @description Get the master league for given queue
+     * @link https://developer.riotgames.com/apis#league-v4/GET_getMasterLeague
+     * @param {RankedQueue} queue
+     * @return {Promise<LeagueListDTO>}
+     */
     public async masterLeagues(queue: RankedQueue): Promise<LeagueListDTO> {
-        return this.client.doRequest({
+        return this.doRequest({
             url: `/lol/league/v4/masterleagues/by-queue/${queue}`
         });
     }
 
-    public async league(id: string): Promise<LeagueListDTO> {
-        return this.client.doRequest({
+    /**
+     * @description Get league with given ID, including inactive entries.
+     * @link https://developer.riotgames.com/apis#league-v4/GET_getLeagueById
+     * @param {string} id
+     * @return {Promise<LeagueListDTO>}
+     */
+    public async byId(id: string): Promise<LeagueListDTO> {
+        return this.doRequest({
             url: `/lol/league/v4/leagues/${id}`
         });
     }

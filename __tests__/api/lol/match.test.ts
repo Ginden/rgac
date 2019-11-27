@@ -1,14 +1,13 @@
 import {
-    ApiSummonerInfoSchema,
     GameQueue,
     J,
     MatchDtoSchema,
     MatchlistDtoSchema,
     MatchTimelineDtoSchema,
-    RiotApiClient
+    RiotApiClient,
+    Servers
 } from '../../../src';
-import { Summoner } from '../../../src/apiClasses';
-import { Servers } from '../../../src/apiInterfaces';
+import { getSummoner, saveData } from './helpers';
 
 const startUser = 'GindenEU';
 
@@ -21,11 +20,13 @@ describe('RiotApiClient.leagueOfLegends.match', () => {
         });
     });
 
-    test('Data matches on all methods', async () => {
+    test('List of matches works', async () => {
         const summoner = await client.leagueOfLegends.summoner.byName(
             startUser
         );
         const { data } = await summoner.getMatches();
+        expect(data.matches.length).toBeGreaterThan(0);
+        saveData(`leagueOfLegends.lastSummonerMatches`, data);
         J.assert(data, MatchlistDtoSchema);
     });
 
@@ -35,18 +36,25 @@ describe('RiotApiClient.leagueOfLegends.match', () => {
         GameQueue.QUEUE_5V5_DRAFT_PICK_400
     ];
     for (const queue of queues) {
-        test(`Match details for queue ${GameQueue[queue]} with timeline`, async () => {
-            const summoner = await client.leagueOfLegends.summoner.byName(
-                startUser
-            );
+        const queueName = GameQueue[queue];
+        test(`Match details for queue ${queueName} with timeline`, async () => {
+            const summoner = await getSummoner(client);
             const {
                 data: {
                     matches: [lastMatch]
                 }
             } = await summoner.getMatches();
             const match = await client.leagueOfLegends.matches.get(lastMatch);
+            saveData(
+                `leagueOfLegends.matches.get.lastMatch.${queueName}`,
+                match
+            );
             J.assert(match, MatchDtoSchema);
             const timeline = await match.getTimeline();
+            saveData(
+                `leagueOfLegends.matches.get.lastMatch.${queueName}.timeline`,
+                timeline
+            );
             J.assert(timeline, MatchTimelineDtoSchema);
         });
     }

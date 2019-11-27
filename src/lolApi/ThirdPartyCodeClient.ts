@@ -1,8 +1,12 @@
+import { Summoner } from '../apiClasses';
 import { ChildClient } from '../ChildClient';
-import { AnySummonerFormat } from '../types';
+import { SummonerId } from '../types';
 
 export class ThirdPartyCodeClient extends ChildClient {
-    async bySummoner(summoner: AnySummonerFormat): Promise<never> {
-        throw new Error('TBA');
+    public async bySummoner(summoner: SummonerId): Promise<string> {
+        const encryptedSummonerId: string = Summoner.id(summoner);
+        return this.doRequest({
+            url: `/lol/platform/v4/third-party-code/by-summoner/${encryptedSummonerId}`
+        });
     }
 }

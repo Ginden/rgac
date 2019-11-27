@@ -6,23 +6,25 @@ import { readdirSync, readFileSync, writeFileSync } from 'fs';
 // import {inspect} from 'util';
 
 function recursiveSearchPath(dir: string): string[] {
-    return _.flattenDeep(readdirSync(dir, { withFileTypes: true })
-        .map(e => {
-            if (e.isFile()) {
-                return join(dir, e.name);
-            } else if (e.isDirectory()) {
-                return recursiveSearchPath(join(dir, e.name));
-            } else {
-                return null;
-            }
-        })
-        .filter(Boolean) as (string | string[])[]);
+    return _.flattenDeep(
+        readdirSync(dir, { withFileTypes: true })
+            .map(e => {
+                if (e.isFile()) {
+                    return join(dir, e.name);
+                } else if (e.isDirectory()) {
+                    return recursiveSearchPath(join(dir, e.name));
+                } else {
+                    return null;
+                }
+            })
+            .filter(Boolean) as (string | string[])[]
+    );
 }
 
 function getEscapedName(id: ts.Identifier): string {
     if (_.isString(id)) {
         return id;
-    } else if (id && 'escapedText' in id) {
+    } else if (id && `escapedText` in id) {
         return (id as any).escapedText;
     } else {
         throw new Error(String(id));
@@ -67,21 +69,21 @@ function getJoiTypeInfo(
             interfaceNames
         )})`;
     }
-    if (mi.type.name === 'any') {
-        return 'J.any()';
-    } else if (mi.type.name === 'number') {
-        return 'J.number()';
-    } else if (mi.type.name === 'string') {
+    if (mi.type.name === `any`) {
+        return `J.any()`;
+    } else if (mi.type.name === `number`) {
+        return `J.number()`;
+    } else if (mi.type.name === `string`) {
         return `J.string().allow('')`;
-    } else if (mi.type.name === 'boolean') {
-        return 'J.boolean()';
+    } else if (mi.type.name === `boolean`) {
+        return `J.boolean()`;
     } else if (enumNames.has(mi.type.name)) {
-        return `J.any().valid(...new Set(getEnumValues(${mi.type.name})))`;
+        return `enumSchema(${mi.type.name})`;
     } else if (interfaceNames.has(mi.type.name)) {
-        return `J.any().custom(lazySchema(() =>${mi.type.name}Schema))`;
+        return `referenceSchema(() =>${mi.type.name}Schema)`;
     } else {
         console.error(mi);
-        return 'J.any()';
+        return `J.any()`;
         //throw new Error(mi.name);
     }
 }
@@ -99,19 +101,19 @@ export function generateSchemas(
         switch (type.kind as ts.SyntaxKind) {
             case ts.SyntaxKind.StringKeyword:
                 return {
-                    name: 'string',
+                    name: `string`,
                     arrayDepth: 0
                 };
                 break;
             case ts.SyntaxKind.NumberKeyword:
                 return {
-                    name: 'number',
+                    name: `number`,
                     arrayDepth: 0
                 };
                 break;
             case ts.SyntaxKind.BooleanKeyword:
                 return {
-                    name: 'boolean',
+                    name: `boolean`,
                     arrayDepth: 0
                 };
                 break;
@@ -128,7 +130,7 @@ export function generateSchemas(
                 break;
             case ts.SyntaxKind.TypeReference:
                 const name = getEscapedName((type as any).typeName);
-                if (name === 'Dictionary') {
+                if (name === `Dictionary`) {
                     const [typeArgument] = type.typeArguments;
                     if (typeArgument.typeName) {
                         return {
@@ -153,7 +155,7 @@ export function generateSchemas(
         }
         console.error(member);
         return {
-            name: 'any',
+            name: `any`,
             arrayDepth: 0,
             node: member
         };
@@ -162,7 +164,6 @@ export function generateSchemas(
 
     function delintNode(node: ts.Node) {
         if (ts.isInterfaceDeclaration(node)) {
-            // @ts-ignore
             interfaces.push({
                 name: getEscapedName(node.name),
                 members: node.members.map(member => {
@@ -199,33 +200,33 @@ export function generateSchemas(
                                 }
                                 return `  ${e.name}: ${joiTypeInfo}.${
                                     e.isOptional
-                                        ? 'allow(null).optional()'
-                                        : 'required()'
+                                        ? `allow(null).optional()`
+                                        : `required()`
                                 }`;
                             })
-                            .join(',\n')
+                            .join(`,\n`)
                     )
                     .concat(`\n}).id('${interf.name}');`)
-                    .concat('\n');
+                    .concat(`\n`);
             })
-            .join('\n\n'),
+            .join(`\n\n`),
         imports: [...usedEnums]
     };
 }
 
 (async () => {
     const entries = recursiveSearchPath(
-        join(process.cwd(), 'src', 'apiInterfaces')
+        join(process.cwd(), `src`, `apiInterfaces`)
     )
-        .map(p => readFileSync(p, 'utf8'))
-        .join('\n\n')
-        .split('\n')
+        .map(p => readFileSync(p, `utf8`))
+        .join(`\n\n`)
+        .split(`\n`)
         .filter(line => !line.includes(`export * from`))
-        .join('\n');
+        .join(`\n`);
     Object.assign(ts, {});
 
     const sourceFile = ts.createSourceFile(
-        'api-interfaces.ts',
+        `api-interfaces.ts`,
         entries,
         ts.ScriptTarget.ES2019,
         true
@@ -235,23 +236,23 @@ export function generateSchemas(
     const { imports, schemaText } = generateSchemas(sourceFile);
     const content: string = `
     import Joi = require('@hapi/joi');
-    import {J, getEnumValues, lazySchema} from './helpers';
+    import {J, enumSchema, referenceSchema} from './helpers';
     import {
     ${_.chunk([...imports], 3)
-        .map(chunk => chunk.join(', '))
-        .join(',\n')}
+        .map(chunk => chunk.join(`, `))
+        .join(`,\n`)}
     } from '../apiInterfaces';
 
     `
         .trim()
-        .concat('\n\n', schemaText);
+        .concat(`\n\n`, schemaText);
 
     writeFileSync(
-        join(process.cwd(), 'src', 'schemas', 'generated.ts'),
+        join(process.cwd(), `src`, `schemas`, `generated.ts`),
         content
     );
 })()
-    .then(() => console.log('Generated schemas from interfaces'))
+    .then(() => console.log(`Generated schemas from interfaces`))
     .then(() => process.exit())
     .catch(e => {
         setImmediate(() => {

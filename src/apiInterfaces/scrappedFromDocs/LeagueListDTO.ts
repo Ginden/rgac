@@ -1,4 +1,4 @@
-import { RankedQueue, RankedTier } from '../index';
+import { RankedQueue, RankedTier } from '..';
 import { LeagueItemDTO } from './LeagueItemDTO';
 
 export interface LeagueListDTO {

@@ -112,7 +112,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="childclient.html">ChildClient</a>.<a href="childclient.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/ChildClient.ts#L6">ChildClient.ts:6</a></li>
+									<li>Defined in ChildClient.ts:7</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -132,19 +132,29 @@
 					<a name="byaccount" class="tsd-anchor"></a>
 					<h3>by<wbr>Account</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">by<wbr>Account<span class="tsd-signature-symbol">(</span>summoner<span class="tsd-signature-symbol">: </span><a href="../globals.html#anysummonerformat" class="tsd-signature-type">AnySummonerFormat</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="summoner.html" class="tsd-signature-type">Summoner</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">by<wbr>Account<span class="tsd-signature-symbol">(</span>summoner<span class="tsd-signature-symbol">: </span><a href="../globals.html#accountid" class="tsd-signature-type">AccountId</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="summoner.html" class="tsd-signature-type">Summoner</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/SummonerClient.ts#L6">lolApi/SummonerClient.ts:6</a></li>
+									<li>Defined in lolApi/SummonerClient.ts:12</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Get a summoner by account ID.</p>
+									</dd>
+									<dt>link</dt>
+									<dd><p><a href="https://developer.riotgames.com/apis#summoner-v4/GET_getByAccountId">https://developer.riotgames.com/apis#summoner-v4/GET_getByAccountId</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>summoner: <a href="../globals.html#anysummonerformat" class="tsd-signature-type">AnySummonerFormat</a></h5>
+									<h5>summoner: <a href="../globals.html#accountid" class="tsd-signature-type">AccountId</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="summoner.html" class="tsd-signature-type">Summoner</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -161,9 +171,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/SummonerClient.ts#L14">lolApi/SummonerClient.ts:14</a></li>
+									<li>Defined in lolApi/SummonerClient.ts:26</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>link</dt>
+									<dd><p><a href="https://developer.riotgames.com/apis#summoner-v4/GET_getBySummonerName">https://developer.riotgames.com/apis#summoner-v4/GET_getBySummonerName</a></p>
+									</dd>
+									<dt>description</dt>
+									<dd><p>Get a summoner by summoner name.</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -178,19 +198,29 @@
 					<a name="bypuuid" class="tsd-anchor"></a>
 					<h3>by<wbr>Puuid</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">by<wbr>Puuid<span class="tsd-signature-symbol">(</span>summoner<span class="tsd-signature-symbol">: </span><a href="../globals.html#anysummonerformat" class="tsd-signature-type">AnySummonerFormat</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="summoner.html" class="tsd-signature-type">Summoner</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">by<wbr>Puuid<span class="tsd-signature-symbol">(</span>summoner<span class="tsd-signature-symbol">: </span><a href="../globals.html#puuid" class="tsd-signature-type">Puuid</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="summoner.html" class="tsd-signature-type">Summoner</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/SummonerClient.ts#L22">lolApi/SummonerClient.ts:22</a></li>
+									<li>Defined in lolApi/SummonerClient.ts:40</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Get a summoner by PUUID.</p>
+									</dd>
+									<dt>link</dt>
+									<dd><p><a href="https://developer.riotgames.com/apis#summoner-v4/GET_getByPUUID">https://developer.riotgames.com/apis#summoner-v4/GET_getByPUUID</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>summoner: <a href="../globals.html#anysummonerformat" class="tsd-signature-type">AnySummonerFormat</a></h5>
+									<h5>summoner: <a href="../globals.html#puuid" class="tsd-signature-type">Puuid</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="summoner.html" class="tsd-signature-type">Summoner</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -201,19 +231,29 @@
 					<a name="bysummonerid" class="tsd-anchor"></a>
 					<h3>by<wbr>Summoner<wbr>Id</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">by<wbr>Summoner<wbr>Id<span class="tsd-signature-symbol">(</span>summoner<span class="tsd-signature-symbol">: </span><a href="../globals.html#anysummonerformat" class="tsd-signature-type">AnySummonerFormat</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="summoner.html" class="tsd-signature-type">Summoner</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">by<wbr>Summoner<wbr>Id<span class="tsd-signature-symbol">(</span>summoner<span class="tsd-signature-symbol">: </span><a href="../globals.html#summonerid" class="tsd-signature-type">SummonerId</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="summoner.html" class="tsd-signature-type">Summoner</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/SummonerClient.ts#L30">lolApi/SummonerClient.ts:30</a></li>
+									<li>Defined in lolApi/SummonerClient.ts:54</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Get a summoner by summoner ID.</p>
+									</dd>
+									<dt>link</dt>
+									<dd><p><a href="https://developer.riotgames.com/apis#summoner-v4/GET_getBySummonerId">https://developer.riotgames.com/apis#summoner-v4/GET_getBySummonerId</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>summoner: <a href="../globals.html#anysummonerformat" class="tsd-signature-type">AnySummonerFormat</a></h5>
+									<h5>summoner: <a href="../globals.html#summonerid" class="tsd-signature-type">SummonerId</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="summoner.html" class="tsd-signature-type">Summoner</a><span class="tsd-signature-symbol">&gt;</span></h4>

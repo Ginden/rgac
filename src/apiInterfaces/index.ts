@@ -9,6 +9,7 @@ export * from './generated/seasons';
 export * from './lol/ChampionInfo';
 export * from './lol/ChampionMasteryDTO';
 export * from './lol/summoner';
+export * from './manual/DataDragonChampionInfo';
 export * from './manual/RankedDivision';
 export * from './manual/RankedQueue';
 export * from './manual/RankedTier';

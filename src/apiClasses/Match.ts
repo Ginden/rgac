@@ -29,7 +29,7 @@ export class Match extends ChildClient implements MatchDto {
     public gameDuration: number;
     public gameCreation: number;
 
-    constructor(client: RiotApiClient, data: MatchDto) {
+    public constructor(client: RiotApiClient, data: MatchDto) {
         super(client);
         this.seasonId = data.seasonId;
         this.queueId = data.queueId;
@@ -45,7 +45,7 @@ export class Match extends ChildClient implements MatchDto {
         this.gameCreation = data.gameCreation;
     }
 
-    static id(match: AnyMatchFormat): number {
+    public static id(match: AnyMatchFormat): number {
         if (isNumber(match)) {
             return match;
         } else {
@@ -54,6 +54,6 @@ export class Match extends ChildClient implements MatchDto {
     }
 
     public getTimeline(): Promise<MatchTimelineDto> {
-        return this.client.leagueOfLegends.matches.timeline(this);
+        return this.client.lol.matches.timeline(this);
     }
 }

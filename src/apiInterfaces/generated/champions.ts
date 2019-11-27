@@ -1,5 +1,6 @@
-/* Generated from URL http://ddragon.leagueoflegends.com/cdn/9.22.1/data/en_US/champion.json */
+/* Generated from URL http://ddragon.leagueoflegends.com/cdn/9.23.1/data/en_US/champion.json */
 
+import { DataDragonChampionInfo } from '..';
 export enum ChampionId {
     None = -1,
     AATROX = 266,
@@ -326,10 +327,12 @@ export enum ChampionId {
 /**
  * @ignore
  */
-export const championData: { [K in ChampionId]: object | null } = {
+export const championData: {
+    [K in ChampionId]: DataDragonChampionInfo | null;
+} = {
     '-1': null,
     1: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Annie',
         key: '1',
         name: 'Annie',
@@ -377,7 +380,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     2: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Olaf',
         key: '2',
         name: 'Olaf',
@@ -425,7 +428,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     3: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Galio',
         key: '3',
         name: 'Galio',
@@ -473,7 +476,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     4: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'TwistedFate',
         key: '4',
         name: 'Twisted Fate',
@@ -521,7 +524,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     5: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'XinZhao',
         key: '5',
         name: 'Xin Zhao',
@@ -569,7 +572,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     6: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Urgot',
         key: '6',
         name: 'Urgot',
@@ -617,7 +620,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     7: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Leblanc',
         key: '7',
         name: 'LeBlanc',
@@ -665,7 +668,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     8: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Vladimir',
         key: '8',
         name: 'Vladimir',
@@ -713,7 +716,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     9: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Fiddlesticks',
         key: '9',
         name: 'Fiddlesticks',
@@ -761,7 +764,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     10: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Kayle',
         key: '10',
         name: 'Kayle',
@@ -809,7 +812,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     11: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'MasterYi',
         key: '11',
         name: 'Master Yi',
@@ -857,7 +860,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     12: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Alistar',
         key: '12',
         name: 'Alistar',
@@ -905,7 +908,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     13: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Ryze',
         key: '13',
         name: 'Ryze',
@@ -953,7 +956,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     14: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Sion',
         key: '14',
         name: 'Sion',
@@ -1001,7 +1004,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     15: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Sivir',
         key: '15',
         name: 'Sivir',
@@ -1049,7 +1052,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     16: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Soraka',
         key: '16',
         name: 'Soraka',
@@ -1097,7 +1100,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     17: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Teemo',
         key: '17',
         name: 'Teemo',
@@ -1145,7 +1148,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     18: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Tristana',
         key: '18',
         name: 'Tristana',
@@ -1193,7 +1196,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     19: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Warwick',
         key: '19',
         name: 'Warwick',
@@ -1241,7 +1244,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     20: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Nunu',
         key: '20',
         name: 'Nunu & Willump',
@@ -1289,7 +1292,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     21: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'MissFortune',
         key: '21',
         name: 'Miss Fortune',
@@ -1337,7 +1340,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     22: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Ashe',
         key: '22',
         name: 'Ashe',
@@ -1385,7 +1388,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     23: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Tryndamere',
         key: '23',
         name: 'Tryndamere',
@@ -1433,7 +1436,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     24: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Jax',
         key: '24',
         name: 'Jax',
@@ -1481,7 +1484,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     25: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Morgana',
         key: '25',
         name: 'Morgana',
@@ -1529,7 +1532,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     26: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Zilean',
         key: '26',
         name: 'Zilean',
@@ -1577,7 +1580,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     27: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Singed',
         key: '27',
         name: 'Singed',
@@ -1625,7 +1628,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     28: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Evelynn',
         key: '28',
         name: 'Evelynn',
@@ -1673,7 +1676,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     29: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Twitch',
         key: '29',
         name: 'Twitch',
@@ -1721,7 +1724,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     30: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Karthus',
         key: '30',
         name: 'Karthus',
@@ -1769,7 +1772,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     31: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Chogath',
         key: '31',
         name: "Cho'Gath",
@@ -1817,7 +1820,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     32: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Amumu',
         key: '32',
         name: 'Amumu',
@@ -1865,7 +1868,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     33: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Rammus',
         key: '33',
         name: 'Rammus',
@@ -1913,7 +1916,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     34: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Anivia',
         key: '34',
         name: 'Anivia',
@@ -1961,7 +1964,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     35: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Shaco',
         key: '35',
         name: 'Shaco',
@@ -2009,7 +2012,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     36: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'DrMundo',
         key: '36',
         name: 'Dr. Mundo',
@@ -2057,7 +2060,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     37: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Sona',
         key: '37',
         name: 'Sona',
@@ -2105,7 +2108,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     38: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Kassadin',
         key: '38',
         name: 'Kassadin',
@@ -2153,7 +2156,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     39: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Irelia',
         key: '39',
         name: 'Irelia',
@@ -2201,7 +2204,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     40: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Janna',
         key: '40',
         name: 'Janna',
@@ -2249,7 +2252,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     41: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Gangplank',
         key: '41',
         name: 'Gangplank',
@@ -2297,7 +2300,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     42: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Corki',
         key: '42',
         name: 'Corki',
@@ -2345,7 +2348,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     43: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Karma',
         key: '43',
         name: 'Karma',
@@ -2393,7 +2396,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     44: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Taric',
         key: '44',
         name: 'Taric',
@@ -2441,7 +2444,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     45: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Veigar',
         key: '45',
         name: 'Veigar',
@@ -2489,7 +2492,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     48: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Trundle',
         key: '48',
         name: 'Trundle',
@@ -2537,7 +2540,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     50: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Swain',
         key: '50',
         name: 'Swain',
@@ -2585,7 +2588,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     51: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Caitlyn',
         key: '51',
         name: 'Caitlyn',
@@ -2633,7 +2636,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     53: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Blitzcrank',
         key: '53',
         name: 'Blitzcrank',
@@ -2681,7 +2684,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     54: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Malphite',
         key: '54',
         name: 'Malphite',
@@ -2729,7 +2732,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     55: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Katarina',
         key: '55',
         name: 'Katarina',
@@ -2777,7 +2780,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     56: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Nocturne',
         key: '56',
         name: 'Nocturne',
@@ -2825,7 +2828,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     57: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Maokai',
         key: '57',
         name: 'Maokai',
@@ -2873,7 +2876,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     58: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Renekton',
         key: '58',
         name: 'Renekton',
@@ -2921,7 +2924,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     59: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'JarvanIV',
         key: '59',
         name: 'Jarvan IV',
@@ -2969,7 +2972,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     60: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Elise',
         key: '60',
         name: 'Elise',
@@ -3017,7 +3020,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     61: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Orianna',
         key: '61',
         name: 'Orianna',
@@ -3065,7 +3068,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     62: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'MonkeyKing',
         key: '62',
         name: 'Wukong',
@@ -3113,7 +3116,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     63: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Brand',
         key: '63',
         name: 'Brand',
@@ -3161,7 +3164,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     64: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'LeeSin',
         key: '64',
         name: 'Lee Sin',
@@ -3209,7 +3212,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     67: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Vayne',
         key: '67',
         name: 'Vayne',
@@ -3257,7 +3260,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     68: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Rumble',
         key: '68',
         name: 'Rumble',
@@ -3305,7 +3308,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     69: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Cassiopeia',
         key: '69',
         name: 'Cassiopeia',
@@ -3353,7 +3356,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     72: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Skarner',
         key: '72',
         name: 'Skarner',
@@ -3401,7 +3404,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     74: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Heimerdinger',
         key: '74',
         name: 'Heimerdinger',
@@ -3449,7 +3452,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     75: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Nasus',
         key: '75',
         name: 'Nasus',
@@ -3497,7 +3500,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     76: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Nidalee',
         key: '76',
         name: 'Nidalee',
@@ -3545,7 +3548,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     77: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Udyr',
         key: '77',
         name: 'Udyr',
@@ -3593,7 +3596,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     78: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Poppy',
         key: '78',
         name: 'Poppy',
@@ -3641,7 +3644,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     79: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Gragas',
         key: '79',
         name: 'Gragas',
@@ -3689,7 +3692,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     80: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Pantheon',
         key: '80',
         name: 'Pantheon',
@@ -3737,7 +3740,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     81: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Ezreal',
         key: '81',
         name: 'Ezreal',
@@ -3785,7 +3788,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     82: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Mordekaiser',
         key: '82',
         name: 'Mordekaiser',
@@ -3833,7 +3836,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     83: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Yorick',
         key: '83',
         name: 'Yorick',
@@ -3881,7 +3884,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     84: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Akali',
         key: '84',
         name: 'Akali',
@@ -3929,7 +3932,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     85: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Kennen',
         key: '85',
         name: 'Kennen',
@@ -3977,7 +3980,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     86: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Garen',
         key: '86',
         name: 'Garen',
@@ -4025,7 +4028,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     89: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Leona',
         key: '89',
         name: 'Leona',
@@ -4073,7 +4076,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     90: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Malzahar',
         key: '90',
         name: 'Malzahar',
@@ -4121,7 +4124,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     91: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Talon',
         key: '91',
         name: 'Talon',
@@ -4169,7 +4172,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     92: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Riven',
         key: '92',
         name: 'Riven',
@@ -4217,7 +4220,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     96: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'KogMaw',
         key: '96',
         name: "Kog'Maw",
@@ -4265,7 +4268,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     98: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Shen',
         key: '98',
         name: 'Shen',
@@ -4313,7 +4316,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     99: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Lux',
         key: '99',
         name: 'Lux',
@@ -4361,7 +4364,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     101: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Xerath',
         key: '101',
         name: 'Xerath',
@@ -4409,7 +4412,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     102: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Shyvana',
         key: '102',
         name: 'Shyvana',
@@ -4457,7 +4460,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     103: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Ahri',
         key: '103',
         name: 'Ahri',
@@ -4505,7 +4508,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     104: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Graves',
         key: '104',
         name: 'Graves',
@@ -4553,7 +4556,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     105: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Fizz',
         key: '105',
         name: 'Fizz',
@@ -4601,7 +4604,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     106: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Volibear',
         key: '106',
         name: 'Volibear',
@@ -4649,7 +4652,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     107: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Rengar',
         key: '107',
         name: 'Rengar',
@@ -4697,7 +4700,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     110: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Varus',
         key: '110',
         name: 'Varus',
@@ -4745,7 +4748,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     111: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Nautilus',
         key: '111',
         name: 'Nautilus',
@@ -4793,7 +4796,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     112: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Viktor',
         key: '112',
         name: 'Viktor',
@@ -4841,7 +4844,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     113: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Sejuani',
         key: '113',
         name: 'Sejuani',
@@ -4889,7 +4892,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     114: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Fiora',
         key: '114',
         name: 'Fiora',
@@ -4937,7 +4940,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     115: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Ziggs',
         key: '115',
         name: 'Ziggs',
@@ -4985,7 +4988,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     117: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Lulu',
         key: '117',
         name: 'Lulu',
@@ -5033,7 +5036,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     119: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Draven',
         key: '119',
         name: 'Draven',
@@ -5081,7 +5084,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     120: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Hecarim',
         key: '120',
         name: 'Hecarim',
@@ -5129,7 +5132,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     121: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Khazix',
         key: '121',
         name: "Kha'Zix",
@@ -5177,7 +5180,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     122: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Darius',
         key: '122',
         name: 'Darius',
@@ -5225,7 +5228,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     126: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Jayce',
         key: '126',
         name: 'Jayce',
@@ -5273,7 +5276,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     127: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Lissandra',
         key: '127',
         name: 'Lissandra',
@@ -5321,7 +5324,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     131: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Diana',
         key: '131',
         name: 'Diana',
@@ -5369,7 +5372,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     133: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Quinn',
         key: '133',
         name: 'Quinn',
@@ -5417,7 +5420,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     134: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Syndra',
         key: '134',
         name: 'Syndra',
@@ -5465,7 +5468,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     136: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'AurelionSol',
         key: '136',
         name: 'Aurelion Sol',
@@ -5513,7 +5516,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     141: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Kayn',
         key: '141',
         name: 'Kayn',
@@ -5561,7 +5564,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     142: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Zoe',
         key: '142',
         name: 'Zoe',
@@ -5609,7 +5612,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     143: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Zyra',
         key: '143',
         name: 'Zyra',
@@ -5657,7 +5660,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     145: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Kaisa',
         key: '145',
         name: "Kai'Sa",
@@ -5705,7 +5708,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     150: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Gnar',
         key: '150',
         name: 'Gnar',
@@ -5753,7 +5756,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     154: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Zac',
         key: '154',
         name: 'Zac',
@@ -5801,7 +5804,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     157: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Yasuo',
         key: '157',
         name: 'Yasuo',
@@ -5849,7 +5852,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     161: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Velkoz',
         key: '161',
         name: "Vel'Koz",
@@ -5897,7 +5900,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     163: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Taliyah',
         key: '163',
         name: 'Taliyah',
@@ -5945,7 +5948,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     164: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Camille',
         key: '164',
         name: 'Camille',
@@ -5993,7 +5996,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     201: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Braum',
         key: '201',
         name: 'Braum',
@@ -6041,7 +6044,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     202: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Jhin',
         key: '202',
         name: 'Jhin',
@@ -6089,7 +6092,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     203: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Kindred',
         key: '203',
         name: 'Kindred',
@@ -6137,7 +6140,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     222: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Jinx',
         key: '222',
         name: 'Jinx',
@@ -6185,7 +6188,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     223: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'TahmKench',
         key: '223',
         name: 'Tahm Kench',
@@ -6233,7 +6236,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     235: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Senna',
         key: '235',
         name: 'Senna',
@@ -6255,7 +6258,7 @@ export const championData: { [K in ChampionId]: object | null } = {
             w: 48,
             h: 48
         },
-        tags: ['Marksman', 'Mage'],
+        tags: ['Marksman', 'Support'],
         partype: 'Mana',
         stats: {
             hp: 520,
@@ -6281,7 +6284,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     236: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Lucian',
         key: '236',
         name: 'Lucian',
@@ -6329,7 +6332,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     238: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Zed',
         key: '238',
         name: 'Zed',
@@ -6377,7 +6380,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     240: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Kled',
         key: '240',
         name: 'Kled',
@@ -6425,7 +6428,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     245: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Ekko',
         key: '245',
         name: 'Ekko',
@@ -6473,7 +6476,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     246: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Qiyana',
         key: '246',
         name: 'Qiyana',
@@ -6521,7 +6524,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     254: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Vi',
         key: '254',
         name: 'Vi',
@@ -6569,7 +6572,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     266: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Aatrox',
         key: '266',
         name: 'Aatrox',
@@ -6617,7 +6620,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     267: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Nami',
         key: '267',
         name: 'Nami',
@@ -6665,7 +6668,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     268: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Azir',
         key: '268',
         name: 'Azir',
@@ -6713,7 +6716,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     350: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Yuumi',
         key: '350',
         name: 'Yuumi',
@@ -6761,7 +6764,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     412: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Thresh',
         key: '412',
         name: 'Thresh',
@@ -6809,7 +6812,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     420: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Illaoi',
         key: '420',
         name: 'Illaoi',
@@ -6857,7 +6860,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     421: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'RekSai',
         key: '421',
         name: "Rek'Sai",
@@ -6905,7 +6908,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     427: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Ivern',
         key: '427',
         name: 'Ivern',
@@ -6953,7 +6956,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     429: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Kalista',
         key: '429',
         name: 'Kalista',
@@ -7001,7 +7004,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     432: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Bard',
         key: '432',
         name: 'Bard',
@@ -7049,7 +7052,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     497: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Rakan',
         key: '497',
         name: 'Rakan',
@@ -7097,7 +7100,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     498: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Xayah',
         key: '498',
         name: 'Xayah',
@@ -7145,7 +7148,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     516: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Ornn',
         key: '516',
         name: 'Ornn',
@@ -7193,7 +7196,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     517: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Sylas',
         key: '517',
         name: 'Sylas',
@@ -7241,7 +7244,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     518: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Neeko',
         key: '518',
         name: 'Neeko',
@@ -7289,7 +7292,7 @@ export const championData: { [K in ChampionId]: object | null } = {
         }
     },
     555: {
-        version: '9.22.1',
+        version: '9.23.1',
         id: 'Pyke',
         key: '555',
         name: 'Pyke',

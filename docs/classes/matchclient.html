@@ -113,7 +113,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="childclient.html">ChildClient</a>.<a href="childclient.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/ChildClient.ts#L6">ChildClient.ts:6</a></li>
+									<li>Defined in ChildClient.ts:7</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -139,9 +139,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/MatchClient.ts#L15">lolApi/MatchClient.ts:15</a></li>
+									<li>Defined in lolApi/MatchClient.ts:20</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Get match by match ID.</p>
+									</dd>
+									<dt>link</dt>
+									<dd><p><a href="https://developer.riotgames.com/apis#match-v4/GET_getMatch">https://developer.riotgames.com/apis#match-v4/GET_getMatch</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -156,25 +166,35 @@
 					<a name="getformatchandtournament" class="tsd-anchor"></a>
 					<h3>get<wbr>For<wbr>Match<wbr>And<wbr>Tournament</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>For<wbr>Match<wbr>And<wbr>Tournament<span class="tsd-signature-symbol">(</span>match<span class="tsd-signature-symbol">: </span><a href="../globals.html#anymatchformat" class="tsd-signature-type">AnyMatchFormat</a>, code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>For<wbr>Match<wbr>And<wbr>Tournament<span class="tsd-signature-symbol">(</span>match<span class="tsd-signature-symbol">: </span><a href="../globals.html#anymatchformat" class="tsd-signature-type">AnyMatchFormat</a>, tournamentCode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="match.html" class="tsd-signature-type">Match</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/MatchClient.ts#L63">lolApi/MatchClient.ts:63</a></li>
+									<li>Defined in lolApi/MatchClient.ts:99</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>link</dt>
+									<dd><p><a href="https://developer.riotgames.com/apis#match-v4/GET_getMatchByTournamentCode">https://developer.riotgames.com/apis#match-v4/GET_getMatchByTournamentCode</a></p>
+									</dd>
+									<dt>description</dt>
+									<dd><p>Get match by match ID and tournament code.</p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>match: <a href="../globals.html#anymatchformat" class="tsd-signature-type">AnyMatchFormat</a></h5>
 								</li>
 								<li>
-									<h5>code: <span class="tsd-signature-type">string</span></h5>
+									<h5>tournamentCode: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="match.html" class="tsd-signature-type">Match</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -182,22 +202,32 @@
 					<a name="getfortournamentcode" class="tsd-anchor"></a>
 					<h3>get<wbr>For<wbr>Tournament<wbr>Code</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>For<wbr>Tournament<wbr>Code<span class="tsd-signature-symbol">(</span>code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>For<wbr>Tournament<wbr>Code<span class="tsd-signature-symbol">(</span>tournamentCode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/MatchClient.ts#L59">lolApi/MatchClient.ts:59</a></li>
+									<li>Defined in lolApi/MatchClient.ts:84</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Get match IDs by tournament code.</p>
+									</dd>
+									<dt>link</dt>
+									<dd><p><a href="https://developer.riotgames.com/apis#match-v4/GET_getMatchIdsByTournamentCode">https://developer.riotgames.com/apis#match-v4/GET_getMatchIdsByTournamentCode</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>code: <span class="tsd-signature-type">string</span></h5>
+									<h5>tournamentCode: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -205,19 +235,30 @@
 					<a name="listbysummoner" class="tsd-anchor"></a>
 					<h3>list<wbr>BySummoner</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">list<wbr>BySummoner<span class="tsd-signature-symbol">(</span>summoner<span class="tsd-signature-symbol">: </span><a href="../globals.html#anysummonerformat" class="tsd-signature-type">AnySummonerFormat</a>, filter<span class="tsd-signature-symbol">?: </span><a href="../globals.html#matchfilterobject" class="tsd-signature-type">MatchFilterObject</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#withnextpage" class="tsd-signature-type">WithNextPage</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/matchlistdto.html" class="tsd-signature-type">MatchlistDto</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">list<wbr>BySummoner<span class="tsd-signature-symbol">(</span>summoner<span class="tsd-signature-symbol">: </span><a href="../globals.html#accountid" class="tsd-signature-type">AccountId</a>, filter<span class="tsd-signature-symbol">?: </span><a href="../globals.html#matchfilterobject" class="tsd-signature-type">MatchFilterObject</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#withnextpage" class="tsd-signature-type">WithNextPage</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/matchlistdto.html" class="tsd-signature-type">MatchlistDto</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/MatchClient.ts#L23">lolApi/MatchClient.ts:23</a></li>
+									<li>Defined in lolApi/MatchClient.ts:36</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Get matchlist for games played on given account ID and platform ID
+										and filtered using given filter parameters, if any.</p>
+									</dd>
+									<dt>link</dt>
+									<dd><p><a href="https://developer.riotgames.com/apis#match-v4/GET_getMatchlist">https://developer.riotgames.com/apis#match-v4/GET_getMatchlist</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>summoner: <a href="../globals.html#anysummonerformat" class="tsd-signature-type">AnySummonerFormat</a></h5>
+									<h5>summoner: <a href="../globals.html#accountid" class="tsd-signature-type">AccountId</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> filter: <a href="../globals.html#matchfilterobject" class="tsd-signature-type">MatchFilterObject</a></h5>
@@ -237,9 +278,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Ginden/rgac/blob/master/src/lolApi/MatchClient.ts#L52">lolApi/MatchClient.ts:52</a></li>
+									<li>Defined in lolApi/MatchClient.ts:71</li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>description</dt>
+									<dd><p>Get match timeline by match ID.</p>
+									</dd>
+									<dt>link</dt>
+									<dd><p><a href="https://developer.riotgames.com/apis#match-v4/GET_getMatchTimeline">https://developer.riotgames.com/apis#match-v4/GET_getMatchTimeline</a></p>
+									</dd>
+								</dl>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>

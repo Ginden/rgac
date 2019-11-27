@@ -6,16 +6,17 @@ import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { isObject } from 'lodash';
 import rateLimit = require('axios-rate-limit');
 import _ = require('lodash');
+import { Servers } from './apiInterfaces';
 
 const API_KEY = Symbol();
 
 export class RiotApiClient {
-    public static readonly dataDragonVersion: string = '9.22.1';
+    public static readonly dataDragonVersion: string = `9.23.1`;
     private readonly [API_KEY]: string;
-    private server: string;
-    private axiosInstance: AxiosInstance;
+    public readonly server: string | Servers;
+    private readonly axiosInstance: AxiosInstance;
 
-    constructor(opts: ClientOptions) {
+    public constructor(opts: ClientOptions) {
         assertIsNotEmpty(opts.apiKey);
         this[API_KEY] = opts.apiKey;
         this.server = opts.server;
@@ -34,21 +35,31 @@ export class RiotApiClient {
     }
 
     @CachedGetter
-    get domain() {
+    private get domain() {
         return `https://${this.server}.api.riotgames.com`;
     }
 
     @CachedGetter
-    get leagueOfLegends(): LeagueOfLegendsApi {
+    public get leagueOfLegends(): LeagueOfLegendsApi {
         return new LeagueOfLegendsApi(this);
     }
 
-    @CachedGetter
-    get teamfightTactics(): never {
-        throw new Error('Not implemented');
+    public get lol(): LeagueOfLegendsApi {
+        return this.leagueOfLegends;
     }
 
-    async doRequest<T = any>(opts: Partial<AxiosRequestConfig>): Promise<T> {
+    @CachedGetter
+    public get teamfightTactics(): never {
+        throw new Error(`Not implemented`);
+    }
+
+    public get tft(): never {
+        return this.teamfightTactics;
+    }
+
+    public async doRequest<T = any>(
+        opts: Partial<AxiosRequestConfig>
+    ): Promise<T> {
         return this.axiosInstance(
             _.defaultsDeep(
                 {
@@ -64,17 +75,17 @@ export class RiotApiClient {
             if (res.status >= 200 && res.status < 400) {
                 return res.data;
             } else {
-                throw Object.assign(
-                    new Error(
-                        `Endpoint ${opts.url} returned status code ${res.status}`
-                    ),
-                    opts,
-                    {
-                        data: res.data,
-                        statusCode: res.status,
-                        statusText: res.statusText
-                    }
-                );
+                console.error(opts.url, res.data);
+                const riotMessage = _.get(res, `data.status.message`);
+                let errorMessage = `Endpoint ${opts.url} returned status code ${res.status}`;
+                if (riotMessage) {
+                    errorMessage += ` ("${riotMessage}")`;
+                }
+                throw Object.assign(new Error(errorMessage), opts, {
+                    data: res.data,
+                    statusCode: res.status,
+                    statusText: res.statusText
+                });
             }
         });
     }
