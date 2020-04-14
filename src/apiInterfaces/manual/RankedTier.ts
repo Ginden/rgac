@@ -7,5 +7,5 @@ export enum RankedTier {
     GOLD = `GOLD`,
     SILVER = `SILVER`,
     BRONZE = `BRONZE`,
-    IRON = `IRON`
+    IRON = `IRON`,
 }

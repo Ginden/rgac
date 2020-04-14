@@ -4,6 +4,7 @@ import { RankedQueue } from '..';
 import { RankedTier } from '..';
 
 export interface LeagueEntryDTO {
+    leagueId: string;
     queueType: RankedQueue;
     summonerName: string;
     summonerId: string;

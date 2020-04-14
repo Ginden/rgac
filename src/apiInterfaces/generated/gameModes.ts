@@ -18,5 +18,5 @@ export enum GameMode {
     STARGUARDIAN = 'STARGUARDIAN', // Star Guardian Invasion games
     PROJECT = 'PROJECT', // PROJECT: Hunters games
     GAMEMODEX = 'GAMEMODEX', // Nexus Blitz games
-    ODYSSEY = 'ODYSSEY' // Odyssey: Extraction games
+    ODYSSEY = 'ODYSSEY', // Odyssey: Extraction games
 }

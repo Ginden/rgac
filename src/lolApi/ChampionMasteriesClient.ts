@@ -10,13 +10,9 @@ export class ChampionMasteriesClient extends ChildClient {
      * @param {AnySummonerFormat} summoner
      * @return {Promise<ChampionMasteryDTO[]>}
      */
-    public async bySummoner(
-        summoner: SummonerId
-    ): Promise<ChampionMasteryDTO[]> {
+    public async bySummoner(summoner: SummonerId): Promise<ChampionMasteryDTO[]> {
         const accountId: string = Summoner.id(summoner);
-        return this.doRequest({
-            url: `lol/champion-mastery/v4/champion-masteries/by-summoner/${accountId}`
-        });
+        return this.doRequest(`lol/champion-mastery/v4/champion-masteries/by-summoner/${accountId}`);
     }
 
     /**
@@ -27,14 +23,11 @@ export class ChampionMasteriesClient extends ChildClient {
      * @return {Promise<ChampionMasteryDTO>}
      */
 
-    public async bySummonerAndChampion(
-        summoner: SummonerId,
-        champion: ChampionId
-    ): Promise<ChampionMasteryDTO> {
+    public async bySummonerAndChampion(summoner: SummonerId, champion: ChampionId): Promise<ChampionMasteryDTO> {
         const encryptedSummonerId: string = Summoner.id(summoner);
-        return this.client.doRequest({
-            url: `lol/champion-mastery/v4/champion-masteries/by-summoner/${encryptedSummonerId}/by-champion/${champion}`
-        });
+        return this.client.doRequest(
+            `lol/champion-mastery/v4/champion-masteries/by-summoner/${encryptedSummonerId}/by-champion/${champion}`
+        );
     }
 
     /**
@@ -43,12 +36,8 @@ export class ChampionMasteriesClient extends ChildClient {
      * @param {AnySummonerFormat} summoner
      * @return {Promise<number>}
      */
-    public async scoresBySummoner(
-        summoner: AnySummonerFormat
-    ): Promise<number> {
+    public async scoresBySummoner(summoner: AnySummonerFormat): Promise<number> {
         const accountId: string = Summoner.id(summoner);
-        return this.doRequest({
-            url: `lol/champion-mastery/v4/scores/${accountId}/`
-        });
+        return this.doRequest(`lol/champion-mastery/v4/scores/by-summoner/${accountId}/`);
     }
 }

@@ -14,7 +14,7 @@ export class LeagueExpClient extends ChildClient {
     ): Promise<WithNextPage<LeagueEntryDTO[]>> {
         return {
             data: await this.entriesRaw(queue, tier, division, page),
-            getNextPage: () => this.entries(queue, tier, division, page + 1)
+            getNextPage: () => this.entries(queue, tier, division, page + 1),
         };
     }
 
@@ -41,8 +41,8 @@ export class LeagueExpClient extends ChildClient {
         return this.client.doRequest({
             url: `/lol/league-exp/v4/entries/${queue}/${tier}/${division}`,
             params: {
-                page
-            }
+                page,
+            },
         });
     }
 }

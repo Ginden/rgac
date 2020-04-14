@@ -11,9 +11,7 @@ export class SummonerClient extends ChildClient {
      */
     public async byAccount(summoner: AccountId): Promise<Summoner> {
         const encryptedAccountId: string = Summoner.accountId(summoner);
-        const data = await this.doRequest({
-            url: `/lol/summoner/v4/summoners/by-account/${encryptedAccountId}`
-        });
+        const data = await this.doRequest(`/lol/summoner/v4/summoners/by-account/${encryptedAccountId}`);
         return new Summoner(this.client, data);
     }
 
@@ -25,9 +23,7 @@ export class SummonerClient extends ChildClient {
      */
     public async byName(summoner: AnySummonerFormat): Promise<Summoner> {
         const name: string = Summoner.getName(summoner);
-        const data = await this.doRequest({
-            url: `/lol/summoner/v4/summoners/by-name/${name}`
-        });
+        const data = await this.doRequest(`/lol/summoner/v4/summoners/by-name/${name}`);
         return new Summoner(this.client, data);
     }
 
@@ -39,9 +35,7 @@ export class SummonerClient extends ChildClient {
      */
     public async byPuuid(summoner: Puuid): Promise<Summoner> {
         const puuid: string = Summoner.puuid(summoner);
-        const data = await this.doRequest({
-            url: `/lol/summoner/v4/summoners/by-puuid/${puuid}`
-        });
+        const data = await this.doRequest(`/lol/summoner/v4/summoners/by-puuid/${puuid}`);
         return new Summoner(this.client, data);
     }
 
@@ -53,9 +47,7 @@ export class SummonerClient extends ChildClient {
      */
     public async bySummonerId(summoner: SummonerId): Promise<Summoner> {
         const encryptedSummonerId: string = Summoner.id(summoner);
-        const data = await this.doRequest({
-            url: `/lol/summoner/v4/summoners/${encryptedSummonerId}`
-        });
+        const data = await this.doRequest(`/lol/summoner/v4/summoners/${encryptedSummonerId}`);
         return new Summoner(this.client, data);
     }
 }

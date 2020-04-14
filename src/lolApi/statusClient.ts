@@ -9,7 +9,7 @@ export class StatusClient extends ChildClient {
      */
     public async shardData(): Promise<ShardStatus> {
         return this.doRequest({
-            url: '/lol/status/v3/shard-data'
+            url: '/lol/status/v3/shard-data',
         });
     }
 }

@@ -1,5 +1,6 @@
 export * from './ChampionClient';
 export * from './ChampionMasteriesClient';
+export * from './ClashClient';
 export * from './leagueClient';
 export * from './leagueExpClient';
 export * from './LeagueOfLegendsApi';

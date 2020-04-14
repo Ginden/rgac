@@ -14,5 +14,5 @@ export enum Season {
     PRESEASON_2018 = 10,
     SEASON_2018 = 11,
     PRESEASON_2019 = 12,
-    SEASON_2019 = 13
+    SEASON_2019 = 13,
 }

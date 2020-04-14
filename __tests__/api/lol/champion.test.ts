@@ -10,13 +10,13 @@ describe('RiotApiClient.leagueOfLegends.champions', () => {
     beforeAll(async () => {
         client = new RiotApiClient({
             apiKey,
-            server
+            server,
         });
     });
 
     test('#champions() returns valid schema', async () => {
         const data: ChampionInfo = await client.leagueOfLegends.champions.rotation();
-        saveData(`leagueOfLegends.champions.rotation`, data);
+        saveData(`leagueOfLegends/champions/rotation`, data);
         Joi.assert(data, ChampionInfoSchema);
     });
 });

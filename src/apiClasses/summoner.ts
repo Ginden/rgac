@@ -4,18 +4,11 @@ import {
     ChampionId,
     LeagueEntryDTO,
     MatchlistDto,
-    CurrentGameInfo
+    CurrentGameInfo,
 } from '../apiInterfaces';
 import { ChildClient } from '../ChildClient';
 import { RiotApiClient } from '../RiotApiClient';
-import {
-    AnySummonerFormat,
-    MatchFilterObject,
-    WithNextPage,
-    SummonerId,
-    AccountId,
-    Puuid
-} from '../types';
+import { AnySummonerFormat, MatchFilterObject, WithNextPage, SummonerId, AccountId, Puuid } from '../types';
 import { assertIsNotEmpty } from '../assert';
 import { isString } from 'lodash';
 
@@ -46,9 +39,7 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
     /**
      * See [[MatchClient.listBySummoner]]
      */
-    public getMatches(
-        filter: MatchFilterObject = {}
-    ): Promise<WithNextPage<MatchlistDto>> {
+    public getMatches(filter: MatchFilterObject = {}): Promise<WithNextPage<MatchlistDto>> {
         return this.client.lol.matches.listBySummoner(this, filter);
     }
 
@@ -62,13 +53,8 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
     /**
      * See [[ChampionMasteriesClient.bySummonerAndChampion]]
      */
-    public getChampionMastery(
-        champion: ChampionId
-    ): Promise<ChampionMasteryDTO> {
-        return this.client.lol.championMasteries.bySummonerAndChampion(
-            this,
-            champion
-        );
+    public getChampionMastery(champion: ChampionId): Promise<ChampionMasteryDTO> {
+        return this.client.lol.championMasteries.bySummonerAndChampion(this, champion);
     }
 
     /**
@@ -102,9 +88,7 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
         assertIsNotEmpty(summoner);
         if (isString(summoner)) {
             if (summoner.length === 78) {
-                throw new Error(
-                    `PUUID given, but encrypted account ID was required`
-                );
+                throw new Error(`PUUID given, but encrypted account ID was required`);
             }
             return summoner;
         }

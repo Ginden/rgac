@@ -1,15 +1,15 @@
 {
   "name": "rgac",
-  "version": "0.0.4",
+  "version": "1.1.1",
   "description": "Riot Games API Client, written in TypeScript",
   "main": "build/index.js",
   "scripts": {
     "build": "rimraf build && tsc",
     "test": "jest",
-    "t:c": "npm run --silent test:coverage",
+    "t:c": "npm run test:coverage",
     "test:coverage": "jest --coverage",
     "docs": "rimraf docs && typedoc",
-    "prepare": "npm run build # && npm test",
+    "prepublish": "npm run build # && npm test",
     "generate-schemas": "ts-node src/tools/generateJoiFromInterfaces.ts",
     "generate-files": "ts-node src/tools/generateEnumsFromFiles.ts",
     "prettier": "prettier --loglevel error --write 'src/**/*.ts' '__tests__/**/*.ts'",
@@ -19,9 +19,17 @@
   "files": [
     "build"
   ],
-  "keywords": [],
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "keywords": [
+    "league of legends",
+    "riot games",
+    "tft",
+    "teamfight tactics"
+  ],
   "author": "Michał Wadas <michalwadas@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/hapi__joi": "^16.0.3",
@@ -31,31 +39,37 @@
     "@types/slug": "^0.9.1",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
-    "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-prettier": "^3.1.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.3",
     "husky": "^3.0.9",
     "jest": "^24.9.0",
-    "prettier": "^1.18.2",
-    "rimraf": "^3.0.0",
+    "mkdirp-promise": "^5.0.1",
+    "prettier": "^2.0.4",
+    "rimraf": "^3.0.2",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.4.1",
-    "typedoc": "^0.15.0",
-    "typescript": "^3.7.2"
+    "typedoc": "^0.17.4",
+    "typescript": "^3.8.3"
   },
   "types": "./build/index.d.ts",
   "dependencies": {
     "@hapi/joi": "^16.1.7",
-    "axios": "^0.19.0",
+    "@types/mkdirp-promise": "^5.0.0",
+    "axios": "^0.19.2",
     "axios-rate-limit": "^1.2.1",
     "lodash": "^4.17.15",
     "slug": "^1.1.0",
-    "tslib": "^1.10.0"
+    "tslib": "^1.11.1"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run docs && git add docs",
       "pre-push": "npm run build && npm test"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ginden/rgac.git"
   }
 }

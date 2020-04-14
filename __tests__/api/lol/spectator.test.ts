@@ -1,9 +1,4 @@
-import {
-    RiotApiClient,
-    J,
-    FeaturedGames,
-    FeaturedGamesSchema
-} from '../../../src';
+import { RiotApiClient, J, FeaturedGames, FeaturedGamesSchema } from '../../../src';
 import { apiKey, saveData, server } from './helpers';
 
 describe('RiotApiClient.leagueOfLegends.spectator', () => {
@@ -11,13 +6,13 @@ describe('RiotApiClient.leagueOfLegends.spectator', () => {
     beforeAll(async () => {
         client = new RiotApiClient({
             apiKey,
-            server
+            server,
         });
     });
 
     test('#featuredGames() matches schema', async () => {
         const data: FeaturedGames = await client.leagueOfLegends.spectator.featuredGames();
-        saveData(`leagueOfLegends.spectator.featuredGames`, data);
+        saveData(`leagueOfLegends/spectator/featuredGames`, data);
         J.assert(data, FeaturedGamesSchema);
     });
 });

@@ -47,13 +47,13 @@ export enum GameQueue {
     QUEUE_5V5_BLIND_PICK_430 = 430, // 5v5 Blind Pick games
     QUEUE_5V5_RANKED_FLEX = 440, // 5v5 Ranked Flex games
     QUEUE_5V5_ARAM_450 = 450, // 5v5 ARAM games
-    QUEUE_3V3_BLIND_PICK = 460, // 3v3 Blind Pick games
-    QUEUE_3V3_RANKED_FLEX_470 = 470, // 3v3 Ranked Flex games
+    QUEUE_3V3_BLIND_PICK = 460, // Deprecated in patch 9.23
+    QUEUE_3V3_RANKED_FLEX_470 = 470, // Deprecated in patch 9.23
     BLOOD_HUNT_ASSASSIN = 600, // Blood Hunt Assassin games
     DARK_STAR_SINGULARITY = 610, // Dark Star: Singularity games
     CLASH = 700, // Clash games
-    CO_OP_VS_AI_INTERMEDIATE_BOT_800 = 800, // Co-op vs. AI Intermediate Bot games
-    CO_OP_VS_AI_INTRO_BOT_810 = 810, // Co-op vs. AI Intro Bot games
+    CO_OP_VS_AI_INTERMEDIATE_BOT_800 = 800, // Deprecated in patch 9.23
+    CO_OP_VS_AI_INTRO_BOT_810 = 810, // Deprecated in patch 9.23
     CO_OP_VS_AI_BEGINNER_BOT_820 = 820, // Co-op vs. AI Beginner Bot games
     CO_OP_VS_AI_INTRO_BOT_830 = 830, // Co-op vs. AI Intro Bot games
     CO_OP_VS_AI_BEGINNER_BOT_840 = 840, // Co-op vs. AI Beginner Bot games
@@ -76,8 +76,9 @@ export enum GameQueue {
     ODYSSEY_EXTRACTION_ONSLAUGHT = 1070, // Odyssey Extraction: Onslaught games
     TEAMFIGHT_TACTICS = 1090, // Teamfight Tactics games
     RANKED_TEAMFIGHT_TACTICS = 1100, // Ranked Teamfight Tactics games
+    TEAMFIGHT_TACTICS_TUTORIAL = 1110, // Teamfight Tactics Tutorial games
     NEXUS_BLITZ = 1200, // Deprecated in patch 9.2
     TUTORIAL_1 = 2000, // Tutorial 1
     TUTORIAL_2 = 2010, // Tutorial 2
-    TUTORIAL_3 = 2020 // Tutorial 3
+    TUTORIAL_3 = 2020, // Tutorial 3
 }

@@ -10,7 +10,7 @@ import {
     ParticipantDto,
     ParticipantIdentityDto,
     Season,
-    TeamStatsDto
+    TeamStatsDto,
 } from '../apiInterfaces';
 import { RiotApiClient } from '../RiotApiClient';
 import { AnyMatchFormat } from '../types';

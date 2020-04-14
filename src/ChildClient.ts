@@ -11,8 +11,9 @@ export class ChildClient {
     }
 
     protected doRequest<T = any>(
-        opts: Partial<AxiosRequestConfig>
+        opts: Partial<AxiosRequestConfig> | string,
+        target: 'region' | 'platform' = 'platform'
     ): Promise<T> {
-        return this.client.doRequest<T>(opts);
+        return this.client.doRequest<T>(opts, target);
     }
 }

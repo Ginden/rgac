@@ -1,12 +1,6 @@
 import { Summoner } from '../apiClasses';
 
-import {
-    LeagueEntryDTO,
-    LeagueListDTO,
-    RankedDivision,
-    RankedQueue,
-    RankedTier
-} from '../apiInterfaces';
+import { LeagueEntryDTO, LeagueListDTO, RankedDivision, RankedQueue, RankedTier } from '../apiInterfaces';
 
 import { ChildClient } from '../ChildClient';
 import { AccountId, WithNextPage } from '../types';
@@ -19,9 +13,7 @@ export class LeagueClient extends ChildClient {
      * @return {Promise<LeagueListDTO>}
      */
     public async challengerLeagues(queue: RankedQueue): Promise<LeagueListDTO> {
-        return this.doRequest({
-            url: `/lol/league/v4/challengerleagues/by-queue/${queue}`
-        });
+        return this.doRequest(`/lol/league/v4/challengerleagues/by-queue/${queue}`);
     }
 
     /**
@@ -30,13 +22,9 @@ export class LeagueClient extends ChildClient {
      * @param {AccountId} summoner
      * @return {Promise<LeagueEntryDTO[]>}
      */
-    public async entriesBySummoner(
-        summoner: AccountId
-    ): Promise<LeagueEntryDTO[]> {
+    public async entriesBySummoner(summoner: AccountId): Promise<LeagueEntryDTO[]> {
         const summonerId: string = Summoner.accountId(summoner);
-        return this.doRequest({
-            url: `/lol/league/v4/entries/by-summoner/${summonerId}`
-        });
+        return this.doRequest(`/lol/league/v4/entries/by-summoner/${summonerId}`);
     }
 
     /**
@@ -54,12 +42,7 @@ export class LeagueClient extends ChildClient {
         division: RankedDivision,
         page: number = 1
     ): Promise<WithNextPage<LeagueEntryDTO[]>> {
-        return this.client.leagueOfLegends.leagueExp.entries(
-            queue,
-            tier,
-            division,
-            page
-        );
+        return this.client.leagueOfLegends.leagueExp.entries(queue, tier, division, page);
     }
 
     /**
@@ -68,12 +51,8 @@ export class LeagueClient extends ChildClient {
      * @param {RankedQueue} queue
      * @return {Promise<LeagueListDTO>}
      */
-    public async grandmasterLeagues(
-        queue: RankedQueue
-    ): Promise<LeagueListDTO> {
-        return this.doRequest({
-            url: `/lol/league/v4/grandmasterleagues/by-queue/${queue}`
-        });
+    public async grandmasterLeagues(queue: RankedQueue): Promise<LeagueListDTO> {
+        return this.doRequest(`/lol/league/v4/grandmasterleagues/by-queue/${queue}`);
     }
 
     /**
@@ -83,9 +62,7 @@ export class LeagueClient extends ChildClient {
      * @return {Promise<LeagueListDTO>}
      */
     public async masterLeagues(queue: RankedQueue): Promise<LeagueListDTO> {
-        return this.doRequest({
-            url: `/lol/league/v4/masterleagues/by-queue/${queue}`
-        });
+        return this.doRequest(`/lol/league/v4/masterleagues/by-queue/${queue}`);
     }
 
     /**
@@ -95,8 +72,6 @@ export class LeagueClient extends ChildClient {
      * @return {Promise<LeagueListDTO>}
      */
     public async byId(id: string): Promise<LeagueListDTO> {
-        return this.doRequest({
-            url: `/lol/league/v4/leagues/${id}`
-        });
+        return this.doRequest(`/lol/league/v4/leagues/${id}`);
     }
 }

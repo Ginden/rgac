@@ -1,12 +1,5 @@
-import { Summoner } from './apiClasses';
-import {
-    ApiSummonerInfo,
-    ChampionId,
-    GameQueue,
-    MatchDto,
-    Season
-} from './apiInterfaces';
-import { Match } from './apiClasses/Match';
+import { Summoner, Match } from './apiClasses';
+import { ApiSummonerInfo, ChampionId, GameQueue, MatchDto, Season } from './apiInterfaces';
 
 /**
  * Any summoner format is allowed. Passing strings is discouraged, because it's prone to errors (summonerId/accoundId/puuid etc.)
@@ -21,6 +14,10 @@ export type SummonerId = AnySummonerFormat | { summonerId: string };
  */
 export type AccountId = AnySummonerFormat | { accountId: string };
 export type Puuid = AnySummonerFormat | { puuid: string };
+
+export type ClashTeam = { teamId: string } | string;
+
+export type ClashTournament = { id: number } | number;
 
 /**
  * This is internal type for pagination. It will be replaced with AsyncIterables in future.

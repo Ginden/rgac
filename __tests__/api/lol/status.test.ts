@@ -8,13 +8,13 @@ describe('RiotApiClient.leagueOfLegends.status', () => {
     beforeAll(async () => {
         client = new RiotApiClient({
             apiKey,
-            server
+            server,
         });
     });
 
     test('#shardData() returns valid schema', async () => {
         const data: ShardStatus = await client.leagueOfLegends.status.shardData();
-        saveData(`leagueOfLegends.status.shardData`, data);
+        saveData(`leagueOfLegends/status/shardData`, data);
         J.assert(data, ShardStatusSchema);
     });
 });

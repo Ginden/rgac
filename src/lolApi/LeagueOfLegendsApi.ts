@@ -9,6 +9,7 @@ import { SpectatorClient } from './SpectatorClient';
 import { StatusClient } from './statusClient';
 import { SummonerClient } from './SummonerClient';
 import { ThirdPartyCodeClient } from './ThirdPartyCodeClient';
+import { ClashClient } from './ClashClient';
 
 export class LeagueOfLegendsApi extends ChildClient {
     @CachedGetter
@@ -54,5 +55,10 @@ export class LeagueOfLegendsApi extends ChildClient {
     @CachedGetter
     public get thirdParty(): ThirdPartyCodeClient {
         return new ThirdPartyCodeClient(this.client);
+    }
+
+    @CachedGetter
+    public get clash(): ClashClient {
+        return new ClashClient(this.client);
     }
 }

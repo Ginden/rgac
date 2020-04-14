@@ -1,19 +1,20 @@
 import { assertIsNotEmpty } from './assert';
 import { CachedGetter } from './decorators';
 import { ClientOptions } from './userInterfaces';
-import { LeagueOfLegendsApi } from './lolApi';
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { isObject } from 'lodash';
 import rateLimit = require('axios-rate-limit');
 import _ = require('lodash');
-import { Servers } from './apiInterfaces';
+import { Servers, PlatformRegionServerMapping } from './apiInterfaces';
+import { LeagueOfLegendsApi } from './lolApi';
+import { TeamfightTacticsApi } from './tftApi';
 
-const API_KEY = Symbol();
+const API_KEY: unique symbol = Symbol();
 
 export class RiotApiClient {
-    public static readonly dataDragonVersion: string = `9.23.1`;
+    public static readonly dataDragonVersion: string = `10.7.1`;
     private readonly [API_KEY]: string;
-    public readonly server: string | Servers;
+    public readonly server: Servers;
     private readonly axiosInstance: AxiosInstance;
 
     public constructor(opts: ClientOptions) {
@@ -35,8 +36,13 @@ export class RiotApiClient {
     }
 
     @CachedGetter
-    private get domain() {
+    public get domain() {
         return `https://${this.server}.api.riotgames.com`;
+    }
+
+    @CachedGetter
+    public get regionalDomain() {
+        return `https://${PlatformRegionServerMapping[this.server]}.api.riotgames.com`;
     }
 
     @CachedGetter
@@ -49,42 +55,50 @@ export class RiotApiClient {
     }
 
     @CachedGetter
-    public get teamfightTactics(): never {
-        throw new Error(`Not implemented`);
+    public get teamfightTactics(): TeamfightTacticsApi {
+        return new TeamfightTacticsApi(this);
     }
 
-    public get tft(): never {
+    public get tft(): TeamfightTacticsApi {
         return this.teamfightTactics;
     }
 
     public async doRequest<T = any>(
-        opts: Partial<AxiosRequestConfig>
+        opts: Partial<AxiosRequestConfig> | string,
+        target: 'region' | 'platform' = 'platform'
     ): Promise<T> {
+        const options: Partial<AxiosRequestConfig> =
+            typeof opts === 'string'
+                ? {
+                      url: opts,
+                  }
+                : opts;
+        const domain = target === 'region' ? this.regionalDomain : this.domain;
         return this.axiosInstance(
             _.defaultsDeep(
                 {
-                    baseURL: this.domain,
+                    baseURL: domain,
                     headers: {
-                        'x-riot-token': this[API_KEY]
+                        'X-Riot-Token': this[API_KEY],
                     },
-                    validateStatus: null
+                    validateStatus: null,
                 },
-                opts
+                options
             )
         ).then((res: AxiosResponse<T>) => {
             if (res.status >= 200 && res.status < 400) {
                 return res.data;
             } else {
-                console.error(opts.url, res.data);
+                console.error(options.url, res.data);
                 const riotMessage = _.get(res, `data.status.message`);
-                let errorMessage = `Endpoint ${opts.url} returned status code ${res.status}`;
+                let errorMessage = `Endpoint ${domain}/${options.url} returned status code ${res.status}`;
                 if (riotMessage) {
                     errorMessage += ` ("${riotMessage}")`;
                 }
                 throw Object.assign(new Error(errorMessage), opts, {
                     data: res.data,
                     statusCode: res.status,
-                    statusText: res.statusText
+                    statusText: res.statusText,
                 });
             }
         });

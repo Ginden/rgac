@@ -1,11 +1,11 @@
-/* Generated from URL http://ddragon.leagueoflegends.com/cdn/9.23.1/data/en_US/runesReforged.json */
+/* Generated from URL http://ddragon.leagueoflegends.com/cdn/10.7.1/data/en_US/runesReforged.json */
 
 export enum RunesReforgedTrees {
     Domination = 8100,
     Inspiration = 8300,
     Precision = 8000,
     Resolve = 8400,
-    Sorcery = 8200
+    Sorcery = 8200,
 }
 
 export enum RunesReforgedAll {
@@ -134,5 +134,5 @@ export enum RunesReforgedAll {
     WATERWALKING = 8232,
     Waterwalking = 8232,
     GATHERING_STORM = 8236,
-    GatheringStorm = 8236
+    GatheringStorm = 8236,
 }

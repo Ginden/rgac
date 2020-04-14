@@ -1,6 +1,6 @@
 # RGAC
 
-This *R*iot *G*ames *A*PI *C*lient is written in TypeScript and offers fluent interfaces, full typing, data classes.
+This **R**iot **G**ames **A**PI **C**lient is written in TypeScript and offers fluent interfaces, full typing, data classes.
 
 Example usage with top level await:
 ```typescript
@@ -28,7 +28,7 @@ const {data: [anotherMatch]} = await getNextPage();
   * `summoner-v4`
   * `third-party-code-v4`
 * Rich objects:
-** `Summoner` and `Match` classes
+  * `Summoner` and `Match` classes
 * [Joi](https://github.com/hapijs/joi) schemas for all API interfaces
 * TypeScript interfaces for API data
 

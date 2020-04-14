@@ -8,8 +8,6 @@ export class ChampionClient extends ChildClient {
      * @return {Promise<ChampionInfo>}
      */
     public async rotation(): Promise<ChampionInfo> {
-        return this.client.doRequest({
-            url: `/lol/platform/v3/champion-rotations`
-        });
+        return this.client.doRequest(`/lol/platform/v3/champion-rotations`);
     }
 }

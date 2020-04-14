@@ -8,7 +8,7 @@ import { readdirSync, readFileSync, writeFileSync } from 'fs';
 function recursiveSearchPath(dir: string): string[] {
     return _.flattenDeep(
         readdirSync(dir, { withFileTypes: true })
-            .map(e => {
+            .map((e) => {
                 if (e.isFile()) {
                     return join(dir, e.name);
                 } else if (e.isDirectory()) {
@@ -44,16 +44,12 @@ type MemberInfo = {
     name: string;
 };
 
-function getJoiTypeInfo(
-    mi: MemberInfo,
-    enumNames: Set<string>,
-    interfaceNames: Set<string>
-): string {
+function getJoiTypeInfo(mi: MemberInfo, enumNames: Set<string>, interfaceNames: Set<string>): string {
     if (mi.type.isDictionary) {
         return `J.object().pattern(J.string(), ${getJoiTypeInfo(
             {
                 ...mi,
-                type: { name: mi.type.name, arrayDepth: mi.type.arrayDepth - 1 }
+                type: { name: mi.type.name, arrayDepth: mi.type.arrayDepth - 1 },
             },
             enumNames,
             interfaceNames
@@ -63,7 +59,7 @@ function getJoiTypeInfo(
         return `J.array().items(${getJoiTypeInfo(
             {
                 ...mi,
-                type: { name: mi.type.name, arrayDepth: mi.type.arrayDepth - 1 }
+                type: { name: mi.type.name, arrayDepth: mi.type.arrayDepth - 1 },
             },
             enumNames,
             interfaceNames
@@ -88,9 +84,7 @@ function getJoiTypeInfo(
     }
 }
 
-function generateSchemas(
-    sourceFile: ts.SourceFile
-): { imports: string[]; schemaText: string } {
+function generateSchemas(sourceFile: ts.SourceFile): { imports: string[]; schemaText: string } {
     const interfaces: { name: string; members: MemberInfo[] }[] = [];
     const enumNames: Set<string> = new Set<string>();
 
@@ -102,29 +96,29 @@ function generateSchemas(
             case ts.SyntaxKind.StringKeyword:
                 return {
                     name: `string`,
-                    arrayDepth: 0
+                    arrayDepth: 0,
                 };
                 break;
             case ts.SyntaxKind.NumberKeyword:
                 return {
                     name: `number`,
-                    arrayDepth: 0
+                    arrayDepth: 0,
                 };
                 break;
             case ts.SyntaxKind.BooleanKeyword:
                 return {
                     name: `boolean`,
-                    arrayDepth: 0
+                    arrayDepth: 0,
                 };
                 break;
             case ts.SyntaxKind.ArrayType:
                 if (ts.isArrayTypeNode(type)) {
                     const { arrayDepth, name: typeName } = getType({
-                        type: type.elementType
+                        type: type.elementType,
                     });
                     return {
                         name: typeName,
-                        arrayDepth: arrayDepth + 1
+                        arrayDepth: arrayDepth + 1,
                     };
                 }
                 break;
@@ -136,20 +130,19 @@ function generateSchemas(
                         return {
                             name: getType({ type: typeArgument }).name,
                             isDictionary: true,
-                            arrayDepth: 0
+                            arrayDepth: 0,
                         };
                     } else {
                         return {
-                            name: getType({ type: { kind: typeArgument.kind } })
-                                .name,
+                            name: getType({ type: { kind: typeArgument.kind } }).name,
                             isDictionary: true,
-                            arrayDepth: 0
+                            arrayDepth: 0,
                         };
                     }
                 }
                 return {
                     name: name,
-                    arrayDepth: 0
+                    arrayDepth: 0,
                 };
                 break;
         }
@@ -157,7 +150,7 @@ function generateSchemas(
         return {
             name: `any`,
             arrayDepth: 0,
-            node: member
+            node: member,
         };
         // throw new Error(ts.SyntaxKind[type.kind]);
     }
@@ -166,14 +159,14 @@ function generateSchemas(
         if (ts.isInterfaceDeclaration(node)) {
             interfaces.push({
                 name: getEscapedName(node.name),
-                members: node.members.map(member => {
+                members: node.members.map((member) => {
                     const { questionToken } = member;
                     return {
                         isOptional: !!questionToken,
                         type: getType(member),
-                        name: getEscapedName((member as any).name)
+                        name: getEscapedName((member as any).name),
                     };
-                })
+                }),
             });
         } else if (ts.isEnumDeclaration(node)) {
             enumNames.add(getEscapedName(node.name));
@@ -181,27 +174,21 @@ function generateSchemas(
         ts.forEachChild(node, delintNode);
     }
 
-    const interfaceNames = new Set(interfaces.map(e => e.name));
+    const interfaceNames = new Set(interfaces.map((e) => e.name));
     const usedEnums: Set<string> = new Set<string>();
     return {
         schemaText: interfaces
-            .map(interf => {
+            .map((interf) => {
                 return `export const ${interf.name}Schema: Joi.ObjectSchema = J.object({\n`
                     .concat(
                         interf.members
                             .map((e: MemberInfo) => {
-                                const joiTypeInfo: string = getJoiTypeInfo(
-                                    e,
-                                    enumNames,
-                                    interfaceNames
-                                );
+                                const joiTypeInfo: string = getJoiTypeInfo(e, enumNames, interfaceNames);
                                 if (enumNames.has(e.type.name)) {
                                     usedEnums.add(e.type.name);
                                 }
                                 return `  ${e.name}: ${joiTypeInfo}.${
-                                    e.isOptional
-                                        ? `allow(null).optional()`
-                                        : `required()`
+                                    e.isOptional ? `allow(null).optional()` : `required()`
                                 }`;
                             })
                             .join(`,\n`)
@@ -210,33 +197,26 @@ function generateSchemas(
                     .concat(`\n`);
             })
             .map(
-                text => `/**
+                (text) => `/**
  * @ignore
  */ 
  ${text}`
             )
             .join(`\n\n`),
-        imports: [...usedEnums]
+        imports: [...usedEnums],
     };
 }
 
 (async () => {
-    const entries = recursiveSearchPath(
-        join(process.cwd(), `src`, `apiInterfaces`)
-    )
-        .map(p => readFileSync(p, `utf8`))
+    const entries = recursiveSearchPath(join(process.cwd(), `src`, `apiInterfaces`))
+        .map((p) => readFileSync(p, `utf8`))
         .join(`\n\n`)
         .split(`\n`)
-        .filter(line => !line.includes(`export * from`))
+        .filter((line) => !line.includes(`export * from`))
         .join(`\n`);
     Object.assign(ts, {});
 
-    const sourceFile = ts.createSourceFile(
-        `api-interfaces.ts`,
-        entries,
-        ts.ScriptTarget.ES2019,
-        true
-    );
+    const sourceFile = ts.createSourceFile(`api-interfaces.ts`, entries, ts.ScriptTarget.ES2019, true);
 
     // generateSchemas it
     const { imports, schemaText } = generateSchemas(sourceFile);
@@ -245,7 +225,7 @@ function generateSchemas(
     import {J, enumSchema, referenceSchema} from './helpers';
     import {
     ${_.chunk([...imports], 3)
-        .map(chunk => chunk.join(`, `))
+        .map((chunk) => chunk.join(`, `))
         .join(`,\n`)}
     } from '../apiInterfaces';
 
@@ -253,14 +233,11 @@ function generateSchemas(
         .trim()
         .concat(`\n\n`, schemaText);
 
-    writeFileSync(
-        join(process.cwd(), `src`, `schemas`, `generated.ts`),
-        content
-    );
+    writeFileSync(join(process.cwd(), `src`, `schemas`, `generated.ts`), content);
 })()
     .then(() => console.log(`Generated schemas from interfaces`))
     .then(() => process.exit())
-    .catch(e => {
+    .catch((e) => {
         setImmediate(() => {
             throw e;
         });

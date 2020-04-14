@@ -1,20 +1,16 @@
 /**
  * @ignore
  */
-export function CachedGetter<T extends object>(
-    target: T,
-    key: PropertyKey,
-    descriptor: PropertyDescriptor
-) {
+export function CachedGetter<T extends object>(target: T, key: PropertyKey, descriptor: PropertyDescriptor) {
     if (!descriptor.get) {
         throw new Error(`descriptor.get is not a function`);
     }
     const method: (this: T) => any = descriptor.get;
-    descriptor.get = function(this: T) {
+    descriptor.get = function (this: T) {
         const ret: any = method.call(this);
         Object.defineProperty(this, key, {
             value: ret,
-            writable: false
+            writable: false,
         });
         return ret;
     };
@@ -33,6 +29,6 @@ export function NonEnumerable(target: any, key: string) {
             return this[symbol];
         },
         enumerable: false,
-        configurable: true
+        configurable: true,
     });
 }

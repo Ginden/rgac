@@ -5,56 +5,42 @@ import {
     MatchlistDtoSchema,
     MatchTimelineDtoSchema,
     RiotApiClient,
-    Servers
+    Servers,
 } from '../../../src';
-import { getSummoner, saveData } from './helpers';
-
-const startUser = 'GindenEU';
+import { getSummoner, saveData, apiKey, server, summonerName } from './helpers';
 
 describe('RiotApiClient.leagueOfLegends.match', () => {
     let client: RiotApiClient;
     beforeAll(async () => {
         client = new RiotApiClient({
-            apiKey: String(process.env.RIOT_API_KEY),
-            server: Servers.EUW1
+            apiKey,
+            server,
         });
     });
 
     test('List of matches works', async () => {
-        const summoner = await client.leagueOfLegends.summoner.byName(
-            startUser
-        );
+        const summoner = await client.leagueOfLegends.summoner.byName(summonerName);
         const { data } = await summoner.getMatches();
         expect(data.matches.length).toBeGreaterThan(0);
         saveData(`leagueOfLegends.lastSummonerMatches`, data);
         J.assert(data, MatchlistDtoSchema);
     });
 
-    const queues: GameQueue[] = [
-        GameQueue.QUEUE_5V5_ARAM_450,
-        GameQueue.QUEUE_3V3_BLIND_PICK,
-        GameQueue.QUEUE_5V5_DRAFT_PICK_400
-    ];
+    const queues: GameQueue[] = [GameQueue.QUEUE_5V5_ARAM_450, GameQueue.QUEUE_5V5_DRAFT_PICK_400];
     for (const queue of queues) {
         const queueName = GameQueue[queue];
         test(`Match details for queue ${queueName} with timeline`, async () => {
             const summoner = await getSummoner(client);
             const {
                 data: {
-                    matches: [lastMatch]
-                }
+                    matches: [lastMatch],
+                },
             } = await summoner.getMatches();
             const match = await client.leagueOfLegends.matches.get(lastMatch);
-            saveData(
-                `leagueOfLegends.matches.get.lastMatch.${queueName}`,
-                match
-            );
+            saveData(`leagueOfLegends/matches/lastMatch.${queueName}`, match);
             J.assert(match, MatchDtoSchema);
             const timeline = await match.getTimeline();
-            saveData(
-                `leagueOfLegends.matches.get.lastMatch.${queueName}.timeline`,
-                timeline
-            );
+            saveData(`leagueOfLegends/matches/lastMatch.${queueName}.timeline`, timeline);
             J.assert(timeline, MatchTimelineDtoSchema);
         });
     }

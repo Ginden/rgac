@@ -10,13 +10,9 @@ export class SpectatorClient extends ChildClient {
      * @link https://developer.riotgames.com/apis#spectator-v4/GET_getCurrentGameInfoBySummoner
      * @return {Promise<CurrentGameInfo>}
      */
-    public async activeGamesBySummoner(
-        summoner: SummonerId
-    ): Promise<CurrentGameInfo> {
+    public async activeGamesBySummoner(summoner: SummonerId): Promise<CurrentGameInfo> {
         const encryptedSummonerId = Summoner.id(summoner);
-        return this.client.doRequest({
-            url: `lol/spectator/v4/active-games/by-summoner/${encryptedSummonerId}`
-        });
+        return this.client.doRequest(`lol/spectator/v4/active-games/by-summoner/${encryptedSummonerId}`);
     }
 
     /**
@@ -25,7 +21,7 @@ export class SpectatorClient extends ChildClient {
      */
     public async featuredGames(): Promise<FeaturedGames> {
         return this.doRequest({
-            url: '/lol/spectator/v4/featured-games'
+            url: '/lol/spectator/v4/featured-games',
         });
     }
 }

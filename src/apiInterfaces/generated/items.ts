@@ -1,4 +1,4 @@
-/* Generated from URL http://ddragon.leagueoflegends.com/cdn/9.23.1/data/en_US/item.json */
+/* Generated from URL http://ddragon.leagueoflegends.com/cdn/10.7.1/data/en_US/item.json */
 
 export enum GameItem {
     YOUR_CUT = 3400, // 'Your Cut'
@@ -49,10 +49,10 @@ export enum GameItem {
     DARK_MATTER_SCYTHE = 3692, // Dark Matter Scythe
     DARK_SEAL = 1082, // Dark Seal
     DARK_STAR_SIGIL = 3695, // Dark Star Sigil
+    DAWNBRINGER_SNAX = 3684, // Dawnbringer Snax
     DEAD_MANS_PLATE = 3742, // Dead Man's Plate
     DEATHS_DANCE = 3812, // Death's Dance
     DEATHS_DAUGHTER = 3902, // Death's Daughter
-    DEATHFIRE_GRASP = 3128, // Deathfire Grasp
     DERVISH_BLADE = 3137, // Dervish Blade
     DIET_PORO_SNAX = 2054, // Diet Poro-Snax
     DORANS_BLADE = 1055, // Doran's Blade
@@ -75,6 +75,7 @@ export enum GameItem {
     ENCHANTMENT_WARRIOR_1400 = 1400, // Enchantment: Warrior
     ENCHANTMENT_WARRIOR_1412 = 1412, // Enchantment: Warrior
     ENCHANTMENT_WARRIOR_3671 = 3671, // Enchantment: Warrior
+    ESPRESSO_SNAX = 3682, // Espresso Snax
     ESSENCE_REAVER = 3508, // Essence Reaver
     EXECUTIONERS_CALLING = 3123, // Executioner's Calling
     EYE_OF_THE_HERALD_3513 = 3513, // Eye of the Herald
@@ -85,6 +86,7 @@ export enum GameItem {
     FIRE_AT_WILL = 3901, // Fire at Will
     FORBIDDEN_IDOL = 3114, // Forbidden Idol
     FORGEFIRE_CAPE = 3373, // Forgefire Cape
+    FROSTED_SNAX = 3680, // Frosted Snax
     FROSTFANG = 3851, // Frostfang
     FROZEN_FIST = 3387, // Frozen Fist
     FROZEN_HEART = 3110, // Frozen Heart
@@ -132,7 +134,6 @@ export enum GameItem {
     LOCKET_OF_THE_IRON_SOLARI = 3190, // Locket of the Iron Solari
     LONG_SWORD = 1036, // Long Sword
     LORD_DOMINIKS_REGARDS = 3036, // Lord Dominik's Regards
-    LORD_VAN_DAMMS_PILLAGER = 3104, // Lord Van Damm's Pillager
     LOST_CHAPTER = 3802, // Lost Chapter
     LUDENS_ECHO = 3285, // Luden's Echo
     LUDENS_PULSE = 3390, // Luden's Pulse
@@ -146,7 +147,6 @@ export enum GameItem {
     MIKAELS_CRUCIBLE = 3222, // Mikael's Crucible
     MINION_DEMATERIALIZER = 2403, // Minion Dematerializer
     MOLTEN_EDGE = 3371, // Molten Edge
-    MOONFLAIR_SPELLBLADE = 3170, // Moonflair Spellblade
     MORELLONOMICON = 3165, // Morellonomicon
     MORTAL_REMINDER = 3033, // Mortal Reminder
     MURAMANA_3042 = 3042, // Muramana
@@ -154,16 +154,17 @@ export enum GameItem {
     NASHORS_TOOTH = 3115, // Nashor's Tooth
     NEEDLESSLY_LARGE_ROD = 1058, // Needlessly Large Rod
     NEGATRON_CLOAK = 1057, // Negatron Cloak
+    NIGHTBRINGER_SNAX = 3685, // Nightbringer Snax
     NINJA_TABI = 3047, // Ninja Tabi
     NULL_MAGIC_MANTLE = 1033, // Null-Magic Mantle
     OBLIVION_ORB = 3916, // Oblivion Orb
     OBSIDIAN_CLEAVER = 3380, // Obsidian Cleaver
-    OHMWRECKER = 3056, // Ohmwrecker
     ORACLE_LENS = 3364, // Oracle Lens
     ORACLES_EXTRACT = 2047, // Oracle's Extract
     OVERLORDS_BLOODMAIL = 3084, // Overlord's Bloodmail
     PAULDRONS_OF_WHITEROCK = 3857, // Pauldrons of Whiterock
     PERFECT_HEX_CORE = 3198, // Perfect Hex Core
+    PERFECTLY_TIMED_STOPWATCH = 2423, // Perfectly Timed Stopwatch
     PHAGE = 3044, // Phage
     PHANTOM_DANCER = 3046, // Phantom Dancer
     PICKAXE = 1037, // Pickaxe
@@ -172,10 +173,10 @@ export enum GameItem {
     QUICKSILVER_SASH = 3140, // Quicksilver Sash
     RABADONS_DEATHCAP = 3089, // Rabadon's Deathcap
     RABADONS_DEATHCROWN = 3374, // Rabadon's Deathcrown
+    RAINBOW_SNAX_PARTY_PACK = 3683, // Rainbow Snax Party Pack!
     RAISE_MORALE = 3903, // Raise Morale
     RANDUINS_OMEN = 3143, // Randuin's Omen
     RAPID_FIRECANNON = 3094, // Rapid Firecannon
-    RAPTOR_CLOAK = 2053, // Raptor Cloak
     RAVENOUS_HYDRA = 3074, // Ravenous Hydra
     RECURVE_BOW = 1043, // Recurve Bow
     REDEMPTION = 3107, // Redemption
@@ -192,6 +193,7 @@ export enum GameItem {
     SALVATION = 3382, // Salvation
     SANGUINE_BLADE = 3181, // Sanguine Blade
     SAPPHIRE_CRYSTAL = 1027, // Sapphire Crystal
+    SCARECROW_EFFIGY_TRINKET = 3330, // Scarecrow Effigy (Trinket)
     SEEKERS_ARMGUARD = 3191, // Seeker's Armguard
     SERAPHS_EMBRACE_3040 = 3040, // Seraph's Embrace
     SERAPHS_EMBRACE_3048 = 3048, // Seraph's Embrace
@@ -215,24 +217,15 @@ export enum GameItem {
     STEEL_SHOULDERGUARDS = 3854, // Steel Shoulderguards
     STERAKS_GAGE = 3053, // Sterak's Gage
     STINGER = 3101, // Stinger
-    STOPWATCH_2420 = 2420, // Stopwatch
-    STOPWATCH_2423 = 2423, // Stopwatch
+    STOPWATCH = 2420, // Stopwatch
     STORMRAZOR = 3095, // Stormrazor
     SUNFIRE_CAPE = 3068, // Sunfire Cape
+    SUPER_SPICY_SNAX = 3681, // Super Spicy Snax
     TARGONS_BUCKLER = 3859, // Targon's Buckler
     TEAR_OF_THE_GODDESS = 3070, // Tear of the Goddess
     TEAR_OF_THE_GODDESS_QUICK_CHARGE = 3073, // Tear of the Goddess (Quick Charge)
     THORNMAIL = 3075, // Thornmail
     TIAMAT = 3077, // Tiamat
-    TIMEWORN_ANCIENT_COIN = 3304, // Timeworn Ancient Coin
-    TIMEWORN_FACE_OF_THE_MOUNTAIN = 3309, // Timeworn Face of the Mountain
-    TIMEWORN_FROST_QUEENS_CLAIM = 3312, // Timeworn Frost Queen's Claim
-    TIMEWORN_FROSTFANG = 3311, // Timeworn Frostfang
-    TIMEWORN_NOMADS_MEDALLION = 3305, // Timeworn Nomad's Medallion
-    TIMEWORN_RELIC_SHIELD = 3307, // Timeworn Relic Shield
-    TIMEWORN_SPELLTHIEFS_EDGE = 3310, // Timeworn Spellthief's Edge
-    TIMEWORN_TALISMAN_OF_ASCENSION = 3306, // Timeworn Talisman of Ascension
-    TIMEWORN_TARGONS_BRACE = 3308, // Timeworn Targon's Brace
     TITANIC_HYDRA = 3748, // Titanic Hydra
     TOTAL_BISCUIT_OF_EVERLASTING_WILL = 2010, // Total Biscuit of Everlasting Will
     TOTAL_BISCUIT_OF_REJUVENATION = 2009, // Total Biscuit of Rejuvenation
@@ -246,14 +239,10 @@ export enum GameItem {
     WARDING_TOTEM_TRINKET = 3340, // Warding Totem (Trinket)
     WARMOGS_ARMOR = 3083, // Warmog's Armor
     WITS_END = 3091, // Wit's End
-    WOOGLETS_WITCHCAP = 3090, // Wooglet's Witchcap
-    WOOGLETS_WITCHCROWN = 3385, // Wooglet's Witchcrown
     YOUMUUS_GHOSTBLADE = 3142, // Youmuu's Ghostblade
     YOUMUUS_WRAITHBLADE = 3388, // Youmuu's Wraithblade
     ZEAL = 3086, // Zeal
     ZEKES_CONVERGENCE = 3050, // Zeke's Convergence
-    ZEPHYR = 3172, // Zephyr
     ZHONYAS_HOURGLASS = 3157, // Zhonya's Hourglass
     ZHONYAS_PARADOX = 3386, // Zhonya's Paradox
-    ZZROT_PORTAL = 3512 // Zz'Rot Portal
 }

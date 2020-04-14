@@ -14,7 +14,7 @@ const urls = {
     gameModes: `http://static.developer.riotgames.com/docs/lol/gameModes.json`,
     champions: `http://ddragon.leagueoflegends.com/cdn/${patch}/data/en_US/champion.json`,
     items: `http://ddragon.leagueoflegends.com/cdn/${patch}/data/en_US/item.json`,
-    runesReforged: `http://ddragon.leagueoflegends.com/cdn/${patch}/data/en_US/runesReforged.json`
+    runesReforged: `http://ddragon.leagueoflegends.com/cdn/${patch}/data/en_US/runesReforged.json`,
 };
 
 function seasons(arr: { id: number; season: string }[]): string {
@@ -52,20 +52,16 @@ function gameQueues(arr: Queue[]): string {
 
     function addSlugs(qs: Queue[]): (Queue & { slugified: string })[] {
         const counts = _.countBy(qs, simpleSlug);
-        return qs.map(q => {
+        return qs.map((q) => {
             return {
                 ...q,
-                slugified:
-                    counts[simpleSlug(q)] === 1
-                        ? simpleSlug(q)
-                        : `${simpleSlug(q)}_${q.queueId}`
+                slugified: counts[simpleSlug(q)] === 1 ? simpleSlug(q) : `${simpleSlug(q)}_${q.queueId}`,
             };
         });
     }
 
     for (const { queueId, description, notes, slugified } of addSlugs(arr)) {
-        const comment =
-            notes || description ? ` // ` + (notes || description) : ``;
+        const comment = notes || description ? ` // ` + (notes || description) : ``;
         ret.push(`  ${slugified} = ${queueId},${comment}`);
     }
     ret.push(`};`);
@@ -77,15 +73,10 @@ type MapEntry = { mapId: number; mapName: string; notes: string };
 function maps(arr: MapEntry[]): string {
     const ret = [`export enum Map {`];
 
-    const pairs: [string, MapEntry[]][] = Object.entries(
-        _.groupBy(arr, v => slug(v.mapName, `_`).toUpperCase())
-    );
+    const pairs: [string, MapEntry[]][] = Object.entries(_.groupBy(arr, (v) => slug(v.mapName, `_`).toUpperCase()));
     for (const [slugifiedMapName, entries] of pairs) {
         for (const { mapId, notes } of entries) {
-            const slugified =
-                entries.length > 1
-                    ? `${slugifiedMapName}_${mapId}`
-                    : slugifiedMapName;
+            const slugified = entries.length > 1 ? `${slugifiedMapName}_${mapId}` : slugifiedMapName;
             ret.push(`  ${slugified} = ${mapId}, // ${notes}`);
         }
     }
@@ -122,10 +113,7 @@ type ChampionData = {
 };
 
 function champions({ data }: ChampionData): string {
-    let ret = [
-        `import { DataDragonChampionInfo } from '..';`,
-        `export enum ChampionId {`
-    ];
+    let ret = [`import { DataDragonChampionInfo } from '..';`, `export enum ChampionId {`];
     ret.push(`  None = -1,`);
     for (const { name, id, key } of Object.values(data)) {
         const slugifiedName = slug(name, `_`);
@@ -143,13 +131,9 @@ function champions({ data }: ChampionData): string {
     }
     ret.push(`};`);
     ret = [...new Set(ret)];
-    const jsonFriendlyForTypescript = JSON.stringify(
-        _.keyBy(Object.values(data), `key`),
-        null,
-        2
-    )
+    const jsonFriendlyForTypescript = JSON.stringify(_.keyBy(Object.values(data), `key`), null, 2)
         .split(`\n`)
-        .map(e => {
+        .map((e) => {
             if (e.match(/"([0-9]*)": {/)) {
                 return e.replace(/"/g, ``);
             }
@@ -159,9 +143,7 @@ function champions({ data }: ChampionData): string {
     ret.push(`/**
     * @ignore
     */`);
-    ret.push(
-        `export const championData: {[K in ChampionId]: DataDragonChampionInfo | null} = {`
-    );
+    ret.push(`export const championData: {[K in ChampionId]: DataDragonChampionInfo | null} = {`);
     ret.push(`'-1': null,`);
     ret.push(...jsonFriendlyForTypescript.slice(1, -1));
     ret.push(`};`);
@@ -179,9 +161,7 @@ type ItemData = {
 
 function items(id: ItemData) {
     let ret = [`export enum GameItem {`];
-    const duplicatedKeys = _.countBy(Object.values(id.data), ({ name }) =>
-        slug(name, `_`).toUpperCase()
-    );
+    const duplicatedKeys = _.countBy(Object.values(id.data), ({ name }) => slug(name, `_`).toUpperCase());
     for (const [key, { name }] of _.sortBy(Object.entries(id.data), `1.name`)) {
         let slugified = slug(name, `_`).toUpperCase();
         if (duplicatedKeys[slugified] > 1) {
@@ -216,9 +196,7 @@ function runesReforged(rrta: RunesReforgedTree[]) {
     for (const { slots } of rrta) {
         for (const { runes } of slots) {
             for (const { key, id } of runes) {
-                ret.push(
-                    `  ${slug(_.snakeCase(key), `_`).toUpperCase()} = ${id},`
-                );
+                ret.push(`  ${slug(_.snakeCase(key), `_`).toUpperCase()} = ${id},`);
                 ret.push(`  ${key} = ${id},`);
             }
         }
@@ -236,33 +214,19 @@ const generators: { [K in keyof typeof urls]: MappingFunction } = {
     gameModes,
     champions,
     items,
-    runesReforged
+    runesReforged,
 };
 
 (async () => {
-    for (const [name, generator] of Object.entries(generators) as [
-        keyof typeof urls,
-        MappingFunction
-    ][]) {
+    for (const [name, generator] of Object.entries(generators) as [keyof typeof urls, MappingFunction][]) {
         const ret: any = (await axios.get(urls[name])).data;
-        const generated = `/* Generated from URL ${urls[name]} */ \n`.concat(
-            generator(ret)
-        );
-        writeFileSync(
-            join(
-                process.cwd(),
-                `src`,
-                `apiInterfaces`,
-                `generated`,
-                `${name}.ts`
-            ),
-            generated
-        );
+        const generated = `/* Generated from URL ${urls[name]} */ \n`.concat(generator(ret));
+        writeFileSync(join(process.cwd(), `src`, `apiInterfaces`, `generated`, `${name}.ts`), generated);
     }
 })()
     .then(() => console.log(`Generated enums from files`))
     .then(() => process.exit(0))
-    .catch(e => {
+    .catch((e) => {
         setImmediate(() => {
             throw e;
         });

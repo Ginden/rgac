@@ -5,10 +5,7 @@ export function assertInstanceOf(val: any, Ctor: typeof val): true {
     if (val instanceof Ctor) {
         return true;
     }
-    throw Object.assign(
-        new Error(`Value ${val} not instance of constructor ${Ctor.name}`),
-        { val, Ctor }
-    );
+    throw Object.assign(new Error(`Value ${val} not instance of constructor ${Ctor.name}`), { val, Ctor });
 }
 
 /**

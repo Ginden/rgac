@@ -1,4 +1,4 @@
-/* Generated from URL http://ddragon.leagueoflegends.com/cdn/9.23.1/data/en_US/champion.json */
+/* Generated from URL http://ddragon.leagueoflegends.com/cdn/10.7.1/data/en_US/champion.json */
 
 import { DataDragonChampionInfo } from '..';
 export enum ChampionId {
@@ -17,6 +17,8 @@ export enum ChampionId {
     Anivia = 34,
     ANNIE = 1,
     Annie = 1,
+    APHELIOS = 523,
+    Aphelios = 523,
     ASHE = 22,
     Ashe = 22,
     AURELION_SOL = 136,
@@ -223,6 +225,8 @@ export enum ChampionId {
     Sejuani = 113,
     SENNA = 235,
     Senna = 235,
+    SETT = 875,
+    Sett = 875,
     SHACO = 35,
     Shaco = 35,
     SHEN = 98,
@@ -321,18 +325,16 @@ export enum ChampionId {
     ZOE = 142,
     Zoe = 142,
     ZYRA = 143,
-    Zyra = 143
+    Zyra = 143,
 }
 
 /**
  * @ignore
  */
-export const championData: {
-    [K in ChampionId]: DataDragonChampionInfo | null;
-} = {
+export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } = {
     '-1': null,
     1: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Annie',
         key: '1',
         name: 'Annie',
@@ -343,7 +345,7 @@ export const championData: {
             attack: 2,
             defense: 3,
             magic: 10,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Annie.png',
@@ -352,7 +354,7 @@ export const championData: {
             x: 288,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage'],
         partype: 'Mana',
@@ -376,11 +378,11 @@ export const championData: {
             attackdamage: 50.41,
             attackdamageperlevel: 2.625,
             attackspeedperlevel: 1.36,
-            attackspeed: 0.579
-        }
+            attackspeed: 0.579,
+        },
     },
     2: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Olaf',
         key: '2',
         name: 'Olaf',
@@ -391,16 +393,16 @@ export const championData: {
             attack: 9,
             defense: 5,
             magic: 3,
-            difficulty: 3
+            difficulty: 3,
         },
         image: {
             full: 'Olaf.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 96,
+            x: 144,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
@@ -424,11 +426,11 @@ export const championData: {
             attackdamage: 68,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 2.7,
-            attackspeed: 0.694
-        }
+            attackspeed: 0.694,
+        },
     },
     3: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Galio',
         key: '3',
         name: 'Galio',
@@ -439,16 +441,16 @@ export const championData: {
             attack: 1,
             defense: 10,
             magic: 6,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Galio.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 0,
+            x: 48,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Mage'],
         partype: 'Mana',
@@ -472,11 +474,11 @@ export const championData: {
             attackdamage: 59,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 1.5,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     4: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'TwistedFate',
         key: '4',
         name: 'Twisted Fate',
@@ -487,16 +489,16 @@ export const championData: {
             attack: 6,
             defense: 2,
             magic: 6,
-            difficulty: 9
+            difficulty: 9,
         },
         image: {
             full: 'TwistedFate.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 48,
+            x: 144,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage'],
         partype: 'Mana',
@@ -520,11 +522,11 @@ export const championData: {
             attackdamage: 49.954,
             attackdamageperlevel: 3.3,
             attackspeedperlevel: 3.22,
-            attackspeed: 0.651
-        }
+            attackspeed: 0.651,
+        },
     },
     5: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'XinZhao',
         key: '5',
         name: 'Xin Zhao',
@@ -535,16 +537,16 @@ export const championData: {
             attack: 8,
             defense: 6,
             magic: 3,
-            difficulty: 2
+            difficulty: 2,
         },
         image: {
             full: 'XinZhao.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 288,
+            x: 384,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Assassin'],
         partype: 'Mana',
@@ -568,11 +570,11 @@ export const championData: {
             attackdamage: 66,
             attackdamageperlevel: 3,
             attackspeedperlevel: 3.5,
-            attackspeed: 0.645
-        }
+            attackspeed: 0.645,
+        },
     },
     6: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Urgot',
         key: '6',
         name: 'Urgot',
@@ -583,16 +585,16 @@ export const championData: {
             attack: 8,
             defense: 5,
             magic: 3,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Urgot.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 192,
+            x: 288,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
@@ -616,11 +618,11 @@ export const championData: {
             attackdamage: 63,
             attackdamageperlevel: 4,
             attackspeedperlevel: 3.75,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     7: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Leblanc',
         key: '7',
         name: 'LeBlanc',
@@ -631,16 +633,16 @@ export const championData: {
             attack: 1,
             defense: 4,
             magic: 10,
-            difficulty: 9
+            difficulty: 9,
         },
         image: {
             full: 'Leblanc.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 0,
+            x: 48,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin', 'Mage'],
         partype: 'Mana',
@@ -664,11 +666,11 @@ export const championData: {
             attackdamage: 54.88,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 1.4,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     8: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Vladimir',
         key: '8',
         name: 'Vladimir',
@@ -679,16 +681,16 @@ export const championData: {
             attack: 2,
             defense: 6,
             magic: 8,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Vladimir.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 48,
+            x: 144,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage'],
         partype: 'Crimson Rush',
@@ -712,41 +714,41 @@ export const championData: {
             attackdamage: 55,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2,
-            attackspeed: 0.658
-        }
+            attackspeed: 0.658,
+        },
     },
     9: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Fiddlesticks',
         key: '9',
         name: 'Fiddlesticks',
-        title: 'the Harbinger of Doom',
+        title: 'the Ancient Fear',
         blurb:
-            'Fiddlesticks is a ghastly, living scarecrow who stalks the darkness, wielding a cruel scythe and preying upon the unwary. Once a lonely man accused of bringing famine to his village, he was tied up and left to starve in his own barren field. Resurrected...',
+            'Something has awoken in Runeterra. Something ancient. Something terrible. The ageless horror known as Fiddlesticks stalks the edges of mortal society, drawn to areas thick with paranoia where it feeds upon terrorized victims. Wielding a jagged scythe...',
         info: {
             attack: 2,
             defense: 3,
             magic: 9,
-            difficulty: 9
+            difficulty: 9,
         },
         image: {
             full: 'Fiddlesticks.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 336,
+            x: 384,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Support'],
         partype: 'Mana',
         stats: {
-            hp: 524.4,
-            hpperlevel: 80,
+            hp: 580.4,
+            hpperlevel: 92,
             mp: 500,
             mpperlevel: 28,
             movespeed: 335,
-            armor: 30,
+            armor: 34,
             armorperlevel: 3.5,
             spellblock: 30,
             spellblockperlevel: 0.5,
@@ -757,14 +759,14 @@ export const championData: {
             mpregenperlevel: 0.8,
             crit: 0,
             critperlevel: 0,
-            attackdamage: 48.36,
+            attackdamage: 55.36,
             attackdamageperlevel: 2.625,
             attackspeedperlevel: 2.11,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     10: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Kayle',
         key: '10',
         name: 'Kayle',
@@ -775,16 +777,16 @@ export const championData: {
             attack: 6,
             defense: 6,
             magic: 7,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Kayle.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 144,
+            x: 192,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Support'],
         partype: 'Mana',
@@ -808,11 +810,11 @@ export const championData: {
             attackdamage: 50,
             attackdamageperlevel: 2.5,
             attackspeedperlevel: 1.5,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     11: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'MasterYi',
         key: '11',
         name: 'Master Yi',
@@ -823,16 +825,16 @@ export const championData: {
             attack: 10,
             defense: 4,
             magic: 2,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'MasterYi.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 0,
+            x: 48,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin', 'Fighter'],
         partype: 'Mana',
@@ -856,11 +858,11 @@ export const championData: {
             attackdamage: 66,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2,
-            attackspeed: 0.679
-        }
+            attackspeed: 0.679,
+        },
     },
     12: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Alistar',
         key: '12',
         name: 'Alistar',
@@ -871,7 +873,7 @@ export const championData: {
             attack: 6,
             defense: 9,
             magic: 5,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Alistar.png',
@@ -880,12 +882,12 @@ export const championData: {
             x: 144,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Support'],
         partype: 'Mana',
         stats: {
-            hp: 573.36,
+            hp: 600,
             hpperlevel: 106,
             mp: 350,
             mpperlevel: 40,
@@ -901,14 +903,14 @@ export const championData: {
             mpregenperlevel: 0.8,
             crit: 0,
             critperlevel: 0,
-            attackdamage: 61.1116,
-            attackdamageperlevel: 3.62,
+            attackdamage: 62,
+            attackdamageperlevel: 3.75,
             attackspeedperlevel: 2.125,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     13: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Ryze',
         key: '13',
         name: 'Ryze',
@@ -919,16 +921,16 @@ export const championData: {
             attack: 2,
             defense: 2,
             magic: 10,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Ryze.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 336,
+            x: 384,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Fighter'],
         partype: 'Mana',
@@ -946,17 +948,17 @@ export const championData: {
             hpregen: 8,
             hpregenperlevel: 0.8,
             mpregen: 8,
-            mpregenperlevel: 0.8,
+            mpregenperlevel: 1,
             crit: 0,
             critperlevel: 0,
             attackdamage: 55.04,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2.112,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     14: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Sion',
         key: '14',
         name: 'Sion',
@@ -967,16 +969,16 @@ export const championData: {
             attack: 5,
             defense: 9,
             magic: 3,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Sion.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 192,
+            x: 288,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Fighter'],
         partype: 'Mana',
@@ -1000,11 +1002,11 @@ export const championData: {
             attackdamage: 68,
             attackdamageperlevel: 4,
             attackspeedperlevel: 1.3,
-            attackspeed: 0.679
-        }
+            attackspeed: 0.679,
+        },
     },
     15: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Sivir',
         key: '15',
         name: 'Sivir',
@@ -1015,16 +1017,16 @@ export const championData: {
             attack: 9,
             defense: 3,
             magic: 1,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Sivir.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 240,
+            x: 336,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman'],
         partype: 'Mana',
@@ -1045,14 +1047,14 @@ export const championData: {
             mpregenperlevel: 0.9,
             crit: 0,
             critperlevel: 0,
-            attackdamage: 61,
+            attackdamage: 63,
             attackdamageperlevel: 3,
             attackspeedperlevel: 1.6,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     16: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Soraka',
         key: '16',
         name: 'Soraka',
@@ -1063,24 +1065,24 @@ export const championData: {
             attack: 2,
             defense: 5,
             magic: 7,
-            difficulty: 3
+            difficulty: 3,
         },
         image: {
             full: 'Soraka.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 384,
-            y: 48,
+            x: 0,
+            y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Support', 'Mage'],
         partype: 'Mana',
         stats: {
-            hp: 529.04,
-            hpperlevel: 78,
-            mp: 350.8,
-            mpperlevel: 60,
+            hp: 535,
+            hpperlevel: 74,
+            mp: 375,
+            mpperlevel: 40,
             movespeed: 325,
             armor: 32,
             armorperlevel: 3.8,
@@ -1093,14 +1095,14 @@ export const championData: {
             mpregenperlevel: 0.4,
             crit: 0,
             critperlevel: 0,
-            attackdamage: 50.04,
+            attackdamage: 50,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2.14,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     17: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Teemo',
         key: '17',
         name: 'Teemo',
@@ -1111,16 +1113,16 @@ export const championData: {
             attack: 5,
             defense: 3,
             magic: 7,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Teemo.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 288,
+            x: 384,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman', 'Assassin'],
         partype: 'Mana',
@@ -1144,11 +1146,11 @@ export const championData: {
             attackdamage: 54,
             attackdamageperlevel: 3,
             attackspeedperlevel: 3.38,
-            attackspeed: 0.69
-        }
+            attackspeed: 0.69,
+        },
     },
     18: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Tristana',
         key: '18',
         name: 'Tristana',
@@ -1159,16 +1161,16 @@ export const championData: {
             attack: 9,
             defense: 3,
             magic: 5,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Tristana.png',
-            sprite: 'champion3.png',
+            sprite: 'champion4.png',
             group: 'champion',
-            x: 384,
-            y: 96,
+            x: 0,
+            y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman', 'Assassin'],
         partype: 'Mana',
@@ -1192,11 +1194,11 @@ export const championData: {
             attackdamage: 61,
             attackdamageperlevel: 3.3,
             attackspeedperlevel: 1.5,
-            attackspeed: 0.656
-        }
+            attackspeed: 0.656,
+        },
     },
     19: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Warwick',
         key: '19',
         name: 'Warwick',
@@ -1207,16 +1209,16 @@ export const championData: {
             attack: 9,
             defense: 5,
             magic: 3,
-            difficulty: 3
+            difficulty: 3,
         },
         image: {
             full: 'Warwick.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 144,
+            x: 240,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
@@ -1240,11 +1242,11 @@ export const championData: {
             attackdamage: 65,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2.3,
-            attackspeed: 0.638
-        }
+            attackspeed: 0.638,
+        },
     },
     20: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Nunu',
         key: '20',
         name: 'Nunu & Willump',
@@ -1255,16 +1257,16 @@ export const championData: {
             attack: 4,
             defense: 6,
             magic: 7,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Nunu.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 48,
+            x: 96,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Fighter'],
         partype: 'Mana',
@@ -1288,11 +1290,11 @@ export const championData: {
             attackdamage: 61,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2.25,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     21: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'MissFortune',
         key: '21',
         name: 'Miss Fortune',
@@ -1303,16 +1305,16 @@ export const championData: {
             attack: 8,
             defense: 2,
             magic: 5,
-            difficulty: 1
+            difficulty: 1,
         },
         image: {
             full: 'MissFortune.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 48,
+            x: 96,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman'],
         partype: 'Mana',
@@ -1335,12 +1337,12 @@ export const championData: {
             critperlevel: 0,
             attackdamage: 50,
             attackdamageperlevel: 2.7,
-            attackspeedperlevel: 3,
-            attackspeed: 0.656
-        }
+            attackspeedperlevel: 2.25,
+            attackspeed: 0.656,
+        },
     },
     22: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Ashe',
         key: '22',
         name: 'Ashe',
@@ -1351,16 +1353,16 @@ export const championData: {
             attack: 7,
             defense: 3,
             magic: 2,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Ashe.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 336,
+            x: 384,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman', 'Support'],
         partype: 'Mana',
@@ -1384,11 +1386,11 @@ export const championData: {
             attackdamage: 61,
             attackdamageperlevel: 2.96,
             attackspeedperlevel: 3.33,
-            attackspeed: 0.658
-        }
+            attackspeed: 0.658,
+        },
     },
     23: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Tryndamere',
         key: '23',
         name: 'Tryndamere',
@@ -1399,16 +1401,16 @@ export const championData: {
             attack: 10,
             defense: 5,
             magic: 2,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Tryndamere.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 0,
+            x: 96,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Assassin'],
         partype: 'Fury',
@@ -1432,11 +1434,11 @@ export const championData: {
             attackdamage: 69,
             attackdamageperlevel: 3.7,
             attackspeedperlevel: 2.9,
-            attackspeed: 0.67
-        }
+            attackspeed: 0.67,
+        },
     },
     24: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Jax',
         key: '24',
         name: 'Jax',
@@ -1447,16 +1449,16 @@ export const championData: {
             attack: 7,
             defense: 5,
             magic: 7,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Jax.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 144,
+            x: 192,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Assassin'],
         partype: 'Mana',
@@ -1480,11 +1482,11 @@ export const championData: {
             attackdamage: 68,
             attackdamageperlevel: 3.375,
             attackspeedperlevel: 3.4,
-            attackspeed: 0.638
-        }
+            attackspeed: 0.638,
+        },
     },
     25: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Morgana',
         key: '25',
         name: 'Morgana',
@@ -1495,16 +1497,16 @@ export const championData: {
             attack: 1,
             defense: 6,
             magic: 8,
-            difficulty: 1
+            difficulty: 1,
         },
         image: {
             full: 'Morgana.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 192,
+            x: 240,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Support'],
         partype: 'Mana',
@@ -1513,7 +1515,7 @@ export const championData: {
             hpperlevel: 90,
             mp: 340,
             mpperlevel: 60,
-            movespeed: 330,
+            movespeed: 335,
             armor: 25,
             armorperlevel: 3.8,
             spellblock: 30,
@@ -1528,11 +1530,11 @@ export const championData: {
             attackdamage: 56,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 1.53,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     26: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Zilean',
         key: '26',
         name: 'Zilean',
@@ -1543,16 +1545,16 @@ export const championData: {
             attack: 2,
             defense: 5,
             magic: 8,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Zilean.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 144,
+            x: 240,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Support', 'Mage'],
         partype: 'Mana',
@@ -1576,11 +1578,11 @@ export const championData: {
             attackdamage: 51.64,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2.13,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     27: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Singed',
         key: '27',
         name: 'Singed',
@@ -1591,26 +1593,26 @@ export const championData: {
             attack: 4,
             defense: 8,
             magic: 7,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Singed.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 144,
+            x: 240,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Fighter'],
         partype: 'Mana',
         stats: {
-            hp: 610,
+            hp: 580,
             hpperlevel: 85,
             mp: 330,
             mpperlevel: 45,
             movespeed: 345,
-            armor: 37,
+            armor: 34,
             armorperlevel: 3.5,
             spellblock: 32.1,
             spellblockperlevel: 1.25,
@@ -1624,11 +1626,11 @@ export const championData: {
             attackdamage: 63,
             attackdamageperlevel: 3.375,
             attackspeedperlevel: 1.9,
-            attackspeed: 0.613
-        }
+            attackspeed: 0.613,
+        },
     },
     28: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Evelynn',
         key: '28',
         name: 'Evelynn',
@@ -1639,16 +1641,16 @@ export const championData: {
             attack: 4,
             defense: 2,
             magic: 7,
-            difficulty: 10
+            difficulty: 10,
         },
         image: {
             full: 'Evelynn.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 240,
+            x: 288,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin', 'Mage'],
         partype: 'Mana',
@@ -1672,11 +1674,11 @@ export const championData: {
             attackdamage: 61,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2.1,
-            attackspeed: 0.667
-        }
+            attackspeed: 0.667,
+        },
     },
     29: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Twitch',
         key: '29',
         name: 'Twitch',
@@ -1687,16 +1689,16 @@ export const championData: {
             attack: 9,
             defense: 2,
             magic: 3,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Twitch.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 96,
+            x: 192,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman', 'Assassin'],
         partype: 'Mana',
@@ -1720,11 +1722,11 @@ export const championData: {
             attackdamage: 59,
             attackdamageperlevel: 3.11,
             attackspeedperlevel: 3.38,
-            attackspeed: 0.679
-        }
+            attackspeed: 0.679,
+        },
     },
     30: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Karthus',
         key: '30',
         name: 'Karthus',
@@ -1735,16 +1737,16 @@ export const championData: {
             attack: 2,
             defense: 2,
             magic: 10,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Karthus.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 0,
+            x: 48,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage'],
         partype: 'Mana',
@@ -1768,11 +1770,11 @@ export const championData: {
             attackdamage: 45.66,
             attackdamageperlevel: 3.25,
             attackspeedperlevel: 2.11,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     31: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Chogath',
         key: '31',
         name: "Cho'Gath",
@@ -1783,16 +1785,16 @@ export const championData: {
             attack: 3,
             defense: 7,
             magic: 7,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Chogath.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 336,
+            x: 384,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Mage'],
         partype: 'Mana',
@@ -1816,11 +1818,11 @@ export const championData: {
             attackdamage: 69,
             attackdamageperlevel: 4.2,
             attackspeedperlevel: 1.44,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     32: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Amumu',
         key: '32',
         name: 'Amumu',
@@ -1831,7 +1833,7 @@ export const championData: {
             attack: 2,
             defense: 6,
             magic: 8,
-            difficulty: 3
+            difficulty: 3,
         },
         image: {
             full: 'Amumu.png',
@@ -1840,7 +1842,7 @@ export const championData: {
             x: 192,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Mage'],
         partype: 'Mana',
@@ -1864,11 +1866,11 @@ export const championData: {
             attackdamage: 53.38,
             attackdamageperlevel: 3.8,
             attackspeedperlevel: 2.18,
-            attackspeed: 0.736
-        }
+            attackspeed: 0.736,
+        },
     },
     33: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Rammus',
         key: '33',
         name: 'Rammus',
@@ -1879,22 +1881,22 @@ export const championData: {
             attack: 4,
             defense: 10,
             magic: 5,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Rammus.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 48,
+            x: 96,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Fighter'],
         partype: 'Mana',
         stats: {
             hp: 564.48,
-            hpperlevel: 86,
+            hpperlevel: 95,
             mp: 310.44,
             mpperlevel: 33,
             movespeed: 335,
@@ -1912,11 +1914,11 @@ export const championData: {
             attackdamage: 55.88,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 2.215,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.656,
+        },
     },
     34: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Anivia',
         key: '34',
         name: 'Anivia',
@@ -1927,7 +1929,7 @@ export const championData: {
             attack: 1,
             defense: 4,
             magic: 10,
-            difficulty: 10
+            difficulty: 10,
         },
         image: {
             full: 'Anivia.png',
@@ -1936,7 +1938,7 @@ export const championData: {
             x: 240,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Support'],
         partype: 'Mana',
@@ -1960,11 +1962,11 @@ export const championData: {
             attackdamage: 51.376,
             attackdamageperlevel: 3.2,
             attackspeedperlevel: 1.68,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     35: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Shaco',
         key: '35',
         name: 'Shaco',
@@ -1975,16 +1977,16 @@ export const championData: {
             attack: 8,
             defense: 4,
             magic: 6,
-            difficulty: 9
+            difficulty: 9,
         },
         image: {
             full: 'Shaco.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 0,
+            x: 96,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin'],
         partype: 'Mana',
@@ -2008,11 +2010,11 @@ export const championData: {
             attackdamage: 63,
             attackdamageperlevel: 3,
             attackspeedperlevel: 3,
-            attackspeed: 0.694
-        }
+            attackspeed: 0.694,
+        },
     },
     36: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'DrMundo',
         key: '36',
         name: 'Dr. Mundo',
@@ -2023,16 +2025,16 @@ export const championData: {
             attack: 5,
             defense: 7,
             magic: 6,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'DrMundo.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 96,
+            x: 144,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'None',
@@ -2056,11 +2058,11 @@ export const championData: {
             attackdamage: 61.27,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 2.8,
-            attackspeed: 0.721
-        }
+            attackspeed: 0.721,
+        },
     },
     37: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Sona',
         key: '37',
         name: 'Sona',
@@ -2071,16 +2073,16 @@ export const championData: {
             attack: 5,
             defense: 2,
             magic: 8,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Sona.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 336,
+            x: 432,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Support', 'Mage'],
         partype: 'Mana',
@@ -2104,11 +2106,11 @@ export const championData: {
             attackdamage: 49,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2.3,
-            attackspeed: 0.644
-        }
+            attackspeed: 0.644,
+        },
     },
     38: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Kassadin',
         key: '38',
         name: 'Kassadin',
@@ -2119,16 +2121,16 @@ export const championData: {
             attack: 3,
             defense: 5,
             magic: 8,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Kassadin.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 48,
+            x: 96,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin', 'Mage'],
         partype: 'Mana',
@@ -2137,7 +2139,7 @@ export const championData: {
             hpperlevel: 90,
             mp: 397.6,
             mpperlevel: 67,
-            movespeed: 340,
+            movespeed: 335,
             armor: 19,
             armorperlevel: 2.8,
             spellblock: 30,
@@ -2152,11 +2154,11 @@ export const championData: {
             attackdamage: 58.852,
             attackdamageperlevel: 3.9,
             attackspeedperlevel: 3.7,
-            attackspeed: 0.64
-        }
+            attackspeed: 0.64,
+        },
     },
     39: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Irelia',
         key: '39',
         name: 'Irelia',
@@ -2167,16 +2169,16 @@ export const championData: {
             attack: 7,
             defense: 4,
             magic: 5,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Irelia.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 432,
-            y: 0,
+            x: 0,
+            y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Assassin'],
         partype: 'Mana',
@@ -2200,11 +2202,11 @@ export const championData: {
             attackdamage: 63,
             attackdamageperlevel: 4,
             attackspeedperlevel: 2.5,
-            attackspeed: 0.656
-        }
+            attackspeed: 0.656,
+        },
     },
     40: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Janna',
         key: '40',
         name: 'Janna',
@@ -2215,16 +2217,16 @@ export const championData: {
             attack: 3,
             defense: 5,
             magic: 7,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Janna.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 48,
+            x: 96,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Support', 'Mage'],
         partype: 'Mana',
@@ -2248,11 +2250,11 @@ export const championData: {
             attackdamage: 46,
             attackdamageperlevel: 1.5,
             attackspeedperlevel: 2.95,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     41: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Gangplank',
         key: '41',
         name: 'Gangplank',
@@ -2263,16 +2265,16 @@ export const championData: {
             attack: 7,
             defense: 6,
             magic: 4,
-            difficulty: 9
+            difficulty: 9,
         },
         image: {
             full: 'Gangplank.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 48,
+            x: 96,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter'],
         partype: 'Mana',
@@ -2296,11 +2298,11 @@ export const championData: {
             attackdamage: 64,
             attackdamageperlevel: 3,
             attackspeedperlevel: 3.2,
-            attackspeed: 0.658
-        }
+            attackspeed: 0.658,
+        },
     },
     42: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Corki',
         key: '42',
         name: 'Corki',
@@ -2311,16 +2313,16 @@ export const championData: {
             attack: 8,
             defense: 3,
             magic: 6,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Corki.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 384,
+            x: 432,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman'],
         partype: 'Mana',
@@ -2344,11 +2346,11 @@ export const championData: {
             attackdamage: 55,
             attackdamageperlevel: 2.5,
             attackspeedperlevel: 2.3,
-            attackspeed: 0.638
-        }
+            attackspeed: 0.638,
+        },
     },
     43: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Karma',
         key: '43',
         name: 'Karma',
@@ -2359,16 +2361,16 @@ export const championData: {
             attack: 1,
             defense: 7,
             magic: 8,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Karma.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 432,
-            y: 48,
+            x: 0,
+            y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Support'],
         partype: 'Mana',
@@ -2392,11 +2394,11 @@ export const championData: {
             attackdamage: 53.544,
             attackdamageperlevel: 3.3,
             attackspeedperlevel: 2.3,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     44: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Taric',
         key: '44',
         name: 'Taric',
@@ -2407,16 +2409,16 @@ export const championData: {
             attack: 4,
             defense: 8,
             magic: 5,
-            difficulty: 3
+            difficulty: 3,
         },
         image: {
             full: 'Taric.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 240,
+            x: 336,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Support', 'Fighter'],
         partype: 'Mana',
@@ -2440,11 +2442,11 @@ export const championData: {
             attackdamage: 55,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 2,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     45: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Veigar',
         key: '45',
         name: 'Veigar',
@@ -2455,16 +2457,16 @@ export const championData: {
             attack: 2,
             defense: 2,
             magic: 10,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Veigar.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 336,
+            x: 432,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage'],
         partype: 'Mana',
@@ -2474,7 +2476,7 @@ export const championData: {
             mp: 490,
             mpperlevel: 26,
             movespeed: 340,
-            armor: 22.55,
+            armor: 23,
             armorperlevel: 3.75,
             spellblock: 30,
             spellblockperlevel: 0.5,
@@ -2485,14 +2487,14 @@ export const championData: {
             mpregenperlevel: 0.8,
             crit: 0,
             critperlevel: 0,
-            attackdamage: 50.71,
-            attackdamageperlevel: 2.625,
+            attackdamage: 52,
+            attackdamageperlevel: 2.7,
             attackspeedperlevel: 2.24,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     48: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Trundle',
         key: '48',
         name: 'Trundle',
@@ -2503,16 +2505,16 @@ export const championData: {
             attack: 7,
             defense: 6,
             magic: 2,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Trundle.png',
-            sprite: 'champion3.png',
+            sprite: 'champion4.png',
             group: 'champion',
-            x: 432,
-            y: 96,
+            x: 48,
+            y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
@@ -2536,11 +2538,11 @@ export const championData: {
             attackdamage: 68,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2.9,
-            attackspeed: 0.67
-        }
+            attackspeed: 0.67,
+        },
     },
     50: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Swain',
         key: '50',
         name: 'Swain',
@@ -2551,16 +2553,16 @@ export const championData: {
             attack: 2,
             defense: 6,
             magic: 9,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Swain.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 432,
-            y: 48,
+            x: 48,
+            y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Fighter'],
         partype: 'Mana',
@@ -2584,11 +2586,11 @@ export const championData: {
             attackdamage: 58,
             attackdamageperlevel: 2.7,
             attackspeedperlevel: 2.11,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     51: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Caitlyn',
         key: '51',
         name: 'Caitlyn',
@@ -2599,16 +2601,16 @@ export const championData: {
             attack: 8,
             defense: 2,
             magic: 2,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Caitlyn.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 192,
+            x: 240,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman'],
         partype: 'Mana',
@@ -2632,11 +2634,11 @@ export const championData: {
             attackdamage: 62,
             attackdamageperlevel: 2.88,
             attackspeedperlevel: 4,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.681,
+        },
     },
     53: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Blitzcrank',
         key: '53',
         name: 'Blitzcrank',
@@ -2647,16 +2649,16 @@ export const championData: {
             attack: 4,
             defense: 8,
             magic: 5,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Blitzcrank.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 48,
+            x: 96,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Fighter'],
         partype: 'Mana',
@@ -2666,7 +2668,7 @@ export const championData: {
             mp: 267.2,
             mpperlevel: 40,
             movespeed: 325,
-            armor: 40,
+            armor: 37,
             armorperlevel: 3.5,
             spellblock: 32.1,
             spellblockperlevel: 1.25,
@@ -2680,11 +2682,11 @@ export const championData: {
             attackdamage: 61.54,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 1.13,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     54: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Malphite',
         key: '54',
         name: 'Malphite',
@@ -2695,16 +2697,16 @@ export const championData: {
             attack: 5,
             defense: 9,
             magic: 7,
-            difficulty: 2
+            difficulty: 2,
         },
         image: {
             full: 'Malphite.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 336,
+            x: 384,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Fighter'],
         partype: 'Mana',
@@ -2728,11 +2730,11 @@ export const championData: {
             attackdamage: 61.97,
             attackdamageperlevel: 4,
             attackspeedperlevel: 3.4,
-            attackspeed: 0.736
-        }
+            attackspeed: 0.736,
+        },
     },
     55: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Katarina',
         key: '55',
         name: 'Katarina',
@@ -2743,16 +2745,16 @@ export const championData: {
             attack: 4,
             defense: 3,
             magic: 9,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Katarina.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 96,
+            x: 144,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin', 'Mage'],
         partype: 'None',
@@ -2776,11 +2778,11 @@ export const championData: {
             attackdamage: 58,
             attackdamageperlevel: 3.2,
             attackspeedperlevel: 2.74,
-            attackspeed: 0.658
-        }
+            attackspeed: 0.658,
+        },
     },
     56: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Nocturne',
         key: '56',
         name: 'Nocturne',
@@ -2791,16 +2793,16 @@ export const championData: {
             attack: 9,
             defense: 5,
             magic: 2,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Nocturne.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 0,
+            x: 48,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin', 'Fighter'],
         partype: 'Mana',
@@ -2813,9 +2815,9 @@ export const championData: {
             armor: 38,
             armorperlevel: 3.5,
             spellblock: 32.1,
-            spellblockperlevel: 1.25,
+            spellblockperlevel: 0.75,
             attackrange: 125,
-            hpregen: 8.5,
+            hpregen: 7,
             hpregenperlevel: 0.75,
             mpregen: 7,
             mpregenperlevel: 0.45,
@@ -2824,11 +2826,11 @@ export const championData: {
             attackdamage: 62,
             attackdamageperlevel: 3.1,
             attackspeedperlevel: 2.7,
-            attackspeed: 0.721
-        }
+            attackspeed: 0.721,
+        },
     },
     57: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Maokai',
         key: '57',
         name: 'Maokai',
@@ -2839,16 +2841,16 @@ export const championData: {
             attack: 3,
             defense: 8,
             magic: 6,
-            difficulty: 3
+            difficulty: 3,
         },
         image: {
             full: 'Maokai.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 432,
-            y: 0,
+            x: 0,
+            y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Mage'],
         partype: 'Mana',
@@ -2872,11 +2874,11 @@ export const championData: {
             attackdamage: 63.54,
             attackdamageperlevel: 3.3,
             attackspeedperlevel: 2.125,
-            attackspeed: 0.8
-        }
+            attackspeed: 0.8,
+        },
     },
     58: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Renekton',
         key: '58',
         name: 'Renekton',
@@ -2887,16 +2889,16 @@ export const championData: {
             attack: 8,
             defense: 5,
             magic: 2,
-            difficulty: 3
+            difficulty: 3,
         },
         image: {
             full: 'Renekton.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 144,
+            x: 192,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Fury',
@@ -2920,11 +2922,11 @@ export const championData: {
             attackdamage: 69,
             attackdamageperlevel: 3.75,
             attackspeedperlevel: 2.75,
-            attackspeed: 0.665
-        }
+            attackspeed: 0.665,
+        },
     },
     59: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'JarvanIV',
         key: '59',
         name: 'Jarvan IV',
@@ -2935,16 +2937,16 @@ export const championData: {
             attack: 6,
             defense: 8,
             magic: 3,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'JarvanIV.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 96,
+            x: 144,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Fighter'],
         partype: 'Mana',
@@ -2968,11 +2970,11 @@ export const championData: {
             attackdamage: 64,
             attackdamageperlevel: 3.4,
             attackspeedperlevel: 2.5,
-            attackspeed: 0.658
-        }
+            attackspeed: 0.658,
+        },
     },
     60: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Elise',
         key: '60',
         name: 'Elise',
@@ -2983,16 +2985,16 @@ export const championData: {
             attack: 6,
             defense: 5,
             magic: 7,
-            difficulty: 9
+            difficulty: 9,
         },
         image: {
             full: 'Elise.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 192,
+            x: 240,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Fighter'],
         partype: 'Mana',
@@ -3016,11 +3018,11 @@ export const championData: {
             attackdamage: 55,
             attackdamageperlevel: 3,
             attackspeedperlevel: 1.75,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     61: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Orianna',
         key: '61',
         name: 'Orianna',
@@ -3031,16 +3033,16 @@ export const championData: {
             attack: 4,
             defense: 3,
             magic: 9,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Orianna.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 144,
+            x: 192,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Support'],
         partype: 'Mana',
@@ -3064,11 +3066,11 @@ export const championData: {
             attackdamage: 40.368,
             attackdamageperlevel: 2.6,
             attackspeedperlevel: 3.5,
-            attackspeed: 0.658
-        }
+            attackspeed: 0.658,
+        },
     },
     62: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'MonkeyKing',
         key: '62',
         name: 'Wukong',
@@ -3079,44 +3081,44 @@ export const championData: {
             attack: 8,
             defense: 5,
             magic: 2,
-            difficulty: 3
+            difficulty: 3,
         },
         image: {
             full: 'MonkeyKing.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 96,
+            x: 144,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
         stats: {
-            hp: 577.8,
+            hp: 540,
             hpperlevel: 85,
-            mp: 265.84,
-            mpperlevel: 38,
+            mp: 300,
+            mpperlevel: 45,
             movespeed: 345,
             armor: 34,
             armorperlevel: 3.5,
-            spellblock: 32.1,
+            spellblock: 28,
             spellblockperlevel: 1.25,
             attackrange: 175,
-            hpregen: 6,
+            hpregen: 4,
             hpregenperlevel: 0.65,
-            mpregen: 8.042,
+            mpregen: 8,
             mpregenperlevel: 0.65,
             crit: 0,
             critperlevel: 0,
             attackdamage: 68,
             attackdamageperlevel: 4,
             attackspeedperlevel: 3,
-            attackspeed: 0.711
-        }
+            attackspeed: 0.711,
+        },
     },
     63: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Brand',
         key: '63',
         name: 'Brand',
@@ -3127,16 +3129,16 @@ export const championData: {
             attack: 2,
             defense: 2,
             magic: 9,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Brand.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 96,
+            x: 144,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage'],
         partype: 'Mana',
@@ -3160,11 +3162,11 @@ export const championData: {
             attackdamage: 57.04,
             attackdamageperlevel: 3,
             attackspeedperlevel: 1.36,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     64: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'LeeSin',
         key: '64',
         name: 'Lee Sin',
@@ -3175,16 +3177,16 @@ export const championData: {
             attack: 8,
             defense: 5,
             magic: 3,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'LeeSin.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 48,
+            x: 96,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Assassin'],
         partype: 'Energy',
@@ -3208,11 +3210,11 @@ export const championData: {
             attackdamage: 70,
             attackdamageperlevel: 3.2,
             attackspeedperlevel: 3,
-            attackspeed: 0.651
-        }
+            attackspeed: 0.651,
+        },
     },
     67: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Vayne',
         key: '67',
         name: 'Vayne',
@@ -3223,16 +3225,16 @@ export const championData: {
             attack: 10,
             defense: 1,
             magic: 1,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Vayne.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 288,
+            x: 384,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman', 'Assassin'],
         partype: 'Mana',
@@ -3256,11 +3258,11 @@ export const championData: {
             attackdamage: 60,
             attackdamageperlevel: 2.36,
             attackspeedperlevel: 3.3,
-            attackspeed: 0.658
-        }
+            attackspeed: 0.658,
+        },
     },
     68: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Rumble',
         key: '68',
         name: 'Rumble',
@@ -3271,16 +3273,16 @@ export const championData: {
             attack: 3,
             defense: 6,
             magic: 8,
-            difficulty: 10
+            difficulty: 10,
         },
         image: {
             full: 'Rumble.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 288,
+            x: 336,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Mage'],
         partype: 'Heat',
@@ -3290,7 +3292,7 @@ export const championData: {
             mp: 100,
             mpperlevel: 0,
             movespeed: 345,
-            armor: 30.88,
+            armor: 31,
             armorperlevel: 3.5,
             spellblock: 32.1,
             spellblockperlevel: 1.25,
@@ -3301,14 +3303,14 @@ export const championData: {
             mpregenperlevel: 0,
             crit: 0,
             critperlevel: 0,
-            attackdamage: 61.036,
+            attackdamage: 61,
             attackdamageperlevel: 3.2,
             attackspeedperlevel: 1.85,
-            attackspeed: 0.644
-        }
+            attackspeed: 0.644,
+        },
     },
     69: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Cassiopeia',
         key: '69',
         name: 'Cassiopeia',
@@ -3319,16 +3321,16 @@ export const championData: {
             attack: 2,
             defense: 3,
             magic: 9,
-            difficulty: 10
+            difficulty: 10,
         },
         image: {
             full: 'Cassiopeia.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 288,
+            x: 336,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage'],
         partype: 'Mana',
@@ -3352,11 +3354,11 @@ export const championData: {
             attackdamage: 53,
             attackdamageperlevel: 3,
             attackspeedperlevel: 1.5,
-            attackspeed: 0.647
-        }
+            attackspeed: 0.647,
+        },
     },
     72: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Skarner',
         key: '72',
         name: 'Skarner',
@@ -3367,16 +3369,16 @@ export const championData: {
             attack: 7,
             defense: 6,
             magic: 5,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Skarner.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 288,
+            x: 384,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
@@ -3400,11 +3402,11 @@ export const championData: {
             attackdamage: 65,
             attackdamageperlevel: 4.5,
             attackspeedperlevel: 2.1,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     74: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Heimerdinger',
         key: '74',
         name: 'Heimerdinger',
@@ -3415,16 +3417,16 @@ export const championData: {
             attack: 2,
             defense: 6,
             magic: 8,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Heimerdinger.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 336,
+            x: 384,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Support'],
         partype: 'Mana',
@@ -3448,11 +3450,11 @@ export const championData: {
             attackdamage: 55.536,
             attackdamageperlevel: 2.7,
             attackspeedperlevel: 1.36,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     75: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Nasus',
         key: '75',
         name: 'Nasus',
@@ -3463,16 +3465,16 @@ export const championData: {
             attack: 7,
             defense: 5,
             magic: 6,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Nasus.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 288,
+            x: 336,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
@@ -3496,11 +3498,11 @@ export const championData: {
             attackdamage: 67,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 3.48,
-            attackspeed: 0.638
-        }
+            attackspeed: 0.638,
+        },
     },
     76: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Nidalee',
         key: '76',
         name: 'Nidalee',
@@ -3511,16 +3513,16 @@ export const championData: {
             attack: 5,
             defense: 4,
             magic: 7,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Nidalee.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 432,
-            y: 48,
+            x: 0,
+            y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin', 'Mage'],
         partype: 'Mana',
@@ -3544,11 +3546,11 @@ export const championData: {
             attackdamage: 61,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 3.22,
-            attackspeed: 0.638
-        }
+            attackspeed: 0.638,
+        },
     },
     77: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Udyr',
         key: '77',
         name: 'Udyr',
@@ -3559,16 +3561,16 @@ export const championData: {
             attack: 8,
             defense: 7,
             magic: 4,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Udyr.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 144,
+            x: 240,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
@@ -3592,11 +3594,11 @@ export const championData: {
             attackdamage: 66,
             attackdamageperlevel: 5,
             attackspeedperlevel: 2.67,
-            attackspeed: 0.658
-        }
+            attackspeed: 0.658,
+        },
     },
     78: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Poppy',
         key: '78',
         name: 'Poppy',
@@ -3607,16 +3609,16 @@ export const championData: {
             attack: 6,
             defense: 7,
             magic: 2,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Poppy.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 288,
+            x: 336,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Fighter'],
         partype: 'Mana',
@@ -3640,11 +3642,11 @@ export const championData: {
             attackdamage: 64,
             attackdamageperlevel: 4,
             attackspeedperlevel: 2.5,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     79: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Gragas',
         key: '79',
         name: 'Gragas',
@@ -3655,16 +3657,16 @@ export const championData: {
             attack: 4,
             defense: 7,
             magic: 6,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Gragas.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 192,
+            x: 240,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Mage'],
         partype: 'Mana',
@@ -3688,11 +3690,11 @@ export const championData: {
             attackdamage: 64,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 2.05,
-            attackspeed: 0.675
-        }
+            attackspeed: 0.675,
+        },
     },
     80: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Pantheon',
         key: '80',
         name: 'Pantheon',
@@ -3703,16 +3705,16 @@ export const championData: {
             attack: 9,
             defense: 4,
             magic: 3,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Pantheon.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 240,
+            x: 288,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Assassin'],
         partype: 'Mana',
@@ -3736,11 +3738,11 @@ export const championData: {
             attackdamage: 64,
             attackdamageperlevel: 3.3,
             attackspeedperlevel: 2.95,
-            attackspeed: 0.644
-        }
+            attackspeed: 0.644,
+        },
     },
     81: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Ezreal',
         key: '81',
         name: 'Ezreal',
@@ -3751,24 +3753,24 @@ export const championData: {
             attack: 7,
             defense: 2,
             magic: 6,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Ezreal.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 288,
+            x: 336,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman', 'Mage'],
         partype: 'Mana',
         stats: {
-            hp: 491,
+            hp: 500,
             hpperlevel: 86,
-            mp: 360.6,
-            mpperlevel: 42,
+            mp: 375,
+            mpperlevel: 50,
             movespeed: 325,
             armor: 22,
             armorperlevel: 3.5,
@@ -3777,18 +3779,18 @@ export const championData: {
             attackrange: 550,
             hpregen: 4,
             hpregenperlevel: 0.55,
-            mpregen: 8.092,
+            mpregen: 8.5,
             mpregenperlevel: 0.65,
             crit: 0,
             critperlevel: 0,
             attackdamage: 60,
             attackdamageperlevel: 2.5,
-            attackspeedperlevel: 1.5,
-            attackspeed: 0.625
-        }
+            attackspeedperlevel: 2.5,
+            attackspeed: 0.625,
+        },
     },
     82: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Mordekaiser',
         key: '82',
         name: 'Mordekaiser',
@@ -3799,16 +3801,16 @@ export const championData: {
             attack: 4,
             defense: 6,
             magic: 7,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Mordekaiser.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 144,
+            x: 192,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter'],
         partype: 'Shield',
@@ -3832,11 +3834,11 @@ export const championData: {
             attackdamage: 61,
             attackdamageperlevel: 4,
             attackspeedperlevel: 1,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     83: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Yorick',
         key: '83',
         name: 'Yorick',
@@ -3847,16 +3849,16 @@ export const championData: {
             attack: 6,
             defense: 6,
             magic: 4,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Yorick.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 384,
-            y: 48,
+            x: 0,
+            y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
@@ -3880,11 +3882,11 @@ export const championData: {
             attackdamage: 62,
             attackdamageperlevel: 5,
             attackspeedperlevel: 2,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     84: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Akali',
         key: '84',
         name: 'Akali',
@@ -3895,7 +3897,7 @@ export const championData: {
             attack: 5,
             defense: 3,
             magic: 8,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Akali.png',
@@ -3904,7 +3906,7 @@ export const championData: {
             x: 96,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin'],
         partype: 'Energy',
@@ -3928,11 +3930,11 @@ export const championData: {
             attackdamage: 62.4,
             attackdamageperlevel: 3.3,
             attackspeedperlevel: 3.2,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     85: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Kennen',
         key: '85',
         name: 'Kennen',
@@ -3943,16 +3945,16 @@ export const championData: {
             attack: 6,
             defense: 4,
             magic: 7,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Kennen.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 240,
+            x: 288,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Marksman'],
         partype: 'Energy',
@@ -3976,11 +3978,11 @@ export const championData: {
             attackdamage: 48,
             attackdamageperlevel: 3.75,
             attackspeedperlevel: 3.4,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     86: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Garen',
         key: '86',
         name: 'Garen',
@@ -3991,16 +3993,16 @@ export const championData: {
             attack: 7,
             defense: 7,
             magic: 1,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Garen.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 96,
+            x: 144,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'None',
@@ -4013,7 +4015,7 @@ export const championData: {
             armor: 36,
             armorperlevel: 3,
             spellblock: 32.1,
-            spellblockperlevel: 1.25,
+            spellblockperlevel: 0.75,
             attackrange: 175,
             hpregen: 8,
             hpregenperlevel: 0.5,
@@ -4024,11 +4026,11 @@ export const championData: {
             attackdamage: 66,
             attackdamageperlevel: 4.5,
             attackspeedperlevel: 3.65,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     89: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Leona',
         key: '89',
         name: 'Leona',
@@ -4039,16 +4041,16 @@ export const championData: {
             attack: 4,
             defense: 8,
             magic: 3,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Leona.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 96,
+            x: 144,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Support'],
         partype: 'Mana',
@@ -4072,11 +4074,11 @@ export const championData: {
             attackdamage: 60.04,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2.9,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     90: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Malzahar',
         key: '90',
         name: 'Malzahar',
@@ -4087,16 +4089,16 @@ export const championData: {
             attack: 2,
             defense: 2,
             magic: 9,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Malzahar.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 384,
+            x: 432,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Assassin'],
         partype: 'Mana',
@@ -4120,11 +4122,11 @@ export const championData: {
             attackdamage: 55,
             attackdamageperlevel: 3,
             attackspeedperlevel: 1.5,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     91: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Talon',
         key: '91',
         name: 'Talon',
@@ -4135,16 +4137,16 @@ export const championData: {
             attack: 9,
             defense: 3,
             magic: 1,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Talon.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 192,
+            x: 288,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin'],
         partype: 'Mana',
@@ -4168,11 +4170,11 @@ export const championData: {
             attackdamage: 68,
             attackdamageperlevel: 3.1,
             attackspeedperlevel: 2.9,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     92: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Riven',
         key: '92',
         name: 'Riven',
@@ -4183,21 +4185,21 @@ export const championData: {
             attack: 8,
             defense: 5,
             magic: 1,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Riven.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 240,
+            x: 288,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Assassin'],
         partype: 'None',
         stats: {
-            hp: 558.48,
+            hp: 560,
             hpperlevel: 86,
             mp: 0,
             mpperlevel: 0,
@@ -4207,7 +4209,7 @@ export const championData: {
             spellblock: 32.1,
             spellblockperlevel: 1.25,
             attackrange: 125,
-            hpregen: 7,
+            hpregen: 8.5,
             hpregenperlevel: 0.5,
             mpregen: 0,
             mpregenperlevel: 0,
@@ -4216,11 +4218,11 @@ export const championData: {
             attackdamage: 64,
             attackdamageperlevel: 3,
             attackspeedperlevel: 3.5,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     96: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'KogMaw',
         key: '96',
         name: "Kog'Maw",
@@ -4231,16 +4233,16 @@ export const championData: {
             attack: 8,
             defense: 2,
             magic: 5,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'KogMaw.png',
-            sprite: 'champion1.png',
+            sprite: 'champion2.png',
             group: 'champion',
-            x: 432,
-            y: 96,
+            x: 0,
+            y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman', 'Mage'],
         partype: 'Mana',
@@ -4264,11 +4266,11 @@ export const championData: {
             attackdamage: 61,
             attackdamageperlevel: 3.11,
             attackspeedperlevel: 2.65,
-            attackspeed: 0.665
-        }
+            attackspeed: 0.665,
+        },
     },
     98: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Shen',
         key: '98',
         name: 'Shen',
@@ -4279,16 +4281,16 @@ export const championData: {
             attack: 3,
             defense: 9,
             magic: 3,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Shen.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 48,
+            x: 144,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank'],
         partype: 'Energy',
@@ -4312,11 +4314,11 @@ export const championData: {
             attackdamage: 60,
             attackdamageperlevel: 3,
             attackspeedperlevel: 3,
-            attackspeed: 0.751
-        }
+            attackspeed: 0.751,
+        },
     },
     99: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Lux',
         key: '99',
         name: 'Lux',
@@ -4327,16 +4329,16 @@ export const championData: {
             attack: 2,
             defense: 4,
             magic: 9,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Lux.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 288,
+            x: 336,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Support'],
         partype: 'Mana',
@@ -4360,11 +4362,11 @@ export const championData: {
             attackdamage: 53.54,
             attackdamageperlevel: 3.3,
             attackspeedperlevel: 1,
-            attackspeed: 0.669
-        }
+            attackspeed: 0.669,
+        },
     },
     101: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Xerath',
         key: '101',
         name: 'Xerath',
@@ -4375,16 +4377,16 @@ export const championData: {
             attack: 1,
             defense: 3,
             magic: 10,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Xerath.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 240,
+            x: 336,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage'],
         partype: 'Mana',
@@ -4408,11 +4410,11 @@ export const championData: {
             attackdamage: 54.7,
             attackdamageperlevel: 3,
             attackspeedperlevel: 1.36,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     102: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Shyvana',
         key: '102',
         name: 'Shyvana',
@@ -4423,16 +4425,16 @@ export const championData: {
             attack: 8,
             defense: 6,
             magic: 3,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Shyvana.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 96,
+            x: 192,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Fury',
@@ -4456,11 +4458,11 @@ export const championData: {
             attackdamage: 66,
             attackdamageperlevel: 3.4,
             attackspeedperlevel: 2.5,
-            attackspeed: 0.658
-        }
+            attackspeed: 0.658,
+        },
     },
     103: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Ahri',
         key: '103',
         name: 'Ahri',
@@ -4471,7 +4473,7 @@ export const championData: {
             attack: 3,
             defense: 4,
             magic: 8,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Ahri.png',
@@ -4480,7 +4482,7 @@ export const championData: {
             x: 48,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Assassin'],
         partype: 'Mana',
@@ -4504,11 +4506,11 @@ export const championData: {
             attackdamage: 53.04,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2,
-            attackspeed: 0.668
-        }
+            attackspeed: 0.668,
+        },
     },
     104: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Graves',
         key: '104',
         name: 'Graves',
@@ -4519,16 +4521,16 @@ export const championData: {
             attack: 8,
             defense: 5,
             magic: 3,
-            difficulty: 3
+            difficulty: 3,
         },
         image: {
             full: 'Graves.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 240,
+            x: 288,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman'],
         partype: 'Mana',
@@ -4540,8 +4542,8 @@ export const championData: {
             movespeed: 340,
             armor: 33,
             armorperlevel: 3.4,
-            spellblock: 30,
-            spellblockperlevel: 1,
+            spellblock: 32,
+            spellblockperlevel: 1.25,
             attackrange: 425,
             hpregen: 8,
             hpregenperlevel: 0.7,
@@ -4552,11 +4554,11 @@ export const championData: {
             attackdamage: 68,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2.6,
-            attackspeed: 0.475
-        }
+            attackspeed: 0.475,
+        },
     },
     105: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Fizz',
         key: '105',
         name: 'Fizz',
@@ -4567,16 +4569,16 @@ export const championData: {
             attack: 6,
             defense: 4,
             magic: 7,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Fizz.png',
-            sprite: 'champion0.png',
+            sprite: 'champion1.png',
             group: 'champion',
-            x: 432,
-            y: 96,
+            x: 0,
+            y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin', 'Fighter'],
         partype: 'Mana',
@@ -4600,11 +4602,11 @@ export const championData: {
             attackdamage: 58.04,
             attackdamageperlevel: 3,
             attackspeedperlevel: 3.1,
-            attackspeed: 0.658
-        }
+            attackspeed: 0.658,
+        },
     },
     106: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Volibear',
         key: '106',
         name: 'Volibear',
@@ -4615,16 +4617,16 @@ export const championData: {
             attack: 7,
             defense: 7,
             magic: 4,
-            difficulty: 3
+            difficulty: 3,
         },
         image: {
             full: 'Volibear.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 96,
+            x: 192,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
@@ -4648,11 +4650,11 @@ export const championData: {
             attackdamage: 68,
             attackdamageperlevel: 3.3,
             attackspeedperlevel: 2.67,
-            attackspeed: 0.658
-        }
+            attackspeed: 0.658,
+        },
     },
     107: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Rengar',
         key: '107',
         name: 'Rengar',
@@ -4663,16 +4665,16 @@ export const championData: {
             attack: 7,
             defense: 4,
             magic: 2,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Rengar.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 192,
+            x: 240,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin', 'Fighter'],
         partype: 'Ferocity',
@@ -4696,11 +4698,11 @@ export const championData: {
             attackdamage: 68,
             attackdamageperlevel: 3,
             attackspeedperlevel: 3,
-            attackspeed: 0.667
-        }
+            attackspeed: 0.667,
+        },
     },
     110: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Varus',
         key: '110',
         name: 'Varus',
@@ -4711,16 +4713,16 @@ export const championData: {
             attack: 7,
             defense: 3,
             magic: 4,
-            difficulty: 2
+            difficulty: 2,
         },
         image: {
             full: 'Varus.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 240,
+            x: 336,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman', 'Mage'],
         partype: 'Mana',
@@ -4744,11 +4746,11 @@ export const championData: {
             attackdamage: 61,
             attackdamageperlevel: 3.11,
             attackspeedperlevel: 3,
-            attackspeed: 0.658
-        }
+            attackspeed: 0.658,
+        },
     },
     111: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Nautilus',
         key: '111',
         name: 'Nautilus',
@@ -4759,16 +4761,16 @@ export const championData: {
             attack: 4,
             defense: 6,
             magic: 6,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Nautilus.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 336,
+            x: 384,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Fighter'],
         partype: 'Mana',
@@ -4792,11 +4794,11 @@ export const championData: {
             attackdamage: 61,
             attackdamageperlevel: 3.3,
             attackspeedperlevel: 1,
-            attackspeed: 0.706
-        }
+            attackspeed: 0.706,
+        },
     },
     112: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Viktor',
         key: '112',
         name: 'Viktor',
@@ -4807,16 +4809,16 @@ export const championData: {
             attack: 2,
             defense: 4,
             magic: 10,
-            difficulty: 9
+            difficulty: 9,
         },
         image: {
             full: 'Viktor.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 0,
+            x: 96,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage'],
         partype: 'Mana',
@@ -4840,11 +4842,11 @@ export const championData: {
             attackdamage: 53,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2.11,
-            attackspeed: 0.658
-        }
+            attackspeed: 0.658,
+        },
     },
     113: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Sejuani',
         key: '113',
         name: 'Sejuani',
@@ -4855,22 +4857,22 @@ export const championData: {
             attack: 5,
             defense: 7,
             magic: 6,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Sejuani.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 384,
+            x: 432,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Fighter'],
         partype: 'Mana',
         stats: {
             hp: 560,
-            hpperlevel: 95,
+            hpperlevel: 100,
             mp: 400,
             mpperlevel: 40,
             movespeed: 340,
@@ -4888,11 +4890,11 @@ export const championData: {
             attackdamage: 66,
             attackdamageperlevel: 4,
             attackspeedperlevel: 3.5,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.688,
+        },
     },
     114: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Fiora',
         key: '114',
         name: 'Fiora',
@@ -4903,16 +4905,16 @@ export const championData: {
             attack: 10,
             defense: 4,
             magic: 2,
-            difficulty: 3
+            difficulty: 3,
         },
         image: {
             full: 'Fiora.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 384,
+            x: 432,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Assassin'],
         partype: 'Mana',
@@ -4936,11 +4938,11 @@ export const championData: {
             attackdamage: 68,
             attackdamageperlevel: 3.3,
             attackspeedperlevel: 3.2,
-            attackspeed: 0.69
-        }
+            attackspeed: 0.69,
+        },
     },
     115: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Ziggs',
         key: '115',
         name: 'Ziggs',
@@ -4951,16 +4953,16 @@ export const championData: {
             attack: 2,
             defense: 4,
             magic: 9,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Ziggs.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 96,
+            x: 192,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage'],
         partype: 'Mana',
@@ -4984,11 +4986,11 @@ export const championData: {
             attackdamage: 54.208,
             attackdamageperlevel: 3.1,
             attackspeedperlevel: 2,
-            attackspeed: 0.656
-        }
+            attackspeed: 0.656,
+        },
     },
     117: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Lulu',
         key: '117',
         name: 'Lulu',
@@ -4999,16 +5001,16 @@ export const championData: {
             attack: 4,
             defense: 5,
             magic: 7,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Lulu.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 240,
+            x: 288,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Support', 'Mage'],
         partype: 'Mana',
@@ -5018,7 +5020,7 @@ export const championData: {
             mp: 350,
             mpperlevel: 55,
             movespeed: 330,
-            armor: 28.22,
+            armor: 29,
             armorperlevel: 3.7,
             spellblock: 30,
             spellblockperlevel: 0.5,
@@ -5029,14 +5031,14 @@ export const championData: {
             mpregenperlevel: 0.6,
             crit: 0,
             critperlevel: 0,
-            attackdamage: 46.368,
+            attackdamage: 47,
             attackdamageperlevel: 2.6,
             attackspeedperlevel: 2.25,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     119: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Draven',
         key: '119',
         name: 'Draven',
@@ -5047,16 +5049,16 @@ export const championData: {
             attack: 9,
             defense: 3,
             magic: 1,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Draven.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 48,
+            x: 96,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman'],
         partype: 'Mana',
@@ -5080,11 +5082,11 @@ export const championData: {
             attackdamage: 60,
             attackdamageperlevel: 3.61,
             attackspeedperlevel: 2.7,
-            attackspeed: 0.679
-        }
+            attackspeed: 0.679,
+        },
     },
     120: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Hecarim',
         key: '120',
         name: 'Hecarim',
@@ -5095,16 +5097,16 @@ export const championData: {
             attack: 8,
             defense: 6,
             magic: 4,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Hecarim.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 288,
+            x: 336,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
@@ -5128,11 +5130,11 @@ export const championData: {
             attackdamage: 66,
             attackdamageperlevel: 3.2,
             attackspeedperlevel: 2.5,
-            attackspeed: 0.67
-        }
+            attackspeed: 0.67,
+        },
     },
     121: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Khazix',
         key: '121',
         name: "Kha'Zix",
@@ -5143,16 +5145,16 @@ export const championData: {
             attack: 9,
             defense: 4,
             magic: 3,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Khazix.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 288,
+            x: 336,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin'],
         partype: 'Mana',
@@ -5176,11 +5178,11 @@ export const championData: {
             attackdamage: 63,
             attackdamageperlevel: 3.1,
             attackspeedperlevel: 2.7,
-            attackspeed: 0.668
-        }
+            attackspeed: 0.668,
+        },
     },
     122: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Darius',
         key: '122',
         name: 'Darius',
@@ -5191,16 +5193,16 @@ export const championData: {
             attack: 9,
             defense: 5,
             magic: 1,
-            difficulty: 2
+            difficulty: 2,
         },
         image: {
             full: 'Darius.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 432,
-            y: 48,
+            x: 0,
+            y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
@@ -5224,11 +5226,11 @@ export const championData: {
             attackdamage: 64,
             attackdamageperlevel: 5,
             attackspeedperlevel: 1,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     126: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Jayce',
         key: '126',
         name: 'Jayce',
@@ -5239,24 +5241,24 @@ export const championData: {
             attack: 8,
             defense: 4,
             magic: 3,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Jayce.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 192,
+            x: 240,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Marksman'],
         partype: 'Mana',
         stats: {
             hp: 560,
             hpperlevel: 90,
-            mp: 357.2,
-            mpperlevel: 37,
+            mp: 375,
+            mpperlevel: 45,
             movespeed: 335,
             armor: 27,
             armorperlevel: 3.5,
@@ -5272,11 +5274,11 @@ export const championData: {
             attackdamage: 54,
             attackdamageperlevel: 4.25,
             attackspeedperlevel: 3,
-            attackspeed: 0.658
-        }
+            attackspeed: 0.658,
+        },
     },
     127: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Lissandra',
         key: '127',
         name: 'Lissandra',
@@ -5287,16 +5289,16 @@ export const championData: {
             attack: 2,
             defense: 5,
             magic: 8,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Lissandra.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 144,
+            x: 192,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage'],
         partype: 'Mana',
@@ -5320,11 +5322,11 @@ export const championData: {
             attackdamage: 53,
             attackdamageperlevel: 2.7,
             attackspeedperlevel: 1.36,
-            attackspeed: 0.656
-        }
+            attackspeed: 0.656,
+        },
     },
     131: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Diana',
         key: '131',
         name: 'Diana',
@@ -5335,24 +5337,24 @@ export const championData: {
             attack: 7,
             defense: 6,
             magic: 8,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Diana.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 0,
+            x: 48,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Mage'],
         partype: 'Mana',
         stats: {
             hp: 594,
             hpperlevel: 95,
-            mp: 372,
-            mpperlevel: 20,
+            mp: 375,
+            mpperlevel: 25,
             movespeed: 345,
             armor: 31,
             armorperlevel: 3.6,
@@ -5365,14 +5367,14 @@ export const championData: {
             mpregenperlevel: 0.8,
             crit: 0,
             critperlevel: 0,
-            attackdamage: 53.04,
+            attackdamage: 57.04,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2.25,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     133: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Quinn',
         key: '133',
         name: 'Quinn',
@@ -5383,16 +5385,16 @@ export const championData: {
             attack: 9,
             defense: 4,
             magic: 2,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Quinn.png',
-            sprite: 'champion2.png',
+            sprite: 'champion3.png',
             group: 'champion',
-            x: 432,
-            y: 96,
+            x: 0,
+            y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman', 'Assassin'],
         partype: 'Mana',
@@ -5416,11 +5418,11 @@ export const championData: {
             attackdamage: 59,
             attackdamageperlevel: 2.4,
             attackspeedperlevel: 3.1,
-            attackspeed: 0.668
-        }
+            attackspeed: 0.668,
+        },
     },
     134: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Syndra',
         key: '134',
         name: 'Syndra',
@@ -5431,16 +5433,16 @@ export const championData: {
             attack: 2,
             defense: 3,
             magic: 9,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Syndra.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 48,
+            x: 144,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Support'],
         partype: 'Mana',
@@ -5464,11 +5466,11 @@ export const championData: {
             attackdamage: 53.872,
             attackdamageperlevel: 2.9,
             attackspeedperlevel: 2,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     136: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'AurelionSol',
         key: '136',
         name: 'Aurelion Sol',
@@ -5479,16 +5481,16 @@ export const championData: {
             attack: 2,
             defense: 3,
             magic: 8,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'AurelionSol.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 384,
+            x: 432,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage'],
         partype: 'Mana',
@@ -5512,11 +5514,11 @@ export const championData: {
             attackdamage: 57,
             attackdamageperlevel: 3.2,
             attackspeedperlevel: 1.36,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     141: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Kayn',
         key: '141',
         name: 'Kayn',
@@ -5527,16 +5529,16 @@ export const championData: {
             attack: 10,
             defense: 6,
             magic: 1,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Kayn.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 192,
+            x: 240,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Assassin'],
         partype: 'Mana',
@@ -5560,11 +5562,11 @@ export const championData: {
             attackdamage: 68,
             attackdamageperlevel: 3.3,
             attackspeedperlevel: 2.7,
-            attackspeed: 0.669
-        }
+            attackspeed: 0.669,
+        },
     },
     142: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Zoe',
         key: '142',
         name: 'Zoe',
@@ -5575,16 +5577,16 @@ export const championData: {
             attack: 1,
             defense: 7,
             magic: 8,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Zoe.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 192,
+            x: 288,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Support'],
         partype: 'Mana',
@@ -5608,11 +5610,11 @@ export const championData: {
             attackdamage: 58,
             attackdamageperlevel: 3.3,
             attackspeedperlevel: 2.5,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     143: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Zyra',
         key: '143',
         name: 'Zyra',
@@ -5623,16 +5625,16 @@ export const championData: {
             attack: 4,
             defense: 3,
             magic: 8,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Zyra.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 240,
+            x: 336,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Support'],
         partype: 'Mana',
@@ -5656,11 +5658,11 @@ export const championData: {
             attackdamage: 53.376,
             attackdamageperlevel: 3.2,
             attackspeedperlevel: 2.11,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     145: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Kaisa',
         key: '145',
         name: "Kai'Sa",
@@ -5671,16 +5673,16 @@ export const championData: {
             attack: 8,
             defense: 5,
             magic: 3,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Kaisa.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 336,
+            x: 384,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman'],
         partype: 'Mana',
@@ -5704,11 +5706,11 @@ export const championData: {
             attackdamage: 59,
             attackdamageperlevel: 1.7,
             attackspeedperlevel: 1.8,
-            attackspeed: 0.644
-        }
+            attackspeed: 0.644,
+        },
     },
     150: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Gnar',
         key: '150',
         name: 'Gnar',
@@ -5719,16 +5721,16 @@ export const championData: {
             attack: 6,
             defense: 5,
             magic: 5,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Gnar.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 144,
+            x: 192,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Rage',
@@ -5737,7 +5739,7 @@ export const championData: {
             hpperlevel: 65,
             mp: 100,
             mpperlevel: 0,
-            movespeed: 325,
+            movespeed: 335,
             armor: 32,
             armorperlevel: 2.5,
             spellblock: 30,
@@ -5752,11 +5754,11 @@ export const championData: {
             attackdamage: 59,
             attackdamageperlevel: 3,
             attackspeedperlevel: 6,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     154: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Zac',
         key: '154',
         name: 'Zac',
@@ -5767,16 +5769,16 @@ export const championData: {
             attack: 3,
             defense: 7,
             magic: 7,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Zac.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 0,
+            x: 96,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Fighter'],
         partype: 'None',
@@ -5800,11 +5802,11 @@ export const championData: {
             attackdamage: 60,
             attackdamageperlevel: 3.4,
             attackspeedperlevel: 1.6,
-            attackspeed: 0.736
-        }
+            attackspeed: 0.736,
+        },
     },
     157: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Yasuo',
         key: '157',
         name: 'Yasuo',
@@ -5815,16 +5817,16 @@ export const championData: {
             attack: 8,
             defense: 4,
             magic: 4,
-            difficulty: 10
+            difficulty: 10,
         },
         image: {
             full: 'Yasuo.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 336,
+            x: 432,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Assassin'],
         partype: 'Flow',
@@ -5848,11 +5850,11 @@ export const championData: {
             attackdamage: 60,
             attackdamageperlevel: 3.2,
             attackspeedperlevel: 2.5,
-            attackspeed: 0.697
-        }
+            attackspeed: 0.697,
+        },
     },
     161: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Velkoz',
         key: '161',
         name: "Vel'Koz",
@@ -5863,16 +5865,16 @@ export const championData: {
             attack: 2,
             defense: 2,
             magic: 10,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Velkoz.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 384,
-            y: 0,
+            x: 0,
+            y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage'],
         partype: 'Mana',
@@ -5896,11 +5898,11 @@ export const championData: {
             attackdamage: 54.9379,
             attackdamageperlevel: 3.1416,
             attackspeedperlevel: 1.36,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     163: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Taliyah',
         key: '163',
         name: 'Taliyah',
@@ -5911,16 +5913,16 @@ export const championData: {
             attack: 1,
             defense: 7,
             magic: 8,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Taliyah.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 144,
+            x: 240,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Support'],
         partype: 'Mana',
@@ -5944,11 +5946,11 @@ export const championData: {
             attackdamage: 58,
             attackdamageperlevel: 3.3,
             attackspeedperlevel: 1.36,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     164: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Camille',
         key: '164',
         name: 'Camille',
@@ -5959,16 +5961,16 @@ export const championData: {
             attack: 8,
             defense: 6,
             magic: 3,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Camille.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 240,
+            x: 288,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
@@ -5992,11 +5994,11 @@ export const championData: {
             attackdamage: 68,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 2.5,
-            attackspeed: 0.644
-        }
+            attackspeed: 0.644,
+        },
     },
     201: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Braum',
         key: '201',
         name: 'Braum',
@@ -6007,22 +6009,22 @@ export const championData: {
             attack: 3,
             defense: 9,
             magic: 4,
-            difficulty: 3
+            difficulty: 3,
         },
         image: {
             full: 'Braum.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 144,
+            x: 192,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Support', 'Tank'],
         partype: 'Mana',
         stats: {
             hp: 540,
-            hpperlevel: 87,
+            hpperlevel: 98,
             mp: 310.6,
             mpperlevel: 45,
             movespeed: 335,
@@ -6031,7 +6033,7 @@ export const championData: {
             spellblock: 32.1,
             spellblockperlevel: 1.25,
             attackrange: 125,
-            hpregen: 8,
+            hpregen: 8.5,
             hpregenperlevel: 1,
             mpregen: 6,
             mpregenperlevel: 0.8,
@@ -6040,11 +6042,11 @@ export const championData: {
             attackdamage: 55.376,
             attackdamageperlevel: 3.2,
             attackspeedperlevel: 3.5,
-            attackspeed: 0.644
-        }
+            attackspeed: 0.644,
+        },
     },
     202: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Jhin',
         key: '202',
         name: 'Jhin',
@@ -6055,16 +6057,16 @@ export const championData: {
             attack: 10,
             defense: 2,
             magic: 6,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Jhin.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 240,
+            x: 288,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman', 'Mage'],
         partype: 'Mana',
@@ -6088,11 +6090,11 @@ export const championData: {
             attackdamage: 59,
             attackdamageperlevel: 4.7,
             attackspeedperlevel: 0,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     203: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Kindred',
         key: '203',
         name: 'Kindred',
@@ -6103,16 +6105,16 @@ export const championData: {
             attack: 8,
             defense: 2,
             magic: 2,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Kindred.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 336,
+            x: 384,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman'],
         partype: 'Mana',
@@ -6129,18 +6131,18 @@ export const championData: {
             attackrange: 500,
             hpregen: 7,
             hpregenperlevel: 0.55,
-            mpregen: 6.972,
+            mpregen: 7,
             mpregenperlevel: 0.4,
             crit: 0,
             critperlevel: 0,
             attackdamage: 65,
-            attackdamageperlevel: 2.26,
+            attackdamageperlevel: 2.5,
             attackspeedperlevel: 3.5,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     222: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Jinx',
         key: '222',
         name: 'Jinx',
@@ -6151,16 +6153,16 @@ export const championData: {
             attack: 9,
             defense: 2,
             magic: 4,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Jinx.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 288,
+            x: 336,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman'],
         partype: 'Mana',
@@ -6184,11 +6186,11 @@ export const championData: {
             attackdamage: 57,
             attackdamageperlevel: 3.4,
             attackspeedperlevel: 1,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     223: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'TahmKench',
         key: '223',
         name: 'Tahm Kench',
@@ -6199,16 +6201,16 @@ export const championData: {
             attack: 3,
             defense: 9,
             magic: 6,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'TahmKench.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 96,
+            x: 192,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Support', 'Tank'],
         partype: 'Mana',
@@ -6232,11 +6234,11 @@ export const championData: {
             attackdamage: 56,
             attackdamageperlevel: 3.2,
             attackspeedperlevel: 2.5,
-            attackspeed: 0.658
-        }
+            attackspeed: 0.658,
+        },
     },
     235: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Senna',
         key: '235',
         name: 'Senna',
@@ -6247,22 +6249,22 @@ export const championData: {
             attack: 7,
             defense: 2,
             magic: 6,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Senna.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 432,
-            y: 0,
+            x: 0,
+            y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman', 'Support'],
         partype: 'Mana',
         stats: {
             hp: 520,
-            hpperlevel: 85,
+            hpperlevel: 75,
             mp: 350,
             mpperlevel: 45,
             movespeed: 330,
@@ -6280,11 +6282,11 @@ export const championData: {
             attackdamage: 50,
             attackdamageperlevel: 0,
             attackspeedperlevel: 4,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     236: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Lucian',
         key: '236',
         name: 'Lucian',
@@ -6295,16 +6297,16 @@ export const championData: {
             attack: 8,
             defense: 5,
             magic: 3,
-            difficulty: 6
+            difficulty: 6,
         },
         image: {
             full: 'Lucian.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 192,
+            x: 240,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman'],
         partype: 'Mana',
@@ -6328,11 +6330,11 @@ export const championData: {
             attackdamage: 64,
             attackdamageperlevel: 2.75,
             attackspeedperlevel: 3.3,
-            attackspeed: 0.638
-        }
+            attackspeed: 0.638,
+        },
     },
     238: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Zed',
         key: '238',
         name: 'Zed',
@@ -6343,16 +6345,16 @@ export const championData: {
             attack: 9,
             defense: 2,
             magic: 1,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Zed.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 48,
+            x: 144,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin'],
         partype: 'Energy',
@@ -6376,11 +6378,11 @@ export const championData: {
             attackdamage: 63,
             attackdamageperlevel: 3.4,
             attackspeedperlevel: 3.3,
-            attackspeed: 0.651
-        }
+            attackspeed: 0.651,
+        },
     },
     240: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Kled',
         key: '240',
         name: 'Kled',
@@ -6391,16 +6393,16 @@ export const championData: {
             attack: 8,
             defense: 2,
             magic: 2,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Kled.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 384,
+            x: 432,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Courage',
@@ -6424,11 +6426,11 @@ export const championData: {
             attackdamage: 65,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 3.5,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     245: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Ekko',
         key: '245',
         name: 'Ekko',
@@ -6439,16 +6441,16 @@ export const championData: {
             attack: 5,
             defense: 3,
             magic: 7,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Ekko.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 144,
+            x: 192,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin', 'Fighter'],
         partype: 'Mana',
@@ -6472,11 +6474,11 @@ export const championData: {
             attackdamage: 58,
             attackdamageperlevel: 3,
             attackspeedperlevel: 3.3,
-            attackspeed: 0.688
-        }
+            attackspeed: 0.688,
+        },
     },
     246: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Qiyana',
         key: '246',
         name: 'Qiyana',
@@ -6487,16 +6489,16 @@ export const championData: {
             attack: 0,
             defense: 2,
             magic: 4,
-            difficulty: 8
+            difficulty: 8,
         },
         image: {
             full: 'Qiyana.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 384,
+            x: 432,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Assassin', 'Fighter'],
         partype: 'Mana',
@@ -6520,11 +6522,11 @@ export const championData: {
             attackdamage: 64,
             attackdamageperlevel: 3.1,
             attackspeedperlevel: 2.1,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     254: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Vi',
         key: '254',
         name: 'Vi',
@@ -6535,16 +6537,16 @@ export const championData: {
             attack: 8,
             defense: 5,
             magic: 3,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Vi.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 432,
-            y: 0,
+            x: 48,
+            y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Assassin'],
         partype: 'Mana',
@@ -6568,11 +6570,11 @@ export const championData: {
             attackdamage: 63,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 2,
-            attackspeed: 0.644
-        }
+            attackspeed: 0.644,
+        },
     },
     266: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Aatrox',
         key: '266',
         name: 'Aatrox',
@@ -6583,7 +6585,7 @@ export const championData: {
             attack: 8,
             defense: 4,
             magic: 3,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Aatrox.png',
@@ -6592,7 +6594,7 @@ export const championData: {
             x: 0,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Blood Well',
@@ -6616,11 +6618,11 @@ export const championData: {
             attackdamage: 60,
             attackdamageperlevel: 5,
             attackspeedperlevel: 2.5,
-            attackspeed: 0.651
-        }
+            attackspeed: 0.651,
+        },
     },
     267: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Nami',
         key: '267',
         name: 'Nami',
@@ -6631,16 +6633,16 @@ export const championData: {
             attack: 4,
             defense: 3,
             magic: 7,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Nami.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 240,
+            x: 288,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Support', 'Mage'],
         partype: 'Mana',
@@ -6664,11 +6666,11 @@ export const championData: {
             attackdamage: 51.208,
             attackdamageperlevel: 3.1,
             attackspeedperlevel: 2.61,
-            attackspeed: 0.644
-        }
+            attackspeed: 0.644,
+        },
     },
     268: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Azir',
         key: '268',
         name: 'Azir',
@@ -6679,23 +6681,23 @@ export const championData: {
             attack: 6,
             defense: 3,
             magic: 8,
-            difficulty: 9
+            difficulty: 9,
         },
         image: {
             full: 'Azir.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 432,
-            y: 0,
+            x: 0,
+            y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Marksman'],
         partype: 'Mana',
         stats: {
             hp: 552,
             hpperlevel: 92,
-            mp: 438,
+            mp: 480,
             mpperlevel: 21,
             movespeed: 335,
             armor: 19.04,
@@ -6712,11 +6714,11 @@ export const championData: {
             attackdamage: 52,
             attackdamageperlevel: 2.8,
             attackspeedperlevel: 3,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     350: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Yuumi',
         key: '350',
         name: 'Yuumi',
@@ -6727,16 +6729,16 @@ export const championData: {
             attack: 5,
             defense: 1,
             magic: 8,
-            difficulty: 2
+            difficulty: 2,
         },
         image: {
             full: 'Yuumi.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 432,
-            y: 48,
+            x: 48,
+            y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Support', 'Mage'],
         partype: 'Mana',
@@ -6760,11 +6762,11 @@ export const championData: {
             attackdamage: 55,
             attackdamageperlevel: 3.1,
             attackspeedperlevel: 1,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     412: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Thresh',
         key: '412',
         name: 'Thresh',
@@ -6775,16 +6777,16 @@ export const championData: {
             attack: 5,
             defense: 6,
             magic: 6,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Thresh.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 336,
+            x: 432,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Support', 'Fighter'],
         partype: 'Mana',
@@ -6808,11 +6810,11 @@ export const championData: {
             attackdamage: 56,
             attackdamageperlevel: 2.2,
             attackspeedperlevel: 3.5,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     420: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Illaoi',
         key: '420',
         name: 'Illaoi',
@@ -6823,16 +6825,16 @@ export const championData: {
             attack: 8,
             defense: 6,
             magic: 3,
-            difficulty: 4
+            difficulty: 4,
         },
         image: {
             full: 'Illaoi.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 384,
+            x: 432,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
@@ -6856,11 +6858,11 @@ export const championData: {
             attackdamage: 68,
             attackdamageperlevel: 5,
             attackspeedperlevel: 2.5,
-            attackspeed: 0.571
-        }
+            attackspeed: 0.571,
+        },
     },
     421: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'RekSai',
         key: '421',
         name: "Rek'Sai",
@@ -6871,16 +6873,16 @@ export const championData: {
             attack: 8,
             defense: 5,
             magic: 2,
-            difficulty: 3
+            difficulty: 3,
         },
         image: {
             full: 'RekSai.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 96,
+            x: 144,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Fighter'],
         partype: 'Rage',
@@ -6904,11 +6906,11 @@ export const championData: {
             attackdamage: 64,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2,
-            attackspeed: 0.667
-        }
+            attackspeed: 0.667,
+        },
     },
     427: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Ivern',
         key: '427',
         name: 'Ivern',
@@ -6919,16 +6921,16 @@ export const championData: {
             attack: 3,
             defense: 5,
             magic: 7,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Ivern.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 0,
+            x: 48,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Support', 'Mage'],
         partype: 'Mana',
@@ -6952,11 +6954,11 @@ export const championData: {
             attackdamage: 50,
             attackdamageperlevel: 3,
             attackspeedperlevel: 3.4,
-            attackspeed: 0.644
-        }
+            attackspeed: 0.644,
+        },
     },
     429: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Kalista',
         key: '429',
         name: 'Kalista',
@@ -6967,27 +6969,27 @@ export const championData: {
             attack: 8,
             defense: 2,
             magic: 4,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Kalista.png',
             sprite: 'champion1.png',
             group: 'champion',
-            x: 384,
+            x: 432,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman'],
         partype: 'Mana',
         stats: {
             hp: 534,
-            hpperlevel: 89,
+            hpperlevel: 100,
             mp: 250,
             mpperlevel: 45,
             movespeed: 325,
             armor: 23,
-            armorperlevel: 3.5,
+            armorperlevel: 4,
             spellblock: 30,
             spellblockperlevel: 0.5,
             attackrange: 525,
@@ -7000,11 +7002,11 @@ export const championData: {
             attackdamage: 69,
             attackdamageperlevel: 4,
             attackspeedperlevel: 4,
-            attackspeed: 0.694
-        }
+            attackspeed: 0.694,
+        },
     },
     432: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Bard',
         key: '432',
         name: 'Bard',
@@ -7015,16 +7017,16 @@ export const championData: {
             attack: 4,
             defense: 4,
             magic: 5,
-            difficulty: 9
+            difficulty: 9,
         },
         image: {
             full: 'Bard.png',
             sprite: 'champion0.png',
             group: 'champion',
-            x: 0,
+            x: 48,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Support', 'Mage'],
         partype: 'Mana',
@@ -7048,11 +7050,11 @@ export const championData: {
             attackdamage: 52,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     497: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Rakan',
         key: '497',
         name: 'Rakan',
@@ -7063,16 +7065,16 @@ export const championData: {
             attack: 2,
             defense: 4,
             magic: 8,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Rakan.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 0,
+            x: 48,
             y: 0,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Support'],
         partype: 'Mana',
@@ -7096,11 +7098,11 @@ export const championData: {
             attackdamage: 62,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 3,
-            attackspeed: 0.635
-        }
+            attackspeed: 0.635,
+        },
     },
     498: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Xayah',
         key: '498',
         name: 'Xayah',
@@ -7111,16 +7113,16 @@ export const championData: {
             attack: 10,
             defense: 6,
             magic: 1,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Xayah.png',
             sprite: 'champion4.png',
             group: 'champion',
-            x: 192,
+            x: 288,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Marksman'],
         partype: 'Mana',
@@ -7144,11 +7146,11 @@ export const championData: {
             attackdamage: 60,
             attackdamageperlevel: 2.9,
             attackspeedperlevel: 3.3,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     516: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Ornn',
         key: '516',
         name: 'Ornn',
@@ -7159,16 +7161,16 @@ export const championData: {
             attack: 5,
             defense: 9,
             magic: 3,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Ornn.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 192,
+            x: 240,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Tank', 'Fighter'],
         partype: 'Mana',
@@ -7192,11 +7194,11 @@ export const championData: {
             attackdamage: 69,
             attackdamageperlevel: 3.5,
             attackspeedperlevel: 2,
-            attackspeed: 0.625
-        }
+            attackspeed: 0.625,
+        },
     },
     517: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Sylas',
         key: '517',
         name: 'Sylas',
@@ -7207,29 +7209,29 @@ export const championData: {
             attack: 3,
             defense: 4,
             magic: 8,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Sylas.png',
             sprite: 'champion3.png',
             group: 'champion',
-            x: 0,
+            x: 96,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Assassin'],
         partype: 'Mana',
         stats: {
-            hp: 585,
-            hpperlevel: 95,
+            hp: 525,
+            hpperlevel: 115,
             mp: 280,
             mpperlevel: 50,
             movespeed: 340,
-            armor: 32,
-            armorperlevel: 3,
-            spellblock: 39,
-            spellblockperlevel: 1.25,
+            armor: 27,
+            armorperlevel: 4,
+            spellblock: 32,
+            spellblockperlevel: 1.75,
             attackrange: 175,
             hpregen: 9,
             hpregenperlevel: 0.9,
@@ -7240,11 +7242,11 @@ export const championData: {
             attackdamage: 61,
             attackdamageperlevel: 3,
             attackspeedperlevel: 3.5,
-            attackspeed: 0.645
-        }
+            attackspeed: 0.645,
+        },
     },
     518: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Neeko',
         key: '518',
         name: 'Neeko',
@@ -7255,16 +7257,16 @@ export const championData: {
             attack: 1,
             defense: 1,
             magic: 9,
-            difficulty: 5
+            difficulty: 5,
         },
         image: {
             full: 'Neeko.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 384,
+            x: 432,
             y: 48,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Mage', 'Support'],
         partype: 'Mana',
@@ -7287,12 +7289,60 @@ export const championData: {
             critperlevel: 0,
             attackdamage: 48,
             attackdamageperlevel: 2.5,
-            attackspeedperlevel: 3,
-            attackspeed: 0.625
-        }
+            attackspeedperlevel: 3.5,
+            attackspeed: 0.625,
+        },
+    },
+    523: {
+        version: '10.7.1',
+        id: 'Aphelios',
+        key: '523',
+        name: 'Aphelios',
+        title: 'the Weapon of the Faithful',
+        blurb:
+            "Emerging from moonlight's shadow with weapons drawn, Aphelios kills the enemies of his faith in brooding silence—speaking only through the certainty of his aim, and the firing of each gun. Though fueled by a poison that renders him mute, he is guided by...",
+        info: {
+            attack: 6,
+            defense: 2,
+            magic: 1,
+            difficulty: 10,
+        },
+        image: {
+            full: 'Aphelios.png',
+            sprite: 'champion0.png',
+            group: 'champion',
+            x: 336,
+            y: 0,
+            w: 48,
+            h: 48,
+        },
+        tags: ['Marksman'],
+        partype: 'Mana',
+        stats: {
+            hp: 500,
+            hpperlevel: 86,
+            mp: 348,
+            mpperlevel: 42,
+            movespeed: 325,
+            armor: 28,
+            armorperlevel: 3,
+            spellblock: 26,
+            spellblockperlevel: 0.5,
+            attackrange: 550,
+            hpregen: 3.25,
+            hpregenperlevel: 0.55,
+            mpregen: 6.5,
+            mpregenperlevel: 0.4,
+            crit: 0,
+            critperlevel: 0,
+            attackdamage: 57,
+            attackdamageperlevel: 2.2,
+            attackspeedperlevel: 2.1,
+            attackspeed: 0.64,
+        },
     },
     555: {
-        version: '9.23.1',
+        version: '10.7.1',
         id: 'Pyke',
         key: '555',
         name: 'Pyke',
@@ -7303,16 +7353,16 @@ export const championData: {
             attack: 9,
             defense: 3,
             magic: 1,
-            difficulty: 7
+            difficulty: 7,
         },
         image: {
             full: 'Pyke.png',
             sprite: 'champion2.png',
             group: 'champion',
-            x: 336,
+            x: 384,
             y: 96,
             w: 48,
-            h: 48
+            h: 48,
         },
         tags: ['Support', 'Assassin'],
         partype: 'Mana',
@@ -7336,7 +7386,55 @@ export const championData: {
             attackdamage: 62,
             attackdamageperlevel: 2,
             attackspeedperlevel: 2.5,
-            attackspeed: 0.667
-        }
-    }
+            attackspeed: 0.667,
+        },
+    },
+    875: {
+        version: '10.7.1',
+        id: 'Sett',
+        key: '875',
+        name: 'Sett',
+        title: 'the Boss',
+        blurb:
+            "A leader of Ionia's growing criminal underworld, Sett rose to prominence in the wake of the war with Noxus. Though he began as a humble challenger in the fighting pits of Navori, he quickly gained notoriety for his savage strength, and his ability to...",
+        info: {
+            attack: 8,
+            defense: 5,
+            magic: 1,
+            difficulty: 2,
+        },
+        image: {
+            full: 'Sett.png',
+            sprite: 'champion3.png',
+            group: 'champion',
+            x: 48,
+            y: 48,
+            w: 48,
+            h: 48,
+        },
+        tags: ['Fighter', 'Tank'],
+        partype: 'Grit',
+        stats: {
+            hp: 600,
+            hpperlevel: 93,
+            mp: 0,
+            mpperlevel: 0,
+            movespeed: 340,
+            armor: 33,
+            armorperlevel: 4,
+            spellblock: 32,
+            spellblockperlevel: 1.25,
+            attackrange: 125,
+            hpregen: 7,
+            hpregenperlevel: 0.5,
+            mpregen: 0,
+            mpregenperlevel: 0,
+            crit: 0,
+            critperlevel: 0,
+            attackdamage: 60,
+            attackdamageperlevel: 4,
+            attackspeedperlevel: 1.75,
+            attackspeed: 0.625,
+        },
+    },
 };
