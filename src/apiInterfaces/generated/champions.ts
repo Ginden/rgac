@@ -1,4 +1,4 @@
-/* Generated from URL http://ddragon.leagueoflegends.com/cdn/10.7.1/data/en_US/champion.json */
+/* Generated from URL http://ddragon.leagueoflegends.com/cdn/10.11.1/data/en_US/champion.json */
 
 import { DataDragonChampionInfo } from '..';
 export enum ChampionId {
@@ -334,7 +334,7 @@ export enum ChampionId {
 export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } = {
     '-1': null,
     1: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Annie',
         key: '1',
         name: 'Annie',
@@ -382,7 +382,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     2: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Olaf',
         key: '2',
         name: 'Olaf',
@@ -430,7 +430,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     3: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Galio',
         key: '3',
         name: 'Galio',
@@ -478,7 +478,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     4: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'TwistedFate',
         key: '4',
         name: 'Twisted Fate',
@@ -508,7 +508,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
             mp: 333,
             mpperlevel: 19,
             movespeed: 335,
-            armor: 20.542,
+            armor: 21,
             armorperlevel: 3.15,
             spellblock: 30,
             spellblockperlevel: 0.5,
@@ -519,14 +519,14 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
             mpregenperlevel: 0.8,
             crit: 0,
             critperlevel: 0,
-            attackdamage: 49.954,
+            attackdamage: 52,
             attackdamageperlevel: 3.3,
             attackspeedperlevel: 3.22,
             attackspeed: 0.651,
         },
     },
     5: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'XinZhao',
         key: '5',
         name: 'Xin Zhao',
@@ -574,7 +574,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     6: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Urgot',
         key: '6',
         name: 'Urgot',
@@ -622,7 +622,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     7: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Leblanc',
         key: '7',
         name: 'LeBlanc',
@@ -670,7 +670,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     8: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Vladimir',
         key: '8',
         name: 'Vladimir',
@@ -718,7 +718,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     9: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Fiddlesticks',
         key: '9',
         name: 'Fiddlesticks',
@@ -766,7 +766,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     10: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Kayle',
         key: '10',
         name: 'Kayle',
@@ -814,7 +814,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     11: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'MasterYi',
         key: '11',
         name: 'Master Yi',
@@ -862,7 +862,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     12: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Alistar',
         key: '12',
         name: 'Alistar',
@@ -910,7 +910,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     13: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Ryze',
         key: '13',
         name: 'Ryze',
@@ -935,12 +935,12 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Mage', 'Fighter'],
         partype: 'Mana',
         stats: {
-            hp: 570.48,
+            hp: 575,
             hpperlevel: 98,
             mp: 300,
             mpperlevel: 50,
             movespeed: 340,
-            armor: 21.552,
+            armor: 22,
             armorperlevel: 3,
             spellblock: 34,
             spellblockperlevel: 0.5,
@@ -951,14 +951,14 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
             mpregenperlevel: 1,
             crit: 0,
             critperlevel: 0,
-            attackdamage: 55.04,
+            attackdamage: 56,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2.112,
             attackspeed: 0.625,
         },
     },
     14: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Sion',
         key: '14',
         name: 'Sion',
@@ -1006,7 +1006,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     15: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Sivir',
         key: '15',
         name: 'Sivir',
@@ -1031,8 +1031,8 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Marksman'],
         partype: 'Mana',
         stats: {
-            hp: 532,
-            hpperlevel: 88,
+            hp: 562,
+            hpperlevel: 90,
             mp: 284,
             mpperlevel: 50,
             movespeed: 335,
@@ -1054,7 +1054,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     16: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Soraka',
         key: '16',
         name: 'Soraka',
@@ -1081,7 +1081,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         stats: {
             hp: 535,
             hpperlevel: 74,
-            mp: 375,
+            mp: 425,
             mpperlevel: 40,
             movespeed: 325,
             armor: 32,
@@ -1102,7 +1102,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     17: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Teemo',
         key: '17',
         name: 'Teemo',
@@ -1150,7 +1150,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     18: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Tristana',
         key: '18',
         name: 'Tristana',
@@ -1198,7 +1198,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     19: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Warwick',
         key: '19',
         name: 'Warwick',
@@ -1246,7 +1246,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     20: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Nunu',
         key: '20',
         name: 'Nunu & Willump',
@@ -1294,7 +1294,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     21: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'MissFortune',
         key: '21',
         name: 'Miss Fortune',
@@ -1319,8 +1319,8 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Marksman'],
         partype: 'Mana',
         stats: {
-            hp: 541,
-            hpperlevel: 91,
+            hp: 570,
+            hpperlevel: 93,
             mp: 325.84,
             mpperlevel: 35,
             movespeed: 325,
@@ -1342,7 +1342,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     22: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Ashe',
         key: '22',
         name: 'Ashe',
@@ -1367,8 +1367,8 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Marksman', 'Support'],
         partype: 'Mana',
         stats: {
-            hp: 539,
-            hpperlevel: 85,
+            hp: 570,
+            hpperlevel: 87,
             mp: 280,
             mpperlevel: 32,
             movespeed: 325,
@@ -1390,7 +1390,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     23: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Tryndamere',
         key: '23',
         name: 'Tryndamere',
@@ -1438,7 +1438,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     24: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Jax',
         key: '24',
         name: 'Jax',
@@ -1486,7 +1486,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     25: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Morgana',
         key: '25',
         name: 'Morgana',
@@ -1534,7 +1534,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     26: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Zilean',
         key: '26',
         name: 'Zilean',
@@ -1582,7 +1582,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     27: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Singed',
         key: '27',
         name: 'Singed',
@@ -1630,7 +1630,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     28: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Evelynn',
         key: '28',
         name: 'Evelynn',
@@ -1678,7 +1678,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     29: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Twitch',
         key: '29',
         name: 'Twitch',
@@ -1703,8 +1703,8 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Marksman', 'Assassin'],
         partype: 'Mana',
         stats: {
-            hp: 582,
-            hpperlevel: 84,
+            hp: 612,
+            hpperlevel: 86,
             mp: 287.2,
             mpperlevel: 40,
             movespeed: 330,
@@ -1726,7 +1726,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     30: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Karthus',
         key: '30',
         name: 'Karthus',
@@ -1755,7 +1755,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
             hpperlevel: 87,
             mp: 467,
             mpperlevel: 30.5,
-            movespeed: 335,
+            movespeed: 325,
             armor: 20.88,
             armorperlevel: 3.5,
             spellblock: 30,
@@ -1774,7 +1774,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     31: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Chogath',
         key: '31',
         name: "Cho'Gath",
@@ -1822,7 +1822,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     32: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Amumu',
         key: '32',
         name: 'Amumu',
@@ -1870,7 +1870,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     33: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Rammus',
         key: '33',
         name: 'Rammus',
@@ -1918,7 +1918,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     34: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Anivia',
         key: '34',
         name: 'Anivia',
@@ -1966,7 +1966,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     35: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Shaco',
         key: '35',
         name: 'Shaco',
@@ -2014,7 +2014,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     36: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'DrMundo',
         key: '36',
         name: 'Dr. Mundo',
@@ -2062,7 +2062,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     37: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Sona',
         key: '37',
         name: 'Sona',
@@ -2110,7 +2110,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     38: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Kassadin',
         key: '38',
         name: 'Kassadin',
@@ -2158,7 +2158,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     39: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Irelia',
         key: '39',
         name: 'Irelia',
@@ -2206,7 +2206,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     40: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Janna',
         key: '40',
         name: 'Janna',
@@ -2254,7 +2254,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     41: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Gangplank',
         key: '41',
         name: 'Gangplank',
@@ -2302,7 +2302,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     42: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Corki',
         key: '42',
         name: 'Corki',
@@ -2350,7 +2350,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     43: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Karma',
         key: '43',
         name: 'Karma',
@@ -2398,7 +2398,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     44: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Taric',
         key: '44',
         name: 'Taric',
@@ -2424,7 +2424,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         partype: 'Mana',
         stats: {
             hp: 575,
-            hpperlevel: 90,
+            hpperlevel: 85,
             mp: 300,
             mpperlevel: 60,
             movespeed: 340,
@@ -2446,7 +2446,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     45: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Veigar',
         key: '45',
         name: 'Veigar',
@@ -2494,7 +2494,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     48: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Trundle',
         key: '48',
         name: 'Trundle',
@@ -2542,7 +2542,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     50: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Swain',
         key: '50',
         name: 'Swain',
@@ -2590,7 +2590,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     51: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Caitlyn',
         key: '51',
         name: 'Caitlyn',
@@ -2615,8 +2615,8 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Marksman'],
         partype: 'Mana',
         stats: {
-            hp: 481,
-            hpperlevel: 91,
+            hp: 510,
+            hpperlevel: 93,
             mp: 313.7,
             mpperlevel: 35,
             movespeed: 325,
@@ -2638,7 +2638,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     53: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Blitzcrank',
         key: '53',
         name: 'Blitzcrank',
@@ -2686,7 +2686,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     54: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Malphite',
         key: '54',
         name: 'Malphite',
@@ -2734,7 +2734,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     55: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Katarina',
         key: '55',
         name: 'Katarina',
@@ -2782,7 +2782,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     56: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Nocturne',
         key: '56',
         name: 'Nocturne',
@@ -2830,7 +2830,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     57: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Maokai',
         key: '57',
         name: 'Maokai',
@@ -2857,7 +2857,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         stats: {
             hp: 565,
             hpperlevel: 95,
-            mp: 377.28,
+            mp: 375,
             mpperlevel: 43,
             movespeed: 335,
             armor: 39,
@@ -2878,7 +2878,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     58: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Renekton',
         key: '58',
         name: 'Renekton',
@@ -2926,7 +2926,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     59: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'JarvanIV',
         key: '59',
         name: 'Jarvan IV',
@@ -2974,7 +2974,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     60: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Elise',
         key: '60',
         name: 'Elise',
@@ -3022,7 +3022,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     61: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Orianna',
         key: '61',
         name: 'Orianna',
@@ -3070,7 +3070,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     62: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'MonkeyKing',
         key: '62',
         name: 'Wukong',
@@ -3100,7 +3100,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
             mp: 300,
             mpperlevel: 45,
             movespeed: 345,
-            armor: 34,
+            armor: 31,
             armorperlevel: 3.5,
             spellblock: 28,
             spellblockperlevel: 1.25,
@@ -3118,7 +3118,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     63: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Brand',
         key: '63',
         name: 'Brand',
@@ -3166,7 +3166,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     64: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'LeeSin',
         key: '64',
         name: 'Lee Sin',
@@ -3214,7 +3214,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     67: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Vayne',
         key: '67',
         name: 'Vayne',
@@ -3262,7 +3262,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     68: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Rumble',
         key: '68',
         name: 'Rumble',
@@ -3310,7 +3310,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     69: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Cassiopeia',
         key: '69',
         name: 'Cassiopeia',
@@ -3358,7 +3358,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     72: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Skarner',
         key: '72',
         name: 'Skarner',
@@ -3406,7 +3406,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     74: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Heimerdinger',
         key: '74',
         name: 'Heimerdinger',
@@ -3454,7 +3454,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     75: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Nasus',
         key: '75',
         name: 'Nasus',
@@ -3502,7 +3502,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     76: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Nidalee',
         key: '76',
         name: 'Nidalee',
@@ -3550,7 +3550,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     77: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Udyr',
         key: '77',
         name: 'Udyr',
@@ -3575,11 +3575,11 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
         stats: {
-            hp: 593.32,
+            hp: 594,
             hpperlevel: 99,
-            mp: 270.4,
+            mp: 271,
             mpperlevel: 30,
-            movespeed: 345,
+            movespeed: 350,
             armor: 34,
             armorperlevel: 4,
             spellblock: 32.1,
@@ -3587,7 +3587,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
             attackrange: 125,
             hpregen: 6,
             hpregenperlevel: 0.75,
-            mpregen: 7.506,
+            mpregen: 7.5,
             mpregenperlevel: 0.45,
             crit: 0,
             critperlevel: 0,
@@ -3598,7 +3598,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     78: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Poppy',
         key: '78',
         name: 'Poppy',
@@ -3646,7 +3646,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     79: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Gragas',
         key: '79',
         name: 'Gragas',
@@ -3694,7 +3694,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     80: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Pantheon',
         key: '80',
         name: 'Pantheon',
@@ -3742,7 +3742,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     81: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Ezreal',
         key: '81',
         name: 'Ezreal',
@@ -3767,8 +3767,8 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Marksman', 'Mage'],
         partype: 'Mana',
         stats: {
-            hp: 500,
-            hpperlevel: 86,
+            hp: 530,
+            hpperlevel: 88,
             mp: 375,
             mpperlevel: 50,
             movespeed: 325,
@@ -3790,7 +3790,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     82: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Mordekaiser',
         key: '82',
         name: 'Mordekaiser',
@@ -3838,7 +3838,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     83: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Yorick',
         key: '83',
         name: 'Yorick',
@@ -3886,7 +3886,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     84: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Akali',
         key: '84',
         name: 'Akali',
@@ -3934,7 +3934,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     85: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Kennen',
         key: '85',
         name: 'Kennen',
@@ -3982,7 +3982,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     86: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Garen',
         key: '86',
         name: 'Garen',
@@ -4030,7 +4030,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     89: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Leona',
         key: '89',
         name: 'Leona',
@@ -4078,7 +4078,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     90: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Malzahar',
         key: '90',
         name: 'Malzahar',
@@ -4126,7 +4126,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     91: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Talon',
         key: '91',
         name: 'Talon',
@@ -4174,7 +4174,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     92: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Riven',
         key: '92',
         name: 'Riven',
@@ -4222,7 +4222,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     96: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'KogMaw',
         key: '96',
         name: "Kog'Maw",
@@ -4247,8 +4247,8 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Marksman', 'Mage'],
         partype: 'Mana',
         stats: {
-            hp: 534,
-            hpperlevel: 88,
+            hp: 565,
+            hpperlevel: 90,
             mp: 325,
             mpperlevel: 40,
             movespeed: 330,
@@ -4270,7 +4270,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     98: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Shen',
         key: '98',
         name: 'Shen',
@@ -4318,7 +4318,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     99: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Lux',
         key: '99',
         name: 'Lux',
@@ -4366,7 +4366,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     101: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Xerath',
         key: '101',
         name: 'Xerath',
@@ -4414,7 +4414,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     102: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Shyvana',
         key: '102',
         name: 'Shyvana',
@@ -4462,7 +4462,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     103: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Ahri',
         key: '103',
         name: 'Ahri',
@@ -4510,7 +4510,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     104: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Graves',
         key: '104',
         name: 'Graves',
@@ -4558,7 +4558,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     105: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Fizz',
         key: '105',
         name: 'Fizz',
@@ -4606,13 +4606,13 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     106: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Volibear',
         key: '106',
         name: 'Volibear',
-        title: "the Thunder's Roar",
+        title: 'the Relentless Storm',
         blurb:
-            'The thunderous demigod known as the Thousand-Pierced Bear is the battle-spirit of the Freljord. Thousands of years of constant and bitter wars, fought in the coldest winters, have hardened Volibear into a truly indomitable force, hurling bolts of...',
+            "To those who still revere him, the Volibear is the storm made manifest. Destructive, wild, and stubbornly resolute, he existed before mortals walked the Freljord's tundra, and is fiercely protective of the lands that he and his demi-god kin created...",
         info: {
             attack: 7,
             defense: 7,
@@ -4631,30 +4631,30 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Fighter', 'Tank'],
         partype: 'Mana',
         stats: {
-            hp: 584.48,
-            hpperlevel: 86,
-            mp: 270.4,
-            mpperlevel: 30,
-            movespeed: 345,
-            armor: 35,
-            armorperlevel: 3.5,
-            spellblock: 32.1,
+            hp: 580,
+            hpperlevel: 85,
+            mp: 350,
+            mpperlevel: 40,
+            movespeed: 340,
+            armor: 31,
+            armorperlevel: 4,
+            spellblock: 32,
             spellblockperlevel: 1.25,
-            attackrange: 125,
-            hpregen: 8,
-            hpregenperlevel: 0.65,
-            mpregen: 8.092,
-            mpregenperlevel: 0.65,
+            attackrange: 150,
+            hpregen: 9,
+            hpregenperlevel: 0.75,
+            mpregen: 6.25,
+            mpregenperlevel: 0.5,
             crit: 0,
             critperlevel: 0,
-            attackdamage: 68,
-            attackdamageperlevel: 3.3,
-            attackspeedperlevel: 2.67,
-            attackspeed: 0.658,
+            attackdamage: 60,
+            attackdamageperlevel: 3,
+            attackspeedperlevel: 2,
+            attackspeed: 0.66,
         },
     },
     107: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Rengar',
         key: '107',
         name: 'Rengar',
@@ -4702,7 +4702,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     110: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Varus',
         key: '110',
         name: 'Varus',
@@ -4727,8 +4727,8 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Marksman', 'Mage'],
         partype: 'Mana',
         stats: {
-            hp: 500,
-            hpperlevel: 89,
+            hp: 530,
+            hpperlevel: 91,
             mp: 360,
             mpperlevel: 33,
             movespeed: 330,
@@ -4750,7 +4750,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     111: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Nautilus',
         key: '111',
         name: 'Nautilus',
@@ -4798,7 +4798,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     112: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Viktor',
         key: '112',
         name: 'Viktor',
@@ -4846,7 +4846,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     113: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Sejuani',
         key: '113',
         name: 'Sejuani',
@@ -4894,7 +4894,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     114: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Fiora',
         key: '114',
         name: 'Fiora',
@@ -4942,7 +4942,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     115: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Ziggs',
         key: '115',
         name: 'Ziggs',
@@ -4990,7 +4990,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     117: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Lulu',
         key: '117',
         name: 'Lulu',
@@ -5038,7 +5038,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     119: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Draven',
         key: '119',
         name: 'Draven',
@@ -5063,8 +5063,8 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Marksman'],
         partype: 'Mana',
         stats: {
-            hp: 574,
-            hpperlevel: 88,
+            hp: 605,
+            hpperlevel: 90,
             mp: 360.56,
             mpperlevel: 39,
             movespeed: 330,
@@ -5086,7 +5086,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     120: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Hecarim',
         key: '120',
         name: 'Hecarim',
@@ -5134,7 +5134,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     121: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Khazix',
         key: '121',
         name: "Kha'Zix",
@@ -5182,7 +5182,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     122: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Darius',
         key: '122',
         name: 'Darius',
@@ -5230,7 +5230,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     126: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Jayce',
         key: '126',
         name: 'Jayce',
@@ -5278,7 +5278,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     127: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Lissandra',
         key: '127',
         name: 'Lissandra',
@@ -5326,7 +5326,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     131: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Diana',
         key: '131',
         name: 'Diana',
@@ -5351,7 +5351,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Fighter', 'Mage'],
         partype: 'Mana',
         stats: {
-            hp: 594,
+            hp: 570,
             hpperlevel: 95,
             mp: 375,
             mpperlevel: 25,
@@ -5367,14 +5367,14 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
             mpregenperlevel: 0.8,
             crit: 0,
             critperlevel: 0,
-            attackdamage: 57.04,
+            attackdamage: 57,
             attackdamageperlevel: 3,
             attackspeedperlevel: 2.25,
             attackspeed: 0.625,
         },
     },
     133: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Quinn',
         key: '133',
         name: 'Quinn',
@@ -5422,7 +5422,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     134: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Syndra',
         key: '134',
         name: 'Syndra',
@@ -5470,7 +5470,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     136: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'AurelionSol',
         key: '136',
         name: 'Aurelion Sol',
@@ -5518,7 +5518,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     141: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Kayn',
         key: '141',
         name: 'Kayn',
@@ -5566,7 +5566,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     142: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Zoe',
         key: '142',
         name: 'Zoe',
@@ -5614,7 +5614,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     143: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Zyra',
         key: '143',
         name: 'Zyra',
@@ -5662,7 +5662,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     145: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Kaisa',
         key: '145',
         name: "Kai'Sa",
@@ -5687,8 +5687,8 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Marksman'],
         partype: 'Mana',
         stats: {
-            hp: 571,
-            hpperlevel: 86,
+            hp: 600,
+            hpperlevel: 88,
             mp: 344.88,
             mpperlevel: 38,
             movespeed: 335,
@@ -5710,7 +5710,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     150: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Gnar',
         key: '150',
         name: 'Gnar',
@@ -5758,7 +5758,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     154: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Zac',
         key: '154',
         name: 'Zac',
@@ -5806,7 +5806,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     157: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Yasuo',
         key: '157',
         name: 'Yasuo',
@@ -5854,7 +5854,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     161: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Velkoz',
         key: '161',
         name: "Vel'Koz",
@@ -5902,7 +5902,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     163: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Taliyah',
         key: '163',
         name: 'Taliyah',
@@ -5950,7 +5950,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     164: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Camille',
         key: '164',
         name: 'Camille',
@@ -5998,7 +5998,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     201: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Braum',
         key: '201',
         name: 'Braum',
@@ -6046,7 +6046,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     202: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Jhin',
         key: '202',
         name: 'Jhin',
@@ -6071,8 +6071,8 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Marksman', 'Mage'],
         partype: 'Mana',
         stats: {
-            hp: 556,
-            hpperlevel: 91,
+            hp: 585,
+            hpperlevel: 93,
             mp: 300,
             mpperlevel: 50,
             movespeed: 330,
@@ -6094,7 +6094,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     203: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Kindred',
         key: '203',
         name: 'Kindred',
@@ -6142,7 +6142,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     222: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Jinx',
         key: '222',
         name: 'Jinx',
@@ -6167,8 +6167,8 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Marksman'],
         partype: 'Mana',
         stats: {
-            hp: 581,
-            hpperlevel: 84,
+            hp: 610,
+            hpperlevel: 86,
             mp: 245,
             mpperlevel: 45,
             movespeed: 325,
@@ -6190,7 +6190,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     223: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'TahmKench',
         key: '223',
         name: 'Tahm Kench',
@@ -6238,7 +6238,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     235: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Senna',
         key: '235',
         name: 'Senna',
@@ -6286,7 +6286,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     236: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Lucian',
         key: '236',
         name: 'Lucian',
@@ -6334,7 +6334,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     238: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Zed',
         key: '238',
         name: 'Zed',
@@ -6382,7 +6382,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     240: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Kled',
         key: '240',
         name: 'Kled',
@@ -6430,7 +6430,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     245: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Ekko',
         key: '245',
         name: 'Ekko',
@@ -6478,7 +6478,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     246: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Qiyana',
         key: '246',
         name: 'Qiyana',
@@ -6526,7 +6526,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     254: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Vi',
         key: '254',
         name: 'Vi',
@@ -6574,7 +6574,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     266: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Aatrox',
         key: '266',
         name: 'Aatrox',
@@ -6622,7 +6622,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     267: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Nami',
         key: '267',
         name: 'Nami',
@@ -6647,9 +6647,9 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Support', 'Mage'],
         partype: 'Mana',
         stats: {
-            hp: 489.32,
+            hp: 475,
             hpperlevel: 74,
-            mp: 377.24,
+            mp: 365,
             mpperlevel: 43,
             movespeed: 335,
             armor: 29,
@@ -6670,7 +6670,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     268: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Azir',
         key: '268',
         name: 'Azir',
@@ -6718,7 +6718,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     350: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Yuumi',
         key: '350',
         name: 'Yuumi',
@@ -6766,7 +6766,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     412: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Thresh',
         key: '412',
         name: 'Thresh',
@@ -6814,7 +6814,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     420: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Illaoi',
         key: '420',
         name: 'Illaoi',
@@ -6862,7 +6862,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     421: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'RekSai',
         key: '421',
         name: "Rek'Sai",
@@ -6910,7 +6910,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     427: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Ivern',
         key: '427',
         name: 'Ivern',
@@ -6958,7 +6958,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     429: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Kalista',
         key: '429',
         name: 'Kalista',
@@ -6988,7 +6988,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
             mp: 250,
             mpperlevel: 45,
             movespeed: 325,
-            armor: 23,
+            armor: 21,
             armorperlevel: 4,
             spellblock: 30,
             spellblockperlevel: 0.5,
@@ -7006,7 +7006,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     432: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Bard',
         key: '432',
         name: 'Bard',
@@ -7054,7 +7054,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     497: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Rakan',
         key: '497',
         name: 'Rakan',
@@ -7102,7 +7102,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     498: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Xayah',
         key: '498',
         name: 'Xayah',
@@ -7127,8 +7127,8 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Marksman'],
         partype: 'Mana',
         stats: {
-            hp: 561,
-            hpperlevel: 86,
+            hp: 590,
+            hpperlevel: 88,
             mp: 340,
             mpperlevel: 40,
             movespeed: 325,
@@ -7150,7 +7150,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     516: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Ornn',
         key: '516',
         name: 'Ornn',
@@ -7198,7 +7198,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     517: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Sylas',
         key: '517',
         name: 'Sylas',
@@ -7246,7 +7246,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     518: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Neeko',
         key: '518',
         name: 'Neeko',
@@ -7294,7 +7294,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     523: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Aphelios',
         key: '523',
         name: 'Aphelios',
@@ -7319,8 +7319,8 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         tags: ['Marksman'],
         partype: 'Mana',
         stats: {
-            hp: 500,
-            hpperlevel: 86,
+            hp: 530,
+            hpperlevel: 88,
             mp: 348,
             mpperlevel: 42,
             movespeed: 325,
@@ -7342,7 +7342,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     555: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Pyke',
         key: '555',
         name: 'Pyke',
@@ -7390,7 +7390,7 @@ export const championData: { [K in ChampionId]: DataDragonChampionInfo | null } 
         },
     },
     875: {
-        version: '10.7.1',
+        version: '10.11.1',
         id: 'Sett',
         key: '875',
         name: 'Sett',

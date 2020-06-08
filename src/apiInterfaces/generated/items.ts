@@ -1,4 +1,4 @@
-/* Generated from URL http://ddragon.leagueoflegends.com/cdn/10.7.1/data/en_US/item.json */
+/* Generated from URL http://ddragon.leagueoflegends.com/cdn/10.11.1/data/en_US/item.json */
 
 export enum GameItem {
     YOUR_CUT = 3400, // 'Your Cut'
