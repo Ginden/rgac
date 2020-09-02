@@ -67,12 +67,12 @@
 				</a>
 				<p>This <strong>R</strong>iot <strong>G</strong>ames <strong>A</strong>PI <strong>C</strong>lient is written in TypeScript and offers fluent interfaces, full typing, data classes.</p>
 				<p>Example usage with top level await:</p>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {RiotApiClient, Servers} <span class="hljs-keyword">from</span> <span class="hljs-string">'rgac'</span>;
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {RiotApiClient, Servers} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;rgac&#x27;</span>;
 <span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> RiotApiClient({
     apiKey: process.env.RIOT_API_KEY,
     server: Servers.EUW1
 });
-<span class="hljs-keyword">const</span> summoner = <span class="hljs-keyword">await</span> client.leagueOfLegends.summoner.byName(<span class="hljs-string">'GindenEU'</span>);
+<span class="hljs-keyword">const</span> summoner = <span class="hljs-keyword">await</span> client.leagueOfLegends.summoner.byName(<span class="hljs-string">&#x27;GindenEU&#x27;</span>);
 <span class="hljs-keyword">const</span> {data: [match], getNextPage} = <span class="hljs-keyword">await</span> summoner.getMatches();
 <span class="hljs-keyword">const</span> timeline = <span class="hljs-keyword">await</span> match.timeline();
 <span class="hljs-keyword">const</span> {data: [anotherMatch]} = <span class="hljs-keyword">await</span> getNextPage();</code></pre>
@@ -475,9 +475,6 @@
 						<a href="globals.html#patch" class="tsd-kind-icon">patch</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="globals.html#ratelimit" class="tsd-kind-icon">rate<wbr>Limit</a>
-					</li>
-					<li class=" tsd-kind-variable">
 						<a href="globals.html#slug" class="tsd-kind-icon">slug</a>
 					</li>
 					<li class=" tsd-kind-function">
@@ -559,6 +556,5 @@
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

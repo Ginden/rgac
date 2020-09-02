@@ -3,7 +3,7 @@ import { CachedGetter } from './decorators';
 import { ClientOptions } from './userInterfaces';
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { isObject } from 'lodash';
-import rateLimit = require('axios-rate-limit');
+import rateLimit from 'axios-rate-limit';
 import _ = require('lodash');
 import { Servers, PlatformRegionServerMapping } from './apiInterfaces';
 import { LeagueOfLegendsApi } from './lolApi';
