@@ -1,5 +1,4 @@
-/* Generated from URL http://ddragon.leagueoflegends.com/cdn/10.11.1/data/en_US/runesReforged.json */
-
+/* Generated from URL http://ddragon.leagueoflegends.com/cdn/10.16.1/data/en_US/runesReforged.json */
 export enum RunesReforgedTrees {
     Domination = 8100,
     Inspiration = 8300,

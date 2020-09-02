@@ -12,7 +12,7 @@ import { TeamfightTacticsApi } from './tftApi';
 const API_KEY: unique symbol = Symbol();
 
 export class RiotApiClient {
-    public static readonly dataDragonVersion: string = `10.11.1`;
+    public static readonly dataDragonVersion: string = `10.16.1`;
     private readonly [API_KEY]: string;
     public readonly server: Servers;
     private readonly axiosInstance: AxiosInstance;

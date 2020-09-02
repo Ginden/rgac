@@ -1,5 +1,4 @@
 /* Generated from URL http://static.developer.riotgames.com/docs/lol/maps.json */
-
 export enum Map {
     SUMMONERS_RIFT_1 = 1, // Original Summer variant
     SUMMONERS_RIFT_2 = 2, // Original Autumn variant

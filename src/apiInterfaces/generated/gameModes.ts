@@ -1,5 +1,4 @@
 /* Generated from URL http://static.developer.riotgames.com/docs/lol/gameModes.json */
-
 export enum GameMode {
     CLASSIC = 'CLASSIC', // Classic Summoner's Rift and Twisted Treeline games
     ODIN = 'ODIN', // Dominion/Crystal Scar games

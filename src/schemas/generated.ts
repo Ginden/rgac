@@ -18,7 +18,6 @@ import {
 /**
  * @ignore
  */
-
 export const ChampionInfoSchema: Joi.ObjectSchema = J.object({
     freeChampionIdsForNewPlayers: J.array().items(enumSchema(ChampionId)).required(),
     freeChampionIds: J.array().items(enumSchema(ChampionId)).required(),
@@ -28,7 +27,6 @@ export const ChampionInfoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const ChampionMasteryDTOSchema: Joi.ObjectSchema = J.object({
     chestGranted: J.boolean().required(),
     championLevel: J.number().required(),
@@ -44,7 +42,6 @@ export const ChampionMasteryDTOSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const ApiSummonerInfoSchema: Joi.ObjectSchema = J.object({
     id: J.string().allow('').required(),
     accountId: J.string().allow('').required(),
@@ -58,7 +55,6 @@ export const ApiSummonerInfoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const DataDragonChampionInfoSchema: Joi.ObjectSchema = J.object({
     version: J.string().allow('').required(),
     id: J.string().allow('').required(),
@@ -76,7 +72,6 @@ export const DataDragonChampionInfoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const ClashPlayerDtoSchema: Joi.ObjectSchema = J.object({
     summonerId: J.string().allow('').required(),
     teamId: J.string().allow('').allow(null).optional(),
@@ -86,7 +81,6 @@ export const ClashPlayerDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const ClashTeamDtoSchema: Joi.ObjectSchema = J.object({
     id: J.string().allow('').required(),
     tournamentId: J.number().required(),
@@ -103,7 +97,6 @@ export const ClashTeamDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const ClashTournamentDtoSchema: Joi.ObjectSchema = J.object({
     id: J.number().required(),
     themeId: J.number().required(),
@@ -117,7 +110,6 @@ export const ClashTournamentDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const TournamentPhaseDtoSchema: Joi.ObjectSchema = J.object({
     id: J.number().required(),
     registrationTime: J.number().required(),
@@ -128,7 +120,6 @@ export const TournamentPhaseDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const CurrentGameInfoSchema: Joi.ObjectSchema = J.object({
     gameId: J.number().required(),
     gameStartTime: J.number().required(),
@@ -151,7 +142,6 @@ export const CurrentGameInfoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const CurrentGameInfoBannedChampionSchema: Joi.ObjectSchema = J.object({
     pickTurn: J.number().required(),
     championId: enumSchema(ChampionId).required(),
@@ -161,7 +151,6 @@ export const CurrentGameInfoBannedChampionSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const CurrentGameInfoObserverSchema: Joi.ObjectSchema = J.object({
     encryptionKey: J.string().allow('').required(),
 }).id('CurrentGameInfoObserver');
@@ -169,7 +158,6 @@ export const CurrentGameInfoObserverSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const CurrentGameParticipantSchema: Joi.ObjectSchema = J.object({
     profileIconId: J.number().required(),
     championId: enumSchema(ChampionId).required(),
@@ -192,7 +180,6 @@ export const CurrentGameParticipantSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const CurrentGameInfoGameCustomizationObjectSchema: Joi.ObjectSchema = J.object({
     category: J.string().allow('').required(),
     content: J.string().allow('').required(),
@@ -201,7 +188,6 @@ export const CurrentGameInfoGameCustomizationObjectSchema: Joi.ObjectSchema = J.
 /**
  * @ignore
  */
-
 export const CurrentGameInfoPerksSchema: Joi.ObjectSchema = J.object({
     perkStyle: J.number().required(),
     perkIds: J.array().items(J.number()).required(),
@@ -211,7 +197,6 @@ export const CurrentGameInfoPerksSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const FeaturedGamesSchema: Joi.ObjectSchema = J.object({
     clientRefreshInterval: J.number().required(),
     gameList: J.array()
@@ -222,7 +207,6 @@ export const FeaturedGamesSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const LeagueEntryDTOSchema: Joi.ObjectSchema = J.object({
     leagueId: J.string().allow('').required(),
     queueType: enumSchema(RankedQueue).required(),
@@ -245,7 +229,6 @@ export const LeagueEntryDTOSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const LeagueItemDTOSchema: Joi.ObjectSchema = J.object({
     summonerName: J.string().allow('').required(),
     summonerId: J.string().allow('').required(),
@@ -265,7 +248,6 @@ export const LeagueItemDTOSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const LeagueListDTOSchema: Joi.ObjectSchema = J.object({
     leagueId: J.string().allow('').allow(null).optional(),
     tier: enumSchema(RankedTier).required(),
@@ -279,7 +261,6 @@ export const LeagueListDTOSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const MatchDtoSchema: Joi.ObjectSchema = J.object({
     seasonId: enumSchema(Season).required(),
     queueId: enumSchema(GameQueue).required(),
@@ -304,7 +285,6 @@ export const MatchDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const ParticipantIdentityDtoSchema: Joi.ObjectSchema = J.object({
     player: referenceSchema(() => PlayerDTOSchema).required(),
     participantId: J.number().required(),
@@ -313,7 +293,6 @@ export const ParticipantIdentityDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const ParticipantDtoSchema: Joi.ObjectSchema = J.object({
     stats: referenceSchema(() => ParticipantStatsDtoSchema).required(),
     participantId: J.number().required(),
@@ -336,7 +315,6 @@ export const ParticipantDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const RuneDtoSchema: Joi.ObjectSchema = J.object({
     runeId: J.number().required(),
     rank: J.number().required(),
@@ -345,7 +323,6 @@ export const RuneDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const MasteryDtoSchema: Joi.ObjectSchema = J.object({
     masteryId: J.number().required(),
     rank: J.number().required(),
@@ -354,7 +331,6 @@ export const MasteryDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const ParticipantStatsDtoSchema: Joi.ObjectSchema = J.object({
     altarsNeutralized: J.number().allow(null).optional(),
     assists: J.number().required(),
@@ -470,7 +446,6 @@ export const ParticipantStatsDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const PlayerDTOSchema: Joi.ObjectSchema = J.object({
     currentPlatformId: J.string().allow('').required(),
     summonerName: J.string().allow('').required(),
@@ -485,7 +460,6 @@ export const PlayerDTOSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const TeamStatsDtoSchema: Joi.ObjectSchema = J.object({
     firstDragon: J.boolean().required(),
     firstInhibitor: J.boolean().required(),
@@ -511,7 +485,6 @@ export const TeamStatsDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const TeamBansDtoSchema: Joi.ObjectSchema = J.object({
     pickTurn: J.number().required(),
     championId: enumSchema(ChampionId).required(),
@@ -520,7 +493,6 @@ export const TeamBansDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const ParticipantTimelineDtoSchema: Joi.ObjectSchema = J.object({
     lane: J.string().allow('').required(),
     participantId: J.number().required(),
@@ -537,7 +509,6 @@ export const ParticipantTimelineDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const MatchTimelineDtoSchema: Joi.ObjectSchema = J.object({
     frames: J.array()
         .items(referenceSchema(() => MatchFrameDtoSchema))
@@ -548,7 +519,6 @@ export const MatchTimelineDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const MatchFrameDtoSchema: Joi.ObjectSchema = J.object({
     timestamp: J.number().required(),
     participantFrames: J.object()
@@ -566,7 +536,6 @@ export const MatchFrameDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const MatchParticipantFrameDtoSchema: Joi.ObjectSchema = J.object({
     totalGold: J.number().required(),
     teamScore: J.number().allow(null).optional(),
@@ -586,7 +555,6 @@ export const MatchParticipantFrameDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const MatchPositionDtoSchema: Joi.ObjectSchema = J.object({
     y: J.number().required(),
     x: J.number().required(),
@@ -595,7 +563,6 @@ export const MatchPositionDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const MatchEventDtoSchema: Joi.ObjectSchema = J.object({
     afterId: J.number().allow(null).optional(),
     ascendedType: J.string().allow('').allow(null).optional(),
@@ -628,7 +595,6 @@ export const MatchEventDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const MatchlistDtoSchema: Joi.ObjectSchema = J.object({
     matches: J.array()
         .items(referenceSchema(() => MatchReferenceDtoSchema))
@@ -641,7 +607,6 @@ export const MatchlistDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const MatchReferenceDtoSchema: Joi.ObjectSchema = J.object({
     lane: J.string().allow('').required(),
     gameId: J.number().required(),
@@ -656,7 +621,6 @@ export const MatchReferenceDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const MiniSeriesDTOSchema: Joi.ObjectSchema = J.object({
     progress: J.string().allow('').required(),
     losses: J.number().required(),
@@ -667,7 +631,6 @@ export const MiniSeriesDTOSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const ShardStatusSchema: Joi.ObjectSchema = J.object({
     name: J.string().allow('').required(),
     region_tag: J.string().allow('').required(),
@@ -682,7 +645,6 @@ export const ShardStatusSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const ShardStatusServiceSchema: Joi.ObjectSchema = J.object({
     status: J.string().allow('').required(),
     incidents: J.array()
@@ -695,7 +657,6 @@ export const ShardStatusServiceSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const ShardStatusServiceIncidentSchema: Joi.ObjectSchema = J.object({
     active: J.boolean().required(),
     created_at: J.string().allow('').required(),
@@ -708,7 +669,6 @@ export const ShardStatusServiceIncidentSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const ShardStatusServiceIncidentMessageSchema: Joi.ObjectSchema = J.object({
     severity: J.string().allow('').required(),
     author: J.string().allow('').required(),
@@ -725,7 +685,6 @@ export const ShardStatusServiceIncidentMessageSchema: Joi.ObjectSchema = J.objec
 /**
  * @ignore
  */
-
 export const ShardStatusServiceIncidentMessageTranslationSchema: Joi.ObjectSchema = J.object({
     locale: J.string().allow('').required(),
     content: J.string().allow('').required(),
@@ -736,7 +695,6 @@ export const ShardStatusServiceIncidentMessageTranslationSchema: Joi.ObjectSchem
 /**
  * @ignore
  */
-
 export const TftLeagueListDTOSchema: Joi.ObjectSchema = J.object({
     leagueId: J.string().allow('').required(),
     tier: J.string().allow('').required(),
@@ -750,7 +708,6 @@ export const TftLeagueListDTOSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const TftLeagueItemDTOSchema: Joi.ObjectSchema = J.object({
     summonerName: J.string().allow('').required(),
     hotStreak: J.boolean().required(),
@@ -768,7 +725,6 @@ export const TftLeagueItemDTOSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const TftMatchDtoSchema: Joi.ObjectSchema = J.object({
     info: referenceSchema(() => TftInfoDtoSchema).required(),
     metadata: referenceSchema(() => TftMetadataDtoSchema).required(),
@@ -777,7 +733,6 @@ export const TftMatchDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const TftInfoDtoSchema: Joi.ObjectSchema = J.object({
     game_datetime: J.number().required(),
     participants: J.array()
@@ -792,7 +747,6 @@ export const TftInfoDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const TftParticipantDtoSchema: Joi.ObjectSchema = J.object({
     placement: J.number().required(),
     level: J.number().required(),
@@ -816,7 +770,6 @@ export const TftParticipantDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const TftTraitDtoSchema: Joi.ObjectSchema = J.object({
     tier_total: J.number().required(),
     name: J.string().allow('').required(),
@@ -827,7 +780,6 @@ export const TftTraitDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const TftUnitDtoSchema: Joi.ObjectSchema = J.object({
     tier: J.number().required(),
     items: J.array().items(J.number()).required(),
@@ -839,7 +791,6 @@ export const TftUnitDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const TftCompanionDtoSchema: Joi.ObjectSchema = J.object({
     skin_ID: J.number().required(),
     content_ID: J.string().allow('').required(),
@@ -849,7 +800,6 @@ export const TftCompanionDtoSchema: Joi.ObjectSchema = J.object({
 /**
  * @ignore
  */
-
 export const TftMetadataDtoSchema: Joi.ObjectSchema = J.object({
     data_version: J.string().allow('').required(),
     participants: J.array().items(J.string().allow('')).required(),

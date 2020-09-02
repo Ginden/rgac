@@ -1,5 +1,4 @@
 /* Generated from URL http://static.developer.riotgames.com/docs/lol/seasons.json */
-
 export enum Season {
     PRESEASON_3 = 0,
     SEASON_3 = 1,

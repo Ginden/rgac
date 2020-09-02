@@ -1,5 +1,4 @@
-/* Generated from URL http://ddragon.leagueoflegends.com/cdn/10.11.1/data/en_US/item.json */
-
+/* Generated from URL http://ddragon.leagueoflegends.com/cdn/10.16.1/data/en_US/item.json */
 export enum GameItem {
     YOUR_CUT = 3400, // 'Your Cut'
     ABYSSAL_MASK = 3001, // Abyssal Mask
@@ -12,6 +11,7 @@ export enum GameItem {
     ARCHANGELS_STAFF_QUICK_CHARGE = 3007, // Archangel's Staff (Quick Charge)
     ARDENT_CENSER = 3504, // Ardent Censer
     ATHENES_UNHOLY_GRAIL = 3174, // Athene's Unholy Grail
+    ATMAS_RECKONING = 3005, // Atma's Reckoning
     B_F_SWORD = 1038, // B. F. Sword
     BAMIS_CINDER = 3751, // Bami's Cinder
     BANSHEES_VEIL = 3102, // Banshee's Veil
@@ -53,9 +53,14 @@ export enum GameItem {
     DEAD_MANS_PLATE = 3742, // Dead Man's Plate
     DEATHS_DANCE = 3812, // Death's Dance
     DEATHS_DAUGHTER = 3902, // Death's Daughter
+    DEATHFIRE_GRASP = 3128, // Deathfire Grasp
     DERVISH_BLADE = 3137, // Dervish Blade
     DIET_PORO_SNAX = 2054, // Diet Poro-Snax
     DORANS_BLADE = 1055, // Doran's Blade
+    DORANS_LOST_BLADE = 4202, // Doran's Lost Blade
+    DORANS_LOST_IDOL = 4204, // Doran's Lost Idol
+    DORANS_LOST_RING = 4203, // Doran's Lost Ring
+    DORANS_LOST_SHIELD = 4201, // Doran's Lost Shield
     DORANS_RING = 1056, // Doran's Ring
     DORANS_SHIELD = 1054, // Doran's Shield
     DUSKBLADE_OF_DRAKTHARR = 3147, // Duskblade of Draktharr
@@ -66,15 +71,19 @@ export enum GameItem {
     ENCHANTMENT_BLOODRAZOR_1416 = 1416, // Enchantment: Bloodrazor
     ENCHANTMENT_BLOODRAZOR_1419 = 1419, // Enchantment: Bloodrazor
     ENCHANTMENT_BLOODRAZOR_3675 = 3675, // Enchantment: Bloodrazor
+    ENCHANTMENT_BLOODRAZOR_4105 = 4105, // Enchantment: Bloodrazor
     ENCHANTMENT_CINDERHULK_1401 = 1401, // Enchantment: Cinderhulk
     ENCHANTMENT_CINDERHULK_1413 = 1413, // Enchantment: Cinderhulk
     ENCHANTMENT_CINDERHULK_3672 = 3672, // Enchantment: Cinderhulk
+    ENCHANTMENT_CINDERHULK_4103 = 4103, // Enchantment: Cinderhulk
     ENCHANTMENT_RUNIC_ECHOES_1402 = 1402, // Enchantment: Runic Echoes
     ENCHANTMENT_RUNIC_ECHOES_1414 = 1414, // Enchantment: Runic Echoes
     ENCHANTMENT_RUNIC_ECHOES_3673 = 3673, // Enchantment: Runic Echoes
+    ENCHANTMENT_RUNIC_ECHOES_4104 = 4104, // Enchantment: Runic Echoes
     ENCHANTMENT_WARRIOR_1400 = 1400, // Enchantment: Warrior
     ENCHANTMENT_WARRIOR_1412 = 1412, // Enchantment: Warrior
     ENCHANTMENT_WARRIOR_3671 = 3671, // Enchantment: Warrior
+    ENCHANTMENT_WARRIOR_4102 = 4102, // Enchantment: Warrior
     ESPRESSO_SNAX = 3682, // Espresso Snax
     ESSENCE_REAVER = 3508, // Essence Reaver
     EXECUTIONERS_CALLING = 3123, // Executioner's Calling
@@ -85,6 +94,7 @@ export enum GameItem {
     FIENDISH_CODEX = 3108, // Fiendish Codex
     FIRE_AT_WILL = 3901, // Fire at Will
     FORBIDDEN_IDOL = 3114, // Forbidden Idol
+    FORCE_OF_NATURE = 4401, // Force of Nature
     FORGEFIRE_CAPE = 3373, // Forgefire Cape
     FROSTED_SNAX = 3680, // Frosted Snax
     FROSTFANG = 3851, // Frostfang
@@ -93,6 +103,7 @@ export enum GameItem {
     FROZEN_MALLET = 3022, // Frozen Mallet
     GARGOYLE_STONEPLATE = 3193, // Gargoyle Stoneplate
     GHOST_PORO = 3520, // Ghost Poro
+    GHOSTWALKERS_MELEE_ONLY = 4001, // Ghostwalkers (Melee Only)
     GIANTS_BELT = 1011, // Giant's Belt
     GLACIAL_SHROUD = 3024, // Glacial Shroud
     GRAVITY_BOOTS = 3693, // Gravity Boots
@@ -123,6 +134,7 @@ export enum GameItem {
     ICEBORN_GAUNTLET = 3025, // Iceborn Gauntlet
     INFERNAL_MASK = 3379, // Infernal Mask
     INFINITY_EDGE = 3031, // Infinity Edge
+    INNERVATING_LOCKET = 4402, // Innervating Locket
     IONIAN_BOOTS_OF_LUCIDITY = 3158, // Ionian Boots of Lucidity
     JAURIMS_FIST = 3052, // Jaurim's Fist
     KINDLEGEM = 3067, // Kindlegem
@@ -131,6 +143,7 @@ export enum GameItem {
     LAST_WHISPER = 3035, // Last Whisper
     LIANDRYS_TORMENT = 3151, // Liandry's Torment
     LICH_BANE = 3100, // Lich Bane
+    LIFELINE = 4003, // Lifeline
     LOCKET_OF_THE_IRON_SOLARI = 3190, // Locket of the Iron Solari
     LONG_SWORD = 1036, // Long Sword
     LORD_DOMINIKS_REGARDS = 3036, // Lord Dominik's Regards
@@ -147,6 +160,7 @@ export enum GameItem {
     MIKAELS_CRUCIBLE = 3222, // Mikael's Crucible
     MINION_DEMATERIALIZER = 2403, // Minion Dematerializer
     MOLTEN_EDGE = 3371, // Molten Edge
+    MOONFLAIR_SPELLBLADE = 3170, // Moonflair Spellblade
     MORELLONOMICON = 3165, // Morellonomicon
     MORTAL_REMINDER = 3033, // Mortal Reminder
     MURAMANA_3042 = 3042, // Muramana
@@ -169,6 +183,7 @@ export enum GameItem {
     PHANTOM_DANCER = 3046, // Phantom Dancer
     PICKAXE = 1037, // Pickaxe
     PORO_SNAX = 2052, // Poro-Snax
+    PRIDESTALKERS_BLADE = 4101, // Pridestalker's Blade
     PROTOTYPE_HEX_CORE = 3200, // Prototype Hex Core
     QUICKSILVER_SASH = 3140, // Quicksilver Sash
     RABADONS_DEATHCAP = 3089, // Rabadon's Deathcap
@@ -207,6 +222,7 @@ export enum GameItem {
     SLIGHTLY_MAGICAL_BOOTS = 2422, // Slightly Magical Boots
     SORCERERS_SHOES = 3020, // Sorcerer's Shoes
     SPEAR_OF_SHOJIN = 3161, // Spear of Shojin
+    SPECTRAL_CUTLASS = 4004, // Spectral Cutlass
     SPECTRAL_SICKLE = 3862, // Spectral Sickle
     SPECTRES_COWL = 3211, // Spectre's Cowl
     SPELLBINDER = 3907, // Spellbinder
@@ -221,9 +237,11 @@ export enum GameItem {
     STORMRAZOR = 3095, // Stormrazor
     SUNFIRE_CAPE = 3068, // Sunfire Cape
     SUPER_SPICY_SNAX = 3681, // Super Spicy Snax
+    SWORD_OF_THE_DIVINE = 3131, // Sword of the Divine
     TARGONS_BUCKLER = 3859, // Targon's Buckler
     TEAR_OF_THE_GODDESS = 3070, // Tear of the Goddess
     TEAR_OF_THE_GODDESS_QUICK_CHARGE = 3073, // Tear of the Goddess (Quick Charge)
+    THE_GOLDEN_SPATULA = 4403, // The Golden Spatula
     THORNMAIL = 3075, // Thornmail
     TIAMAT = 3077, // Tiamat
     TITANIC_HYDRA = 3748, // Titanic Hydra
@@ -243,6 +261,7 @@ export enum GameItem {
     YOUMUUS_WRAITHBLADE = 3388, // Youmuu's Wraithblade
     ZEAL = 3086, // Zeal
     ZEKES_CONVERGENCE = 3050, // Zeke's Convergence
+    ZEPHYR = 3172, // Zephyr
     ZHONYAS_HOURGLASS = 3157, // Zhonya's Hourglass
     ZHONYAS_PARADOX = 3386, // Zhonya's Paradox
 }

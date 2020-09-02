@@ -1,5 +1,4 @@
 /* Generated from URL http://static.developer.riotgames.com/docs/lol/queues.json */
-
 export enum GameQueue {
     CUSTOM = 0,
     QUEUE_5V5_BLIND_PICK_2 = 2, // Deprecated in patch 7.19 in favor of queueId 430
