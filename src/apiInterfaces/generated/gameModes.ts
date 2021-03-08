@@ -18,4 +18,5 @@ export enum GameMode {
     PROJECT = 'PROJECT', // PROJECT: Hunters games
     GAMEMODEX = 'GAMEMODEX', // Nexus Blitz games
     ODYSSEY = 'ODYSSEY', // Odyssey: Extraction games
+    NEXUSBLITZ = 'NEXUSBLITZ', // Nexus Blitz games
 }

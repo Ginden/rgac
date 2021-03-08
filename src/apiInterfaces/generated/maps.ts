@@ -13,5 +13,6 @@ export enum Map {
     VALORAN_CITY_PARK = 18, // Star Guardian Invasion map
     SUBSTRUCTURE_43 = 19, // PROJECT: Hunters map
     CRASH_SITE = 20, // Odyssey: Extraction map
+    CONVERGENCE = 20, // Teamfight Tactics map
     NEXUS_BLITZ = 21, // Nexus Blitz map
 }
