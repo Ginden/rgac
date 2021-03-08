@@ -131,22 +131,6 @@ function champions({ data }: ChampionData): string {
     }
     ret.push(`};`);
     ret = [...new Set(ret)];
-    const jsonFriendlyForTypescript = JSON.stringify(_.keyBy(Object.values(data), `key`), null, 2)
-        .split(`\n`)
-        .map((e) => {
-            if (e.match(/"([0-9]*)": {/)) {
-                return e.replace(/"/g, ``);
-            }
-            return e;
-        });
-    ret.push(``);
-    ret.push(`/**
-    * @ignore
-    */`);
-    ret.push(`export const championData: {[K in ChampionId]: DataDragonChampionInfo | null} = {`);
-    ret.push(`'-1': null,`);
-    ret.push(...jsonFriendlyForTypescript.slice(1, -1));
-    ret.push(`};`);
     return ret.join(`\n`);
 }
 
