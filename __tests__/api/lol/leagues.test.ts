@@ -1,6 +1,5 @@
 import {
     J,
-    LeagueEntryDTO,
     LeagueEntryDTOSchema,
     LeagueListDTOSchema,
     RankedDivision,
@@ -45,7 +44,7 @@ describe('RiotApiClient.leagueOfLegends.league', () => {
 
         for (const tier of tiers) {
             test(`List leagues in queue ${queue}`, async () => {
-                const { data } = await client.leagueOfLegends.league.entries(queue, tier, division);
+                const data  = await client.leagueOfLegends.league.entries(queue, tier, division);
                 saveData(`leagueOfLegends/league/entries/${queue}.${tier}.${division}`, data);
                 J.assert(data, J.array().items(LeagueEntryDTOSchema));
             });

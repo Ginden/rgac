@@ -3,8 +3,6 @@ import * as ts from 'typescript';
 import _ = require('lodash');
 import { readdirSync, readFileSync, writeFileSync } from 'fs';
 
-// import {inspect} from 'util';
-
 function recursiveSearchPath(dir: string): string[] {
     return _.flattenDeep(
         readdirSync(dir, { withFileTypes: true })
@@ -88,6 +86,25 @@ function generateSchemas(sourceFile: ts.SourceFile): { imports: string[]; schema
     const interfaces: { name: string; members: MemberInfo[] }[] = [];
     const enumNames: Set<string> = new Set<string>();
 
+    function delintNode(node: ts.Node): void {
+        if (ts.isInterfaceDeclaration(node)) {
+            interfaces.push({
+                name: getEscapedName(node.name),
+                members: node.members.map((member) => {
+                    const { questionToken } = member;
+                    return {
+                        isOptional: !!questionToken,
+                        type: getType(member),
+                        name: getEscapedName((member as any).name),
+                    };
+                }),
+            });
+        } else if (ts.isEnumDeclaration(node)) {
+            enumNames.add(getEscapedName(node.name));
+        }
+        ts.forEachChild(node, delintNode);
+    }
+
     delintNode(sourceFile);
 
     function getType(member: any): TypeInfo {
@@ -122,7 +139,7 @@ function generateSchemas(sourceFile: ts.SourceFile): { imports: string[]; schema
                     };
                 }
                 break;
-            case ts.SyntaxKind.TypeReference:
+            case ts.SyntaxKind.TypeReference: {
                 const name = getEscapedName((type as any).typeName);
                 if (name === `Dictionary`) {
                     const [typeArgument] = type.typeArguments;
@@ -144,7 +161,7 @@ function generateSchemas(sourceFile: ts.SourceFile): { imports: string[]; schema
                     name: name,
                     arrayDepth: 0,
                 };
-                break;
+            }
         }
         console.error(member);
         return {
@@ -153,25 +170,6 @@ function generateSchemas(sourceFile: ts.SourceFile): { imports: string[]; schema
             node: member,
         };
         // throw new Error(ts.SyntaxKind[type.kind]);
-    }
-
-    function delintNode(node: ts.Node) {
-        if (ts.isInterfaceDeclaration(node)) {
-            interfaces.push({
-                name: getEscapedName(node.name),
-                members: node.members.map((member) => {
-                    const { questionToken } = member;
-                    return {
-                        isOptional: !!questionToken,
-                        type: getType(member),
-                        name: getEscapedName((member as any).name),
-                    };
-                }),
-            });
-        } else if (ts.isEnumDeclaration(node)) {
-            enumNames.add(getEscapedName(node.name));
-        }
-        ts.forEachChild(node, delintNode);
     }
 
     const interfaceNames = new Set(interfaces.map((e) => e.name));
@@ -207,14 +205,13 @@ function generateSchemas(sourceFile: ts.SourceFile): { imports: string[]; schema
     };
 }
 
-(async () => {
+(async (): Promise<void> => {
     const entries = recursiveSearchPath(join(process.cwd(), `src`, `apiInterfaces`))
         .map((p) => readFileSync(p, `utf8`))
         .join(`\n\n`)
         .split(`\n`)
         .filter((line) => !line.includes(`export * from`))
         .join(`\n`);
-    Object.assign(ts, {});
 
     const sourceFile = ts.createSourceFile(`api-interfaces.ts`, entries, ts.ScriptTarget.ES2019, true);
 

@@ -1,5 +1,5 @@
 /* Generated from URL http://static.developer.riotgames.com/docs/lol/maps.json */
-export enum Map {
+export enum GameMap {
     SUMMONERS_RIFT_1 = 1, // Original Summer variant
     SUMMONERS_RIFT_2 = 2, // Original Autumn variant
     SUMMONERS_RIFT_11 = 11, // Current Version
@@ -13,6 +13,6 @@ export enum Map {
     VALORAN_CITY_PARK = 18, // Star Guardian Invasion map
     SUBSTRUCTURE_43 = 19, // PROJECT: Hunters map
     CRASH_SITE = 20, // Odyssey: Extraction map
-    CONVERGENCE = 20, // Teamfight Tactics map
     NEXUS_BLITZ = 21, // Nexus Blitz map
+    CONVERGENCE = 22, // Teamfight Tactics map
 }

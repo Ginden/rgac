@@ -19,14 +19,6 @@ export type ClashTeam = { teamId: string } | string;
 
 export type ClashTournament = { id: number } | number;
 
-/**
- * This is internal type for pagination. It will be replaced with AsyncIterables in future.
- */
-export type WithNextPage<T> = {
-    data: T;
-    getNextPage(): Promise<WithNextPage<T>>;
-};
-
 export type AnyMatchFormat = number | Match | MatchDto | { gameId: number };
 
 export type MatchFilterObject = {

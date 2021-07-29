@@ -1,7 +1,7 @@
 import { Match } from '../apiClasses/Match';
 import { ChildClient } from '../ChildClient';
-import { AccountId, AnyMatchFormat, AnySummonerFormat, MatchFilterObject, WithNextPage } from '../types';
-import { MatchDto, MatchlistDto, MatchTimelineDto } from '../apiInterfaces';
+import { AccountId, AnyMatchFormat, MatchFilterObject } from '../types';
+import { MatchDto, MatchlistDto, MatchReferenceDto, MatchTimelineDto } from '../apiInterfaces';
 import { Summoner } from '../apiClasses';
 
 export class MatchClient extends ChildClient {
@@ -25,29 +25,39 @@ export class MatchClient extends ChildClient {
      * @param {MatchFilterObject} [filter]
      * @return {Promise<WithNextPage<MatchlistDto>>}
      */
-    public async listBySummoner(summoner: AccountId, filter?: MatchFilterObject): Promise<WithNextPage<MatchlistDto>> {
+    public async listBySummoner(summoner: AccountId, filter?: MatchFilterObject, chunk = 100): Promise<MatchlistDto> {
         const encryptedAccountId: string = Summoner.accountId(summoner);
         const newFilter: MatchFilterObject = {
             beginIndex: 0,
-            ...Object(filter),
+            ...(filter ?? {}),
         };
         if (!newFilter.endIndex) {
-            newFilter.endIndex = Number(newFilter.beginIndex) + 100;
+            newFilter.endIndex = Number(newFilter.beginIndex) + chunk;
         }
         const matchlistDto: MatchlistDto = await this.doRequest(
             `/lol/match/v4/matchlists/by-account/${encryptedAccountId}`
         );
-        return {
-            data: matchlistDto,
-            getNextPage: async () => {
-                const pageSize = Number(newFilter.endIndex) - Number(newFilter.beginIndex);
-                return this.listBySummoner(summoner, {
-                    ...newFilter,
-                    beginIndex: Number(newFilter.beginIndex) + pageSize,
-                    endIndex: Number(newFilter.endIndex) + pageSize,
-                });
-            },
-        };
+        return matchlistDto;
+    }
+
+    public async *listBySummonerIterable(
+        summoner: AccountId,
+        filter?: MatchFilterObject,
+        beginIndex = 0,
+        chunk = 100
+    ): AsyncIterable<MatchReferenceDto> {
+        let currentBeginIndex = beginIndex;
+        let matches = null;
+        do {
+            const newFilter: MatchFilterObject = {
+                ...(filter ?? {}),
+                beginIndex: currentBeginIndex,
+                endIndex: currentBeginIndex + chunk,
+            };
+            matches = (await this.listBySummoner(summoner, newFilter)).matches;
+            currentBeginIndex += chunk;
+            yield* matches;
+        } while (matches);
     }
 
     /**

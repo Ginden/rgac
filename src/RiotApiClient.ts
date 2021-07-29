@@ -12,7 +12,7 @@ import { TeamfightTacticsApi } from './tftApi';
 const API_KEY: unique symbol = Symbol();
 
 export class RiotApiClient {
-    public static readonly dataDragonVersion: string = `11.5.1`;
+    public static readonly dataDragonVersion: string = `11.24.1`;
     private readonly [API_KEY]: string;
     public readonly server: Servers;
     private readonly axiosInstance: AxiosInstance;
@@ -36,12 +36,12 @@ export class RiotApiClient {
     }
 
     @CachedGetter
-    public get domain() {
+    public get domain(): string {
         return `https://${this.server}.api.riotgames.com`;
     }
 
     @CachedGetter
-    public get regionalDomain() {
+    public get regionalDomain(): string {
         return `https://${PlatformRegionServerMapping[this.server]}.api.riotgames.com`;
     }
 

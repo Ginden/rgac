@@ -1,11 +1,13 @@
-/* Generated from URL http://ddragon.leagueoflegends.com/cdn/11.5.1/data/en_US/item.json */
+/* Generated from URL http://ddragon.leagueoflegends.com/cdn/11.24.1/data/en_US/item.json */
 export enum GameItem {
-    ABYSSAL_MASK = 3001, // Abyssal Mask
+    ABYSSAL_MASK = 8020, // Abyssal Mask
     AEGIS_OF_THE_LEGION = 3105, // Aegis of the Legion
     AETHER_WISP = 3113, // Aether Wisp
     AMPLIFYING_TOME = 1052, // Amplifying Tome
+    ANATHEMAS_CHAINS = 8001, // Anathema's Chains
     ARCHANGELS_STAFF = 3003, // Archangel's Staff
     ARDENT_CENSER = 3504, // Ardent Censer
+    AXIOM_ARC = 6696, // Axiom Arc
     B_F_SWORD = 1038, // B. F. Sword
     BAMIS_CINDER = 6660, // Bami's Cinder
     BANDLEGLASS_MIRROR = 4642, // Bandleglass Mirror
@@ -33,6 +35,7 @@ export enum GameItem {
     CONTROL_WARD = 2055, // Control Ward
     CORRUPTING_POTION = 2033, // Corrupting Potion
     COSMIC_DRIVE = 4629, // Cosmic Drive
+    CROWN_OF_THE_SHATTERED_QUEEN = 4644, // Crown of the Shattered Queen
     CRYSTALLINE_BRACER = 3801, // Crystalline Bracer
     CULL = 1083, // Cull
     DAGGER = 1042, // Dagger
@@ -52,12 +55,14 @@ export enum GameItem {
     ELIXIR_OF_WRATH = 2140, // Elixir of Wrath
     EMBERKNIFE = 1035, // Emberknife
     ESSENCE_REAVER = 3508, // Essence Reaver
+    EVENSHROUD = 3001, // Evenshroud
     EVERFROST = 6656, // Everfrost
     EXECUTIONERS_CALLING = 3123, // Executioner's Calling
     EYE_OF_THE_HERALD = 3513, // Eye of the Herald
     FAERIE_CHARM = 1004, // Faerie Charm
     FARSIGHT_ALTERATION = 3363, // Farsight Alteration
     FIENDISH_CODEX = 3108, // Fiendish Codex
+    FIMBULWINTER = 3121, // Fimbulwinter
     FORBIDDEN_IDOL = 3114, // Forbidden Idol
     FORCE_OF_NATURE = 4401, // Force of Nature
     FROSTFANG = 3851, // Frostfang
@@ -82,6 +87,7 @@ export enum GameItem {
     HEXTECH_ALTERNATOR = 3145, // Hextech Alternator
     HEXTECH_ROCKETBELT = 3152, // Hextech Rocketbelt
     HORIZON_FOCUS = 4628, // Horizon Focus
+    HULLBREAKER = 3181, // Hullbreaker
     IMMORTAL_SHIELDBOW = 6673, // Immortal Shieldbow
     IMPERIAL_MANDATE = 4005, // Imperial Mandate
     INFINITY_EDGE = 3031, // Infinity Edge
@@ -120,8 +126,9 @@ export enum GameItem {
     NEGATRON_CLOAK = 1057, // Negatron Cloak
     NIGHT_HARVESTER = 4636, // Night Harvester
     NOONQUIVER = 6670, // Noonquiver
-    NULL_MAGIC_MANTLE = 1033, // Null-Magic Mantle
+    NULLMAGIC_MANTLE = 1033, // Null-Magic Mantle
     OBLIVION_ORB = 3916, // Oblivion Orb
+    OBSIDIAN_EDGE = 1040, // Obsidian Edge
     ORACLE_LENS = 3364, // Oracle Lens
     PAULDRONS_OF_WHITEROCK = 3857, // Pauldrons of Whiterock
     PERFECTLY_TIMED_STOPWATCH = 2423, // Perfectly Timed Stopwatch
@@ -129,7 +136,7 @@ export enum GameItem {
     PHANTOM_DANCER = 3046, // Phantom Dancer
     PICKAXE = 1037, // Pickaxe
     PLATED_STEELCAPS = 3047, // Plated Steelcaps
-    PORO_SNAX = 2052, // Poro-Snax
+    POROSNAX = 2052, // Poro-Snax
     PROWLERS_CLAW = 6693, // Prowler's Claw
     QUICKSILVER_SASH = 3140, // Quicksilver Sash
     RABADONS_DEATHCAP = 3089, // Rabadon's Deathcap
@@ -147,7 +154,6 @@ export enum GameItem {
     RUNAANS_HURRICANE = 3085, // Runaan's Hurricane
     RUNESTEEL_SPAULDERS = 3855, // Runesteel Spaulders
     RYLAIS_CRYSTAL_SCEPTER = 3116, // Rylai's Crystal Scepter
-    SANGUINE_BLADE = 3181, // Sanguine Blade
     SAPPHIRE_CRYSTAL = 1027, // Sapphire Crystal
     SCARECROW_EFFIGY = 3330, // Scarecrow Effigy
     SEEKERS_ARMGUARD = 3191, // Seeker's Armguard
@@ -155,6 +161,7 @@ export enum GameItem {
     SERPENTS_FANG = 6695, // Serpent's Fang
     SERRATED_DIRK = 3134, // Serrated Dirk
     SERYLDAS_GRUDGE = 6694, // Serylda's Grudge
+    SHADOWFLAME = 4645, // Shadowflame
     SHARD_OF_TRUE_ICE = 3853, // Shard of True Ice
     SHEEN = 3057, // Sheen
     SHURELYAS_BATTLESONG = 2065, // Shurelya's Battlesong
@@ -169,7 +176,6 @@ export enum GameItem {
     STEALTH_WARD = 3340, // Stealth Ward
     STEEL_SHOULDERGUARDS = 3854, // Steel Shoulderguards
     STERAKS_GAGE = 3053, // Sterak's Gage
-    STIRRING_WARDSTONE = 4641, // Stirring Wardstone
     STOPWATCH = 2420, // Stopwatch
     STORMRAZOR = 3095, // Stormrazor
     STRIDEBREAKER = 6631, // Stridebreaker
@@ -193,6 +199,7 @@ export enum GameItem {
     WARMOGS_ARMOR = 3083, // Warmog's Armor
     WATCHFUL_WARDSTONE = 4638, // Watchful Wardstone
     WINGED_MOONPLATE = 3066, // Winged Moonplate
+    WINTERS_APPROACH = 3119, // Winter's Approach
     WITS_END = 3091, // Wit's End
     YOUMUUS_GHOSTBLADE = 3142, // Youmuu's Ghostblade
     YOUR_CUT = 3400, // Your Cut

@@ -1,6 +1,6 @@
 import { CurrentGameInfo, FeaturedGames } from '../apiInterfaces';
 import { ChildClient } from '../ChildClient';
-import { AnySummonerFormat, SummonerId } from '../types';
+import { AnySummonerFormat } from '../types';
 import { Summoner } from '../apiClasses';
 
 export class SpectatorClient extends ChildClient {
@@ -10,7 +10,7 @@ export class SpectatorClient extends ChildClient {
      * @link https://developer.riotgames.com/apis#spectator-v4/GET_getCurrentGameInfoBySummoner
      * @return {Promise<CurrentGameInfo>}
      */
-    public async activeGamesBySummoner(summoner: SummonerId): Promise<CurrentGameInfo> {
+    public async activeGamesBySummoner(summoner: AnySummonerFormat): Promise<CurrentGameInfo> {
         const encryptedSummonerId = Summoner.id(summoner);
         return this.client.doRequest(`lol/spectator/v4/active-games/by-summoner/${encryptedSummonerId}`);
     }

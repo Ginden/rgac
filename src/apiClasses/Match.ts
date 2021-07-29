@@ -4,7 +4,7 @@ import {
     GameMode,
     GameQueue,
     GameType,
-    Map,
+    GameMap,
     MatchDto,
     MatchTimelineDto,
     ParticipantDto,
@@ -27,7 +27,7 @@ export class Match extends ChildClient implements MatchDto {
     public participants: ParticipantDto[];
     public gameVersion: string;
     public gameMode: GameMode;
-    public mapId: Map;
+    public mapId: GameMap;
     public gameType: GameType;
     public teams: TeamStatsDto[];
     public gameDuration: number;

@@ -1,4 +1,4 @@
-/* Generated from URL http://ddragon.leagueoflegends.com/cdn/11.5.1/data/en_US/runesReforged.json */
+/* Generated from URL http://ddragon.leagueoflegends.com/cdn/11.24.1/data/en_US/runesReforged.json */
 export enum RunesReforgedTrees {
     Domination = 8100,
     Inspiration = 8300,
@@ -40,8 +40,8 @@ export enum RunesReforgedAll {
     GlacialAugment = 8351,
     UNSEALED_SPELLBOOK = 8360,
     UnsealedSpellbook = 8360,
-    MASTER_KEY = 8358,
-    MasterKey = 8358,
+    FIRST_STRIKE = 8369,
+    FirstStrike = 8369,
     HEXTECH_FLASHTRAPTION = 8306,
     HextechFlashtraption = 8306,
     MAGICAL_FOOTWEAR = 8304,

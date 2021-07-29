@@ -14,6 +14,7 @@ const urls = {
     gameModes: `http://static.developer.riotgames.com/docs/lol/gameModes.json`,
     champions: `http://ddragon.leagueoflegends.com/cdn/${patch}/data/en_US/champion.json`,
     items: `http://ddragon.leagueoflegends.com/cdn/${patch}/data/en_US/item.json`,
+    itemStats: `http://ddragon.leagueoflegends.com/cdn/${patch}/data/en_US/item.json`,
     runesReforged: `http://ddragon.leagueoflegends.com/cdn/${patch}/data/en_US/runesReforged.json`,
 };
 
@@ -71,7 +72,7 @@ function gameQueues(arr: Queue[]): string {
 type MapEntry = { mapId: number; mapName: string; notes: string };
 
 function maps(arr: MapEntry[]): string {
-    const ret = [`export enum Map {`];
+    const ret = [`export enum GameMap {`];
 
     const pairs: [string, MapEntry[]][] = Object.entries(_.groupBy(arr, (v) => slug(v.mapName, `_`).toUpperCase()));
     for (const [slugifiedMapName, entries] of pairs) {
@@ -135,6 +136,9 @@ function champions({ data }: ChampionData): string {
 }
 
 type ItemData = {
+    basic: {
+        stats: Record<string, number>;
+    };
     data: {
         [K: string]: {
             id: string;
@@ -144,7 +148,7 @@ type ItemData = {
 };
 
 function items(id: ItemData) {
-    let ret = [`export enum GameItem {`];
+    const ret = [`export enum GameItem {`];
     const duplicatedKeys = _.countBy(Object.values(id.data), ({ name }) => slug(name, `_`).toUpperCase());
     for (const [key, { name }] of _.sortBy(Object.entries(id.data), `1.name`)) {
         let slugified = slug(name, `_`).toUpperCase();
@@ -152,6 +156,16 @@ function items(id: ItemData) {
             slugified += `_${key}`;
         }
         ret.push(`  ${slugified} = ${key}, // ${name}`);
+    }
+    ret.push(`};`);
+    return ret.join(`\n`);
+}
+
+function itemStats(id: ItemData) {
+    const ret = [`export enum GameItemStat {`];
+    for (const [name] of Object.entries(id.basic.stats)) {
+        const slugified = slug(name, `_`).toUpperCase();
+        ret.push(`  ${slugified} = '${name}', // ${name}`);
     }
     ret.push(`};`);
     return ret.join(`\n`);
@@ -199,6 +213,7 @@ const generators: { [K in keyof typeof urls]: MappingFunction } = {
     champions,
     items,
     runesReforged,
+    itemStats,
 };
 
 (async () => {

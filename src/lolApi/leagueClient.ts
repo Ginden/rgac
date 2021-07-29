@@ -3,7 +3,7 @@ import { Summoner } from '../apiClasses';
 import { LeagueEntryDTO, LeagueListDTO, RankedDivision, RankedQueue, RankedTier } from '../apiInterfaces';
 
 import { ChildClient } from '../ChildClient';
-import { AccountId, WithNextPage } from '../types';
+import { AccountId } from '../types';
 
 export class LeagueClient extends ChildClient {
     /**
@@ -34,17 +34,31 @@ export class LeagueClient extends ChildClient {
      * @param {RankedTier} tier
      * @param {RankedDivision} division
      * @param {number} [page]
-     * @return {Promise<WithNextPage<LeagueEntryDTO[]>>}
+     * @return {Promise<LeagueEntryDTO[]>}
      */
     public async entries(
         queue: RankedQueue,
         tier: RankedTier,
         division: RankedDivision,
-        page: number = 1
-    ): Promise<WithNextPage<LeagueEntryDTO[]>> {
+        page = 1
+    ): Promise<LeagueEntryDTO[]> {
         return this.client.leagueOfLegends.leagueExp.entries(queue, tier, division, page);
     }
 
+    public async *entriesIterable(
+        queue: RankedQueue,
+        tier: RankedTier,
+        division: RankedDivision
+    ): AsyncIterable<LeagueEntryDTO> {
+        let page = 1;
+        let entriesLength = 0;
+        do {
+            const entries = await this.entries(queue, tier, division, page);
+            yield* entries;
+            entriesLength = entries.length;
+            page += 1;
+        } while (entriesLength > 0);
+    }
     /**
      * Get the grandmaster league of a specific queue.
      * @link https://developer.riotgames.com/apis#league-v4/GET_getGrandmasterLeague

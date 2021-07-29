@@ -25,7 +25,7 @@ describe('RiotApiClient.leagueOfLegends.championMasteries', () => {
 
     test('#championMasteries.bySummonerAndChampion() matches schema', async () => {
         const summoner = await getSummoner(client);
-        const data: ChampionMasteryDTO = await summoner.getChampionMastery(ChampionId.Swain);
+        const data: ChampionMasteryDTO = await summoner.getChampionMastery(ChampionId.swain);
         saveData(`leagueOfLegends/championMasteries/by-summoner-and-champion`, data);
         Joi.assert(data, ChampionMasteryDTOSchema);
     });
@@ -48,7 +48,7 @@ describe('RiotApiClient.leagueOfLegends.championMasteries', () => {
 
     test('#getChampionMastery() returns valid schema', async () => {
         const summoner: Summoner = await getSummoner(client);
-        const mastery = await summoner.getChampionMastery(ChampionId.Swain);
+        const mastery = await summoner.getChampionMastery(ChampionId.swain);
         saveData(`leagueOfLegends/championMasteries/swain`, mastery);
         J.assert(mastery, ChampionMasteryDTOSchema);
     });

@@ -1,7 +1,7 @@
 import { RiotApiClient } from '..';
 import axios from 'axios';
 
-(async () => {
+(async (): Promise<void> => {
     const [major, minor, patch] = RiotApiClient.dataDragonVersion.split(`.`).map(Number);
     const versionsToTest = [
         [major + 1, 0, 1],

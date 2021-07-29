@@ -3,7 +3,7 @@ import { GameMode } from '..';
 import { GameQueue } from '..';
 import { GameType } from '..';
 import { Season } from '..';
-import { Map } from '..';
+import { GameMap } from '..';
 import { Team } from '..';
 import { WinString } from '..';
 
@@ -19,7 +19,7 @@ export interface MatchDto {
     participants: ParticipantDto[];
     gameVersion: string;
     gameMode: GameMode;
-    mapId: Map;
+    mapId: GameMap;
     gameType: GameType;
     teams: TeamStatsDto[];
     gameDuration: number;

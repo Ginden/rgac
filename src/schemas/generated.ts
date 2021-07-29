@@ -1,6 +1,7 @@
 import Joi = require('@hapi/joi');
 import { J, enumSchema, referenceSchema } from './helpers';
 import {
+    GameItem,
     ChampionId,
     SRPosition,
     RankedQueue,
@@ -9,11 +10,37 @@ import {
     Season,
     GameQueue,
     GameMode,
-    Map,
+    GameMap,
     GameType,
     Team,
     WinString,
 } from '../apiInterfaces';
+
+/**
+ * @ignore
+ */
+export const DataDragonItemSchema: Joi.ObjectSchema = J.object({
+    type: J.any().required(),
+    version: J.string().allow('').required(),
+    basic: J.any().required(),
+    data: J.any().required(),
+}).id('DataDragonItem');
+
+/**
+ * @ignore
+ */
+export const DataDragonItemItemSchema: Joi.ObjectSchema = J.object({
+    name: J.string().allow('').required(),
+    description: J.string().allow('').required(),
+    colloq: J.string().allow('').required(),
+    plaintext: J.string().allow('').required(),
+    into: J.array().items(enumSchema(GameItem)).required(),
+    image: J.any().required(),
+    gold: J.any().required(),
+    tags: J.array().items(J.string().allow('')).required(),
+    maps: J.any().required(),
+    stats: J.any().required(),
+}).id('DataDragonItemItem');
 
 /**
  * @ignore
@@ -273,7 +300,7 @@ export const MatchDtoSchema: Joi.ObjectSchema = J.object({
         .required(),
     gameVersion: J.string().allow('').required(),
     gameMode: enumSchema(GameMode).required(),
-    mapId: enumSchema(Map).required(),
+    mapId: enumSchema(GameMap).required(),
     gameType: enumSchema(GameType).required(),
     teams: J.array()
         .items(referenceSchema(() => TeamStatsDtoSchema))

@@ -18,7 +18,7 @@ export function referenceSchema(thunk: () => Joi.ObjectSchema): Joi.AnySchema {
 /**
  * @ignore
  */
-export function getEnumValues(obj: any): any[] {
+export function getEnumValues<T>(obj: Record<string, T>): T[] {
     return Object.keys(obj)
         .filter((k) => !Number.isFinite(Number(k))) // Ignore numeric keys
         .map((k) => obj[k]);
@@ -27,6 +27,6 @@ export function getEnumValues(obj: any): any[] {
 /**
  * @ignore
  */
-export function enumSchema(en: object): Joi.AnySchema {
+export function enumSchema<T>(en: Record<string, T>): Joi.AnySchema {
     return J.any().valid(...new Set(getEnumValues(en)));
 }

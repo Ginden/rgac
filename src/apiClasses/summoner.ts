@@ -8,7 +8,7 @@ import {
 } from '../apiInterfaces';
 import { ChildClient } from '../ChildClient';
 import { RiotApiClient } from '../RiotApiClient';
-import { AnySummonerFormat, MatchFilterObject, WithNextPage, SummonerId, AccountId, Puuid } from '../types';
+import { AnySummonerFormat, MatchFilterObject, SummonerId, AccountId, Puuid } from '../types';
 import { assertIsNotEmpty } from '../assert';
 import { isString } from 'lodash';
 
@@ -39,7 +39,7 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
     /**
      * See [[MatchClient.listBySummoner]]
      */
-    public getMatches(filter: MatchFilterObject = {}): Promise<WithNextPage<MatchlistDto>> {
+    public getMatches(filter: MatchFilterObject = {}): Promise<MatchlistDto> {
         return this.client.lol.matches.listBySummoner(this, filter);
     }
 
@@ -84,7 +84,7 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
      * @param {AccountId} summoner
      * @return {string}
      */
-    public static accountId(summoner: AccountId) {
+    public static accountId(summoner: AccountId): string {
         assertIsNotEmpty(summoner);
         if (isString(summoner)) {
             if (summoner.length === 78) {
@@ -101,7 +101,7 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
      * @param {Puuid} summoner
      * @return {string}
      */
-    public static puuid(summoner: Puuid) {
+    public static puuid(summoner: Puuid): string {
         assertIsNotEmpty(summoner);
         if (isString(summoner)) {
             if (summoner.length !== 78) {
@@ -118,7 +118,7 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
      * @param {SummonerId} summoner
      * @return {string | any}
      */
-    public static id(summoner: SummonerId) {
+    public static id(summoner: SummonerId): string {
         assertIsNotEmpty(summoner);
         if (isString(summoner)) {
             if (summoner.length === 78) {
@@ -138,7 +138,7 @@ export class Summoner extends ChildClient implements ApiSummonerInfo {
      * @param {AnySummonerFormat} summoner
      * @return {string}
      */
-    public static getName(summoner: AnySummonerFormat) {
+    public static getName(summoner: AnySummonerFormat): string {
         assertIsNotEmpty(summoner);
         if (isString(summoner)) {
             if (summoner.length === 78) {
