@@ -2,7 +2,7 @@ import { Summoner } from '../api-classes';
 
 import { LeagueEntryDTO, LeagueListDTO, RankedDivision, RankedQueue, RankedTier } from '../api-interfaces';
 
-import { ChildClient } from '../ChildClient';
+import { ChildClient } from '../child-client';
 import { AccountId } from '../types';
 
 export class LeagueClient extends ChildClient {

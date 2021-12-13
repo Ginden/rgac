@@ -1,5 +1,5 @@
 import { CurrentGameInfo, FeaturedGames } from '../api-interfaces';
-import { ChildClient } from '../ChildClient';
+import { ChildClient } from '../child-client';
 import { AnySummonerFormat } from '../types';
 import { Summoner } from '../api-classes';
 

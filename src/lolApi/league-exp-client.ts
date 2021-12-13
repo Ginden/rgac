@@ -1,6 +1,6 @@
 import { LeagueEntryDTO } from '../api-interfaces';
 import { RankedTier } from '../api-interfaces';
-import { ChildClient } from '../ChildClient';
+import { ChildClient } from '../child-client';
 import { RankedQueue } from '../api-interfaces';
 import { RankedDivision } from '../api-interfaces';
 

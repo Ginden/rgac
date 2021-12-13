@@ -1,5 +1,5 @@
 import { TftLeagueListDTO } from '../api-interfaces';
-import { ChildClient } from '../ChildClient';
+import { ChildClient } from '../child-client';
 
 export class TftLeagueClient extends ChildClient {
     public challenger(): Promise<TftLeagueListDTO> {

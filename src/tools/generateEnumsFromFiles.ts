@@ -3,7 +3,7 @@ import _ = require('lodash');
 import axios from 'axios';
 import { writeFileSync } from 'fs';
 import { join } from 'path';
-import { RiotApiClient } from '../RiotApiClient';
+import { RiotApiClient } from '../riot-api-client';
 
 const patch = RiotApiClient.dataDragonVersion;
 const urls = {

@@ -1,5 +1,5 @@
 import { Match } from '../api-classes/match';
-import { ChildClient } from '../ChildClient';
+import { ChildClient } from '../child-client';
 import { AccountId, AnyMatchFormat, MatchFilterObject } from '../types';
 import { MatchDto, MatchlistDto, MatchReferenceDto, MatchTimelineDto } from '../api-interfaces';
 import { Summoner } from '../api-classes';

@@ -1,4 +1,4 @@
-import { ChildClient } from '../ChildClient';
+import { ChildClient } from '../child-client';
 import { ClashTeam, SummonerId, ClashTournament } from '../types';
 
 export class ClashClient extends ChildClient {

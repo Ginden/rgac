@@ -1,5 +1,5 @@
 import { ChampionInfo } from '../api-interfaces';
-import { ChildClient } from '../ChildClient';
+import { ChildClient } from '../child-client';
 
 export class ChampionClient extends ChildClient {
     /**

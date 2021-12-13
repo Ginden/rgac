@@ -1,6 +1,6 @@
 import { Summoner } from '../api-classes';
 import { ChampionId, ChampionMasteryDTO } from '../api-interfaces';
-import { ChildClient } from '../ChildClient';
+import { ChildClient } from '../child-client';
 import { AnySummonerFormat, SummonerId } from '../types';
 
 export class ChampionMasteriesClient extends ChildClient {

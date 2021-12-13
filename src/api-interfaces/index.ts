@@ -27,5 +27,5 @@ export * from './scrapped-from-docs/MatchlistDto';
 export * from './scrapped-from-docs/MatchTimelineDto';
 export * from './scrapped-from-docs/MiniSeriesDTO';
 export * from './scrapped-from-docs/ShardStatus';
-export * from './tft/tftLeagueList';
-export * from './tft/tftMatch';
+export * from './tft/tft-league-list';
+export * from './tft/tft-match';

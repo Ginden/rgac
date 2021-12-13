@@ -1,5 +1,5 @@
 import { Summoner } from '../api-classes';
-import { ChildClient } from '../ChildClient';
+import { ChildClient } from '../child-client';
 import { AccountId, AnySummonerFormat, Puuid, SummonerId } from '../types';
 
 export class SummonerClient extends ChildClient {

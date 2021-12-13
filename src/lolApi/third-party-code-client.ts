@@ -1,5 +1,5 @@
 import { Summoner } from '../api-classes';
-import { ChildClient } from '../ChildClient';
+import { ChildClient } from '../child-client';
 import { SummonerId } from '../types';
 
 export class ThirdPartyCodeClient extends ChildClient {

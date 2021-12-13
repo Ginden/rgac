@@ -6,8 +6,8 @@ import {
     MatchlistDto,
     CurrentGameInfo,
 } from '../api-interfaces';
-import { ChildClient } from '../ChildClient';
-import { RiotApiClient } from '../RiotApiClient';
+import { ChildClient } from '../child-client';
+import { RiotApiClient } from '../riot-api-client';
 import { AnySummonerFormat, MatchFilterObject, SummonerId, AccountId, Puuid } from '../types';
 import { assertIsNotEmpty } from '../assert';
 import { isString } from 'lodash';

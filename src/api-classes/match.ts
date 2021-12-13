@@ -1,5 +1,5 @@
 import { isNumber } from 'lodash';
-import { ChildClient } from '../ChildClient';
+import { ChildClient } from '../child-client';
 import {
     GameMode,
     GameQueue,
@@ -12,7 +12,7 @@ import {
     Season,
     TeamStatsDto,
 } from '../api-interfaces';
-import { RiotApiClient } from '../RiotApiClient';
+import { RiotApiClient } from '../riot-api-client';
 import { AnyMatchFormat } from '../types';
 
 /**

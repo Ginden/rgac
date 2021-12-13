@@ -1,15 +1,15 @@
-import { ChildClient } from '../ChildClient';
+import { ChildClient } from '../child-client';
 import { CachedGetter } from '../decorators';
-import { ChampionClient } from './ChampionClient';
-import { ChampionMasteriesClient } from './ChampionMasteriesClient';
-import { LeagueClient } from './leagueClient';
-import { LeagueExpClient } from './leagueExpClient';
-import { MatchClient } from './MatchClient';
-import { SpectatorClient } from './SpectatorClient';
-import { StatusClient } from './statusClient';
-import { SummonerClient } from './SummonerClient';
-import { ThirdPartyCodeClient } from './ThirdPartyCodeClient';
-import { ClashClient } from './ClashClient';
+import { ChampionClient } from './champion-client';
+import { ChampionMasteriesClient } from './champion-masteries-client';
+import { LeagueClient } from './league-client';
+import { LeagueExpClient } from './league-exp-client';
+import { MatchClient } from './match-client';
+import { SpectatorClient } from './spectator-client';
+import { StatusClient } from './status-client';
+import { SummonerClient } from './summoner-client';
+import { ThirdPartyCodeClient } from './third-party-code-client';
+import { ClashClient } from './clash-client';
 
 export class LeagueOfLegendsApi extends ChildClient {
     @CachedGetter

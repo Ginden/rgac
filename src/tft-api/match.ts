@@ -1,4 +1,4 @@
-import { ChildClient } from '../ChildClient';
+import { ChildClient } from '../child-client';
 import { TftMatchDto } from '../api-interfaces';
 import { Summoner } from '../api-classes';
 import { Puuid } from '../types';

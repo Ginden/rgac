@@ -1,4 +1,4 @@
-import { ChildClient } from '../ChildClient';
+import { ChildClient } from '../child-client';
 import { CachedGetter } from '../decorators';
 import { TftLeagueClient } from './league';
 import { TftMatchClient } from './match';

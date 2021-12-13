@@ -1,6 +1,6 @@
 import { AxiosRequestConfig } from 'axios';
 import { NonEnumerable } from './decorators';
-import { RiotApiClient } from './RiotApiClient';
+import { RiotApiClient } from './riot-api-client';
 
 export class ChildClient {
     @NonEnumerable

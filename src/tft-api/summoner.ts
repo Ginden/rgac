@@ -1,5 +1,5 @@
 import { Summoner, TftSummoner } from '../api-classes';
-import { ChildClient } from '../ChildClient';
+import { ChildClient } from '../child-client';
 import { SummonerClient } from '../lolApi';
 import { AccountId, AnySummonerFormat, Puuid, SummonerId } from '../types';
 

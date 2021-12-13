@@ -1,4 +1,4 @@
 export * from './league';
 export * from './match';
 export * from './summoner';
-export * from './tftClient';
+export * from './tft-client';
