@@ -14,7 +14,7 @@ import {
     GameType,
     Team,
     WinString,
-} from '../apiInterfaces';
+} from '../api-interfaces';
 
 /**
  * @ignore

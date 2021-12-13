@@ -1,5 +1,5 @@
 import { RiotApiClient } from '../../../src';
-import { ChampionInfo, Servers } from '../../../src/apiInterfaces';
+import { ChampionInfo, Servers } from '../../../src/api-interfaces';
 import { ChampionInfoSchema } from '../../../src/schemas/generated';
 import { saveData } from './helpers';
 import { apiKey, server } from './helpers';

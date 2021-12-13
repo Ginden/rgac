@@ -1,4 +1,4 @@
-import { TftLeagueListDTO } from '../apiInterfaces';
+import { TftLeagueListDTO } from '../api-interfaces';
 import { ChildClient } from '../ChildClient';
 
 export class TftLeagueClient extends ChildClient {

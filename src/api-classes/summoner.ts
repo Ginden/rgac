@@ -5,7 +5,7 @@ import {
     LeagueEntryDTO,
     MatchlistDto,
     CurrentGameInfo,
-} from '../apiInterfaces';
+} from '../api-interfaces';
 import { ChildClient } from '../ChildClient';
 import { RiotApiClient } from '../RiotApiClient';
 import { AnySummonerFormat, MatchFilterObject, SummonerId, AccountId, Puuid } from '../types';

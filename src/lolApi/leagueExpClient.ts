@@ -1,8 +1,8 @@
-import { LeagueEntryDTO } from '../apiInterfaces';
-import { RankedTier } from '../apiInterfaces';
+import { LeagueEntryDTO } from '../api-interfaces';
+import { RankedTier } from '../api-interfaces';
 import { ChildClient } from '../ChildClient';
-import { RankedQueue } from '../apiInterfaces';
-import { RankedDivision } from '../apiInterfaces';
+import { RankedQueue } from '../api-interfaces';
+import { RankedDivision } from '../api-interfaces';
 
 export class LeagueExpClient extends ChildClient {
     public async entries(

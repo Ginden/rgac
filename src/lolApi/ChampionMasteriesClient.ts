@@ -1,5 +1,5 @@
-import { Summoner } from '../apiClasses';
-import { ChampionId, ChampionMasteryDTO } from '../apiInterfaces';
+import { Summoner } from '../api-classes';
+import { ChampionId, ChampionMasteryDTO } from '../api-interfaces';
 import { ChildClient } from '../ChildClient';
 import { AnySummonerFormat, SummonerId } from '../types';
 

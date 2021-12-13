@@ -1,6 +1,6 @@
 import { writeFile } from 'fs';
 import { dirname, join } from 'path';
-import { Servers } from '../src/apiInterfaces';
+import { Servers } from '../src/api-interfaces';
 import mkdirp = require('mkdirp-promise');
 
 export const server: Servers = process.env.RGAC_TEST_SERVER

@@ -5,7 +5,7 @@ import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { isObject } from 'lodash';
 import rateLimit from 'axios-rate-limit';
 import _ = require('lodash');
-import { Servers, PlatformRegionServerMapping } from './apiInterfaces';
+import { Servers, PlatformRegionServerMapping } from './api-interfaces';
 import { LeagueOfLegendsApi } from './lolApi';
 import { TeamfightTacticsApi } from './tftApi';
 

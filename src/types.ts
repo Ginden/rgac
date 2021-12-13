@@ -1,5 +1,5 @@
-import { Summoner, Match } from './apiClasses';
-import { ApiSummonerInfo, ChampionId, GameQueue, MatchDto, Season } from './apiInterfaces';
+import { Summoner, Match } from './api-classes';
+import { ApiSummonerInfo, ChampionId, GameQueue, MatchDto, Season } from './api-interfaces';
 
 /**
  * Any summoner format is allowed. Passing strings is discouraged, because it's prone to errors (summonerId/accoundId/puuid etc.)

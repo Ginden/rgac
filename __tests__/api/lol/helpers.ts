@@ -1,5 +1,5 @@
 import { RiotApiClient } from '../../../src';
-import { Summoner } from '../../../src/apiClasses';
+import { Summoner } from '../../../src/api-classes';
 import { summonerName } from '../../helpers';
 
 export { summonerName, saveData, server, apiKey } from '../../helpers';

@@ -1,7 +1,7 @@
-import { CurrentGameInfo, FeaturedGames } from '../apiInterfaces';
+import { CurrentGameInfo, FeaturedGames } from '../api-interfaces';
 import { ChildClient } from '../ChildClient';
 import { AnySummonerFormat } from '../types';
-import { Summoner } from '../apiClasses';
+import { Summoner } from '../api-classes';
 
 export class SpectatorClient extends ChildClient {
     /**

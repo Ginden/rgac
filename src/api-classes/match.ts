@@ -11,7 +11,7 @@ import {
     ParticipantIdentityDto,
     Season,
     TeamStatsDto,
-} from '../apiInterfaces';
+} from '../api-interfaces';
 import { RiotApiClient } from '../RiotApiClient';
 import { AnyMatchFormat } from '../types';
 

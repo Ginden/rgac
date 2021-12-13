@@ -1,4 +1,4 @@
-import { ShardStatus } from '../apiInterfaces';
+import { ShardStatus } from '../api-interfaces';
 import { ChildClient } from '../ChildClient';
 
 export class StatusClient extends ChildClient {

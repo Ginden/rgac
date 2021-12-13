@@ -1,6 +1,6 @@
-import { Summoner } from '../apiClasses';
+import { Summoner } from '../api-classes';
 
-import { LeagueEntryDTO, LeagueListDTO, RankedDivision, RankedQueue, RankedTier } from '../apiInterfaces';
+import { LeagueEntryDTO, LeagueListDTO, RankedDivision, RankedQueue, RankedTier } from '../api-interfaces';
 
 import { ChildClient } from '../ChildClient';
 import { AccountId } from '../types';

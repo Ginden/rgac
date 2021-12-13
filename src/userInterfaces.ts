@@ -1,5 +1,5 @@
 import { AxiosInstance, AxiosRequestConfig } from 'axios';
-import { Servers } from './apiInterfaces';
+import { Servers } from './api-interfaces';
 
 export interface ClientOptions {
     apiKey: string;

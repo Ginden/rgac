@@ -1,6 +1,6 @@
 import { ChildClient } from '../ChildClient';
-import { TftMatchDto } from '../apiInterfaces';
-import { Summoner } from '../apiClasses';
+import { TftMatchDto } from '../api-interfaces';
+import { Summoner } from '../api-classes';
 import { Puuid } from '../types';
 
 export class TftMatchClient extends ChildClient {

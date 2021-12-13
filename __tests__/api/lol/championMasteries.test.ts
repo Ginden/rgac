@@ -2,7 +2,7 @@ import { ChampionId, ChampionMasteryDTO, ChampionMasteryDTOSchema, RiotApiClient
 import { getSummoner, apiKey, server, saveData } from './helpers';
 import Joi = require('@hapi/joi');
 import { J } from '../../../src/schemas';
-import { Summoner } from '../../../src/apiClasses';
+import { Summoner } from '../../../src/api-classes';
 
 describe('RiotApiClient.leagueOfLegends.championMasteries', () => {
     let client: RiotApiClient;

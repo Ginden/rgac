@@ -1,4 +1,4 @@
-import { ChampionInfo } from '../apiInterfaces';
+import { ChampionInfo } from '../api-interfaces';
 import { ChildClient } from '../ChildClient';
 
 export class ChampionClient extends ChildClient {

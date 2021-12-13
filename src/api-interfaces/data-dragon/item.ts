@@ -1,5 +1,5 @@
 import { GameItem } from '../generated/items';
-import { GameItemStat } from '../generated/itemStats';
+import { GameItemStat } from '../generated/item-stats';
 import { GameMap } from '../generated/maps';
 
 export interface DataDragonItem {

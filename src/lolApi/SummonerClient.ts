@@ -1,4 +1,4 @@
-import { Summoner } from '../apiClasses';
+import { Summoner } from '../api-classes';
 import { ChildClient } from '../ChildClient';
 import { AccountId, AnySummonerFormat, Puuid, SummonerId } from '../types';
 

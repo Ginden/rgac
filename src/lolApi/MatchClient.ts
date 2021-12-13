@@ -1,8 +1,8 @@
-import { Match } from '../apiClasses/Match';
+import { Match } from '../api-classes/match';
 import { ChildClient } from '../ChildClient';
 import { AccountId, AnyMatchFormat, MatchFilterObject } from '../types';
-import { MatchDto, MatchlistDto, MatchReferenceDto, MatchTimelineDto } from '../apiInterfaces';
-import { Summoner } from '../apiClasses';
+import { MatchDto, MatchlistDto, MatchReferenceDto, MatchTimelineDto } from '../api-interfaces';
+import { Summoner } from '../api-classes';
 
 export class MatchClient extends ChildClient {
     /**
