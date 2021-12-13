@@ -1,4 +1,4 @@
-import { MiniSeriesDTO } from './MiniSeriesDTO';
+import { MiniSeriesDTO } from './mini-series-dto';
 import { RankedDivision } from '..';
 
 export interface LeagueItemDTO {

@@ -1,4 +1,4 @@
-import { MiniSeriesDTO } from './MiniSeriesDTO';
+import { MiniSeriesDTO } from './mini-series-dto';
 import { RankedDivision } from '..';
 import { RankedQueue } from '..';
 import { RankedTier } from '..';

@@ -1,4 +1,4 @@
-import { CurrentGameInfo } from './CurrentGameInfo';
+import { CurrentGameInfo } from './current-game-info';
 
 export interface FeaturedGames {
     clientRefreshInterval: number;

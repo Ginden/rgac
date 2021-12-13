@@ -1,5 +1,5 @@
 import { RankedQueue, RankedTier } from '..';
-import { LeagueItemDTO } from './LeagueItemDTO';
+import { LeagueItemDTO } from './league-item-dto';
 
 export interface LeagueListDTO {
     leagueId?: string;

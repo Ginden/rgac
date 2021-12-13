@@ -1,4 +1,4 @@
-import { Dictionary } from './MatchDto';
+import { Dictionary } from './match-dto';
 import { Team } from '..';
 
 export interface MatchTimelineDto {
